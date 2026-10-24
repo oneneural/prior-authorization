@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f02-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F02",
+  "kind": "encounter",
+  "contentHash": "e16864925ff29162969f90e61824c8342357b0dcc71be48aa027a45f4108c7a3",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-12",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F02. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

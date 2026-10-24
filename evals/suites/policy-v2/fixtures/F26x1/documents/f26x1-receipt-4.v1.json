@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Vale Testcase",
+    "identifier": "SYN-BEN-F26X1"
+  },
+  "orderReference": {
+    "documentId": "f26x1-order-b",
+    "version": 1
+  },
+  "receivedAt": "2026-09-02T18:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F15a",
+  "fixtureManifestSha256": "8267deea47762dd390f7bca6a0c87e6c066a40d8293bdbaabf3f19558f39e18b",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2-unreviewed",
+    "sha256": "71249e79af2e9df81b912bcf3020ebbd683be5080dc412789a1747d8a44827b6"
+  },
+  "specReferences": {
+    "fixtureRow": "F15",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Administrative requirements",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2"
+    ],
+    "conventions": [
+      "C05",
+      "C07",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "The policy input is the frozen negative input pinned by hash, whose bytes equal the reviewed v2 pack except packId lab-k0823-jd-20261018-v2-unreviewed and reviewedAsOf null. The case policyPackId equals that packId, so R08.pack_id_differs does not hold; the date 2026-10-18 is supported and equals the argument. reviewedAsOf is null, so R08 holds R08.pack_unreviewed: missing for the administrative reviewer with the scope_hold effect, naming no document, and the state is scope_hold. The input still lists its source references, so R08.pack_unsourced does not hold. Rules, conditions and conventions are identical to the reviewed pack, so every other finding is as for the supported packet; R01 passes citing the eight supplier and order item code facts. Every other finding follows the supported packet, checked by hand: the final encounter (2026-08-26) and final signed order (2026-09-04) name practitioner identifier SYN-PRAC-0001, and the order is after the encounter and within the C01 bound 2027-02-26; the receipt references the order version and is recorded at 2026-09-05T18:40:00Z, after the C06 span 2026-09-03T10:00:00Z to 2026-09-05T12:00:00Z of the date-only order; the named supplier record is usable and hash-valid. R02 passes with six beneficiary citations (encounter, order, receipt), R03 passes with nine, R04 with six (status, date and practitioner identifier of each final document; null times supply no fact), R05 with four. R06 stays manual_review for the qualified clinical reviewer with R06.clinical_review and the five full /clinical/ pointers; it neither blocks nor satisfies readiness and draws no medical necessity conclusion. R07 passes citing the stated LCMP flag false; no ATP, specialty, home assessment or proof-of-delivery item is required. R09 passes. R10 is not_applicable with R10.pure_assessment. Quarantine and superseded lists are empty and clinicalReviewRequired is true. Parent affectedDocuments are empty: no held condition is restricted, unreadable or failed provenance (C07).",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "scope_hold",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f15a-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f15a-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f15a-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f15a-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f15a-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f15a-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f15a-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/item/code"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f15a-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f15a-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R03",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/signature/signerName"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/signature/signedDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R04",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R05",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f15a-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f15a-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f15a-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f15a-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f15a-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "missing",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R08.pack_unreviewed",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R09",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [],
+    "supersededDocuments": [],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "Invalidation of an existing human acceptance (SPEC F15) needs persisted acceptance and is not exercised; this snapshot proves only the scope hold, and trusting the policy bytes never marks a policy reviewed."
+      }
+    ]
+  }
+}

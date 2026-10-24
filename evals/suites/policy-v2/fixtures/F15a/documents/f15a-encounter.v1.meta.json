@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f15a-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F15A",
+  "kind": "encounter",
+  "contentHash": "d6f3315737a017ee28bbe552b6005d8ac6c1a06ed4e448f915e3add76c25afec",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-26",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F15a. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

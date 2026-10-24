@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Finley Testcase",
+    "identifier": "SYN-BEN-F22"
+  },
+  "authoredDate": "2026-10-16",
+  "title": "Generic power mobility intake worksheet (synthetic)",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F22. Supplier worksheet modelled on a broad, multi-category checklist. Assistive technology professional evaluation: not on file. Specialty evaluation: not on file. Home assessment: not on file. Proof of delivery: not on file; the item has not been delivered."
+}

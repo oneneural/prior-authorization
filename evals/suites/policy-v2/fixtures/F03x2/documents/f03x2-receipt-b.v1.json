@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Tatum Testcase",
+    "identifier": "SYN-BEN-F03X2"
+  },
+  "orderReference": {
+    "documentId": "f03x2-order-b",
+    "version": 1
+  },
+  "receivedAt": "2026-09-02T18:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F14x3",
+  "specFixtureRow": "F14",
+  "title": "Draft order dated before the encounter beside a final order",
+  "scenario": "Final encounter 2026-08-20; final order A dated and signed 2026-09-01; draft order B, otherwise like A, dated and signed 2026-08-15, before the encounter. Receipt A references A at 2026-09-02T17:00:00Z and receipt B references B at 2026-08-16T17:00:00Z. Nothing is superseded.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (independent evaluator fixture-author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F14",
+    "C09",
+    "R03.orders_disagree",
+    "order.date",
+    "order.signature_date"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "3acea4271f6da94d37e84b39e4ce5c3368a6542e86d27c524d6ddf1f7fc923a3"
+    },
+    {
+      "path": "documents/f14x3-encounter.v1.json",
+      "sha256": "a91e9b6771d5999e52198f85419b41627e014021085c495bfae2314f9fb7d24d"
+    },
+    {
+      "path": "documents/f14x3-encounter.v1.meta.json",
+      "sha256": "c1b1ae72faab4e091b7405cd03cfa1fea1cc0f18bd8d2e719475c378e70195cf"
+    },
+    {
+      "path": "documents/f14x3-order-a.v1.json",
+      "sha256": "93524df99ded031e5405369eaa98a17a8455deb08fa33a47397efff2c6df35fa"
+    },
+    {
+      "path": "documents/f14x3-order-a.v1.meta.json",
+      "sha256": "b2a9790c923d3d69e135f378bc34742d879ae0572f5e1e727889eb8871f9ae60"
+    },
+    {
+      "path": "documents/f14x3-order-b.v1.json",
+      "sha256": "2734fa5ef5a05029664c08f4674d45ddbb6956fc53333339a1366cf7abdb6a50"
+    },
+    {
+      "path": "documents/f14x3-order-b.v1.meta.json",
+      "sha256": "ab2ce4e96c07fae25c65784ccc0dc5fdb4659b8bfc7533ee87cd91e06a766ed7"
+    },
+    {
+      "path": "documents/f14x3-receipt-a.v1.json",
+      "sha256": "22f379064267d9843d5d4ec50c9f3043fa6f054536db09ce23a7e993f28891c3"
+    },
+    {
+      "path": "documents/f14x3-receipt-a.v1.meta.json",
+      "sha256": "768a218f4f5a63742231247dc2a74e3176b73670100b44e26a2f51fe056d56b6"
+    },
+    {
+      "path": "documents/f14x3-receipt-b.v1.json",
+      "sha256": "9a5a80587746c4e0028a1ccae3b98a760026d99c5e0d9665fc6df20030609426"
+    },
+    {
+      "path": "documents/f14x3-receipt-b.v1.meta.json",
+      "sha256": "a34568edbb43065fc5f77b30bc2b0918601326507daaf42cbf8eb3113ddcdda9"
+    },
+    {
+      "path": "documents/f14x3-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f14x3-supplier-status.v1.meta.json",
+      "sha256": "0862a16cb62f2be93dd4e69eb7b09e34d5b89832e7248308766c3ea787b3686a"
+    }
+  ]
+}

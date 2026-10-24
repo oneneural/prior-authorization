@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Flint Testcase",
+    "identifier": "SYN-BEN-F26F"
+  },
+  "orderReference": {
+    "documentId": "f26f-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-05T12:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

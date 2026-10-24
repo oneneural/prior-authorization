@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26e-order",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26E",
+  "kind": "order",
+  "contentHash": "502a1e250e991f0bcb70420c8a52b2f243067baf4e31577c9ccd9c661d6720fc",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:05:00Z",
+  "authoredAt": "2026-09-04",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F26e. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

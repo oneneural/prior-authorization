@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Morgan Holdout",
+    "identifier": "SYN-BEN-H04"
+  },
+  "orderReference": {
+    "documentId": "h04-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-03T17:05:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

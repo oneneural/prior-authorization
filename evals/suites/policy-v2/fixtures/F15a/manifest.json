@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F15a",
+  "specFixtureRow": "F15",
+  "title": "Unreviewed policy pack",
+  "scenario": "Supported K0823 packet assessed with the frozen negative policy input lab-k0823-jd-20261018-v2-unreviewed (reviewedAsOf null); the case names that pack ID and the assessment date argument is 2026-10-18.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "evals/suites/policy-v2/policy-inputs/lab-k0823-jd-20261018-unreviewed.json",
+    "sha256": "71249e79af2e9df81b912bcf3020ebbd683be5080dc412789a1747d8a44827b6"
+  },
+  "coverage": [
+    "F15",
+    "R08.pack_unreviewed"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "4d48f6d8773681c05dac35144eeafd6d8a24b0b57ddc881735133d115912c55c"
+    },
+    {
+      "path": "documents/f15a-encounter.v1.json",
+      "sha256": "d6f3315737a017ee28bbe552b6005d8ac6c1a06ed4e448f915e3add76c25afec"
+    },
+    {
+      "path": "documents/f15a-encounter.v1.meta.json",
+      "sha256": "4cf62b3b5782c27657537ec1e8465996cbfc9d3bc0f9de5c4954a7f5539f7cbc"
+    },
+    {
+      "path": "documents/f15a-order.v1.json",
+      "sha256": "e2428c8141e15a47beab4331c7dd00d8c73dfadcac9095af9c9d501ac2fc114b"
+    },
+    {
+      "path": "documents/f15a-order.v1.meta.json",
+      "sha256": "7771d88527b24a3a1a6c2c985cc54c62e5c44b594fe4b4674fddf143a8bfa130"
+    },
+    {
+      "path": "documents/f15a-receipt.v1.json",
+      "sha256": "c711fe06f10a3967babe93c1a62164266a2e13d6a50e5156d4bc3a3c4c0c90ce"
+    },
+    {
+      "path": "documents/f15a-receipt.v1.meta.json",
+      "sha256": "8524d01d752d813eb577d0d3acb484a733a39665c0d04e9b2042b1c4946295bc"
+    },
+    {
+      "path": "documents/f15a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f15a-supplier-status.v1.meta.json",
+      "sha256": "eae6aa420cc610bd877251642c0c8138cfb52ba879442367542a526c7a005a79"
+    }
+  ]
+}

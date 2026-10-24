@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f10c-order",
+  "version": 1,
+  "subjectId": "SYN-BEN-F10C",
+  "kind": "order",
+  "contentHash": "5c3af4751d18d1b4c5d99bc700a126cd238b4ecb818220f4d762efaed72cfaa4",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:05:00Z",
+  "authoredAt": "2026-09-04",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F10c. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

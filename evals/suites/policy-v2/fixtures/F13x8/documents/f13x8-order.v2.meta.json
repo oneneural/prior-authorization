@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f13x8-order",
+  "version": 2,
+  "subjectId": "SYN-OTH-F13X8",
+  "kind": "order",
+  "contentHash": "c5a60b95ddb8232b52ce84d374e598f0eee3aabd2e8d9b57a90fc454a968f616",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-16T14:20:00Z",
+  "authoredAt": "2026-09-08",
+  "supersedes": {
+    "documentId": "f13x8-order",
+    "version": 1
+  },
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F13x8. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

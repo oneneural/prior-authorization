@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F03x2",
+  "specFixtureRow": "F03",
+  "title": "Signer names differ only by a trailing space",
+  "scenario": "Encounter 2026-08-20 and two final, complete orders of 2026-09-01 that are identical except that order B's signature signer name ends with one space. Each order has its own receipt (2026-09-02T17:00:00Z and 2026-09-02T18:00:00Z).",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (independent evaluator fixture-author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F03",
+    "C09",
+    "D1",
+    "R03.orders_disagree",
+    "order.signature_signer_name",
+    "exactText"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "ef6ee721e57d2a2fd39ed8405b8cbcb40574fd96d42fb84673057ba4ec0434d1"
+    },
+    {
+      "path": "documents/f03x2-encounter.v1.json",
+      "sha256": "38c4bfa6a52c38c067d2058fa2b9c09d6d7313438fd2719316eb13a0d6046f3b"
+    },
+    {
+      "path": "documents/f03x2-encounter.v1.meta.json",
+      "sha256": "3baa11d9c2894233402eeaea61d9716f95ebb3ee2ab6df0e3960e3e578546a9e"
+    },
+    {
+      "path": "documents/f03x2-order-a.v1.json",
+      "sha256": "472af12d7f2b03cc035758c02fcd1aa1aca4df9f06d21981d556ff5b1129ea9c"
+    },
+    {
+      "path": "documents/f03x2-order-a.v1.meta.json",
+      "sha256": "185c6c0fe6c0825e63695f3ab8d42b1f001738d6b5985f40ae5993d99812a609"
+    },
+    {
+      "path": "documents/f03x2-order-b.v1.json",
+      "sha256": "578bce550740962d51b26d2e31d38928e70c1a11f46873ceb3571b7bdbdf668d"
+    },
+    {
+      "path": "documents/f03x2-order-b.v1.meta.json",
+      "sha256": "1c15ec8cfec86a8b4bce08a41e604b84c68b7f13ddd4d7f5fa3dcabb4d4e298c"
+    },
+    {
+      "path": "documents/f03x2-receipt-a.v1.json",
+      "sha256": "b044172cc57a79bb081326360b4db3e2e7fd0e46b5b13e1a926d9a7c6585159d"
+    },
+    {
+      "path": "documents/f03x2-receipt-a.v1.meta.json",
+      "sha256": "5bf038691dba602c7bc844c3c4f469b3639f26fb120e72aa1e705b1637db3649"
+    },
+    {
+      "path": "documents/f03x2-receipt-b.v1.json",
+      "sha256": "deda9f80b3474f54b034b000fe1cb3919dd7b9bec4936f611f25266e8fdc0569"
+    },
+    {
+      "path": "documents/f03x2-receipt-b.v1.meta.json",
+      "sha256": "ca6153822d78e94c123cb428683a91792e5780b321f7ea42bed349bce945fbd7"
+    },
+    {
+      "path": "documents/f03x2-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f03x2-supplier-status.v1.meta.json",
+      "sha256": "48f9c0317becfd8847384ec6541d37bf717d834df5ddd508acdb61d2cf18c886"
+    }
+  ]
+}

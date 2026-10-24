@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.encounter.v1",
+  "documentKind": "encounter",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Marlow Testcase",
+    "identifier": "SYN-BEN-F05D"
+  },
+  "encounterDate": "2026-08-20",
+  "completionTime": null,
+  "practitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "lcmpReport": {
+    "incorporated": false,
+    "evaluationDate": null
+  },
+  "clinical": {
+    "diagnosisStatement": "Synthetic test text: chronic condition affecting lower-limb strength, as stated by the practitioner.",
+    "mobilityLimitation": "Synthetic test text: reports difficulty moving between rooms at home without resting.",
+    "lowerLevelDevices": "Synthetic test text: currently uses a walker indoors; other devices were discussed.",
+    "homeAccessibility": "Synthetic test text: ground-floor apartment with a level entry.",
+    "abilityToOperate": "Synthetic test text: demonstrates understanding of the controls and wishes to use a powered chair."
+  },
+  "narrative": "SYNTHETIC TEST DOCUMENT for fixture F05d. Fictional face-to-face encounter summary; not a medical record."
+}

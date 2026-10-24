@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F10x2",
+  "specFixtureRow": "F10",
+  "title": "Failed supplier record beside a usable same-ID version without supersession",
+  "scenario": "Supplier record f10x2-supplier-status version 1 is available with MIME application/json, but its contentHash is the SHA-256 of different bytes (the same body with effectiveTo 2026-06-29); its held body states an expired interval 2025-07-01 to 2026-06-30. Version 2 of the same record is available, hash-matching and states the case supplier status 2026-02-01 to 2027-01-31, with supersedes null. Final encounter 2026-08-24, final order 2026-09-08 and its receipt 2026-09-09T16:30:00Z are usable. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F10",
+    "D4",
+    "R09.hash_mismatch"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "14b2a3da43700286114e52977da063fa39e9586cd22279d236c430478545bfad"
+    },
+    {
+      "path": "documents/f10x2-encounter.v1.json",
+      "sha256": "5e5a8f7b985835a92d6b8b9d444bb49e4a857b485f278aae42362fb3ee77bd40"
+    },
+    {
+      "path": "documents/f10x2-encounter.v1.meta.json",
+      "sha256": "1e3492f270d72ff9b61d5aa8412bbd0076bb214e3550e425da752d0203249a8f"
+    },
+    {
+      "path": "documents/f10x2-order.v1.json",
+      "sha256": "35dfe3592116338005ff40df3c144642c1faef83968509c508e324301d83a2eb"
+    },
+    {
+      "path": "documents/f10x2-order.v1.meta.json",
+      "sha256": "71eb395215e2017b1bd4589065bdb28ed58d51106e78981f481245450a7a86c8"
+    },
+    {
+      "path": "documents/f10x2-receipt.v1.json",
+      "sha256": "98c22c75d01743de71f654d9647ed28073357934aedfc9fb108fd1bff8edbb29"
+    },
+    {
+      "path": "documents/f10x2-receipt.v1.meta.json",
+      "sha256": "a342e53b901d44f21c3e6eee18f232f13344b43a88c3e3691d9ffdb71c3ca807"
+    },
+    {
+      "path": "documents/f10x2-supplier-status.v1.json",
+      "sha256": "84ea47bda1f2cbc1c96dec83a7c5ff2c8f27f2835c3f3e4ad678dfc07419465d"
+    },
+    {
+      "path": "documents/f10x2-supplier-status.v1.meta.json",
+      "sha256": "2f7c891fc96ae3738051f831b36ed8d48b07a1d8806bf198da82fdd0fc1a41b4"
+    },
+    {
+      "path": "documents/f10x2-supplier-status.v2.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f10x2-supplier-status.v2.meta.json",
+      "sha256": "d10db97201fc8cace2d3af31eda4b535f7a89a5977bb57d504fa01e4531ab061"
+    }
+  ]
+}

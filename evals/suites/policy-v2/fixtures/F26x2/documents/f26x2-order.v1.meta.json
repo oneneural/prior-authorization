@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26x2-order",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26X2",
+  "kind": "order",
+  "contentHash": "80bb0d02ba69e8d96bc07d00e406534c7f512fe42ee25b0f181f9b5033e8773e",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:05:00Z",
+  "authoredAt": "2026-09-01",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F26x2. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

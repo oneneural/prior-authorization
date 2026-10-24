@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F04a",
+  "specFixtureRow": "F04",
+  "title": "Encounter and order state different practitioner identifiers",
+  "scenario": "Final encounter on 2026-08-20 by Casey Example, MD (synthetic) with identifier SYN-PRAC-0001. Final order dated 2026-09-02 whose treating practitioner and signer have the same name but identifier SYN-PRAC-0002. Receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F04",
+    "D2",
+    "R04.practitioner_identifier_differs"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "ee95a2f7c676bbfdfc34988045e73373c2864f28815cb64d7061168584ab85c2"
+    },
+    {
+      "path": "documents/f04a-encounter.v1.json",
+      "sha256": "d35f5436a6bbd52c963f12c0330940d83c4668f12918b4cc168c863657711394"
+    },
+    {
+      "path": "documents/f04a-encounter.v1.meta.json",
+      "sha256": "c03b932f5d953c93327e7cd067e882109dfc10e2acae815a02ea87e9c1a57846"
+    },
+    {
+      "path": "documents/f04a-order.v1.json",
+      "sha256": "21f962df7b5452491ad5a3ac5e24d54576418815e2dcd50e79539a5c10552ba7"
+    },
+    {
+      "path": "documents/f04a-order.v1.meta.json",
+      "sha256": "89c87143e905756296d4514cb019077098fb22de80c453dbc048c00db08e313b"
+    },
+    {
+      "path": "documents/f04a-receipt.v1.json",
+      "sha256": "de5640ed17d4e6108f6de7c30345a02cb8ab0598c2a8826124894d2b124247ba"
+    },
+    {
+      "path": "documents/f04a-receipt.v1.meta.json",
+      "sha256": "3676fd7af7c3e151efd7c09e3982bb632ffd81754998b97226d5a5ee1cadb15e"
+    },
+    {
+      "path": "documents/f04a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f04a-supplier-status.v1.meta.json",
+      "sha256": "69fa9dc4d6b70fbb1cffd7574895e07f13ce68973cc812217b54aacb025b4245"
+    }
+  ]
+}

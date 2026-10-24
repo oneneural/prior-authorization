@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Peyton Testcase",
+    "identifier": "SYN-BEN-F08X3"
+  },
+  "orderReference": {
+    "documentId": "f08x3-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-03T17:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

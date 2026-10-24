@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "F18a",
+  "group": "adversarial",
+  "specRow": "F18",
+  "fixture": {
+    "suite": "policy-v2",
+    "fixtureId": "F01",
+    "manifestSha256": "867f4ee978aabef801e5f565c9038118b5ebb71602ae8b9ea0cb51093f676879"
+  },
+  "provider": {
+    "kind": "recorded",
+    "responseId": "f18a-citations"
+  },
+  "authoringNote": "F01 inputs are unchanged, so its oracle outcome holds. Each invented citation fails the named gate check, the low-confidence candidate is recorded but not acceptable, and only the exact signature date citation is valid.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished",
+      "proposalCodes": [
+        "source_unavailable",
+        "locator_mismatch",
+        "value_mismatch",
+        "source_hash_mismatch",
+        "low_confidence",
+        "valid",
+        "source_unavailable",
+        "invalid_schema"
+      ],
+      "prohibitedAttempts": 0,
+      "toolErrors": 0
+    }
+  }
+}

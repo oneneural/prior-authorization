@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26b-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26B",
+  "kind": "order_receipt",
+  "contentHash": "4d847e92c0b5037f6940c514fd0c2ec84ebac1b7a3d239a5c66f6ccc84eb03b2",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-04",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F26b. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

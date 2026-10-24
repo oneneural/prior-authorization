@@ -1,0 +1,354 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F16f",
+  "fixtureManifestSha256": "aabf24505c0027b31370f490691ffc6ae31ba30d41fad5c1b54ccc506d695f4f",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F02",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Administrative requirements",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D1",
+      "D2"
+    ],
+    "conventions": [
+      "C05",
+      "C06",
+      "C07",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "SPEC F02 concerns a finalized order that is absent. Here the only order is current and usable but its status is draft. R03 has no missing element; R04 alone gates the draft status. Under C05 and C09 a draft order is usable for R01, R03 and R05, so R01 passes citing the supplier fields and the draft's K0823 code (eight), R03 passes citing all nine element facts of the draft, and R05 passes because the receipt references the exact draft version and follows its date span 2026-09-01T10:00Z to 2026-09-03T12:00Z (C06; four citations). R04 requires final documents: current usable orders exist but none is final, so R04 holds R04.order_not_final naming the draft, missing for the authorization coordinator. No no_usable_order holds (a current usable order exists) and no candidate condition holds (no order has an R09 condition). Under the recorded reading (R04 reads only final current usable documents), R04 cites only the final encounter's status, date and practitioner identifier (three) and no draft order fact, while its draft diagnostic names the draft. A missing finding names no parent (C07). R02 (six), R07 (one) pass, R06 is qualified clinical review with five clinical citations and no administrative effect, R08 and R09 pass and R10 is not applicable. The state is needs_information. Distinct from F14x3, where a final order exists beside the draft, so no not-final condition holds.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_information",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16f-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f16f-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f16f-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f16f-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f16f-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f16f-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f16f-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/item/code"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f16f-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f16f-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R03",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/signature/signerName"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/signature/signedDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R04",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R04.order_not_final",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f16f-order",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R05",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16f-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f16f-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f16f-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f16f-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16f-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [],
+    "supersededDocuments": [],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "A neutral local request for the existing finalized order is a later workflow action; no order is generated and this snapshot proves only the findings."
+      }
+    ]
+  }
+}

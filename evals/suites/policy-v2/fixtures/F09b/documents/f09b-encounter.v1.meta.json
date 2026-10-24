@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f09b-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F09B",
+  "kind": "encounter",
+  "contentHash": "95a42e632aace98a156a6373a2ab6d7d4e14d95104cba40bf1e12437a3346bad",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-26",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F09b. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

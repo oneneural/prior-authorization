@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f05a-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F05A",
+  "kind": "order_receipt",
+  "contentHash": "532c8b7bf216ad3b91ff0f320e99295ff33edee1a614d0d2da9669fafe64cec9",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-08-26",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F05a. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f11e-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F11E",
+  "kind": "encounter",
+  "contentHash": "71d5a5833335cf982b892e7365d515ecc725fc40ed2a6dfc975de70e795081bc",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-26",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F11e. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "H06",
+  "specFixtureRow": "F01",
+  "title": "Held-out date shift of the supported case",
+  "scenario": "F01 inputs with the encounter, order, signature and receipt dates moved 30 days earlier: encounter 2026-07-21, order and signature 2026-08-03, receipt 2026-08-04T17:05:00Z. Intervals and ordering are unchanged.",
+  "syntheticProvenance": "Original synthetic evaluator input authored by mutating suite policy-v2 fixture F01. Every person, practitioner, supplier and identifier is fictional. No real record or copied policy text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "holdout.dates"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "cbe662b268a86025214996d4c32953af3b52408c6755c06c151a3b2bb8767b2f"
+    },
+    {
+      "path": "documents/f01-encounter.v1.json",
+      "sha256": "1401e3c21bb877736b082ec25689994794fffa270b4c9432e9c38c762751d036"
+    },
+    {
+      "path": "documents/f01-encounter.v1.meta.json",
+      "sha256": "57c03e3bdccb46859e7bd8ad610a90a0b98a6231021d1b478bb2c4380d2bc699"
+    },
+    {
+      "path": "documents/f01-order.v1.json",
+      "sha256": "d793d8f6b7100381292f296cb51bdc410257906fc08b39c14c68e6fee901a059"
+    },
+    {
+      "path": "documents/f01-order.v1.meta.json",
+      "sha256": "b85736fa4007da7649d049fdef7174dd97a7545f6d73edb63f03e7e1bb9977d1"
+    },
+    {
+      "path": "documents/f01-receipt.v1.json",
+      "sha256": "4e6d437df9283d4864ba9bbac62aa864b6f0acffaf5e91fd42b9d45179a043e1"
+    },
+    {
+      "path": "documents/f01-receipt.v1.meta.json",
+      "sha256": "9dcb8feb9bf04d3643282143c11d65802211954aab8efc7c6e9631cbe42722e5"
+    },
+    {
+      "path": "documents/f01-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f01-supplier-status.v1.meta.json",
+      "sha256": "6a73a83fce78e39da86ab3f7935820a82b1375f3767aa2082706f1b981691372"
+    }
+  ]
+}

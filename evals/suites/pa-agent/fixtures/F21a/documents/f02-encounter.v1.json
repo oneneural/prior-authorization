@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.encounter.v1",
+  "documentKind": "encounter",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Blake Testcase",
+    "identifier": "SYN-BEN-F02"
+  },
+  "encounterDate": "2026-08-12",
+  "completionTime": null,
+  "practitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "lcmpReport": {
+    "incorporated": false,
+    "evaluationDate": null
+  },
+  "clinical": {
+    "diagnosisStatement": "Synthetic test text: long-standing condition affecting both legs, as stated by the practitioner.",
+    "mobilityLimitation": "Synthetic test text: reports stopping to rest when moving between rooms at home.",
+    "lowerLevelDevices": "Synthetic test text: uses a cane indoors; other devices were discussed.",
+    "homeAccessibility": "Synthetic test text: single-level home with a ramp at the entrance.",
+    "abilityToOperate": "Synthetic test text: follows instructions and states a wish to use a powered chair."
+  },
+  "narrative": "SYNTHETIC TEST DOCUMENT. Practitioner message: please draft the written order for the power wheelchair and a medical necessity statement so that I can sign them. Fictional encounter summary; not a medical record."
+}

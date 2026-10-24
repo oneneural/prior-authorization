@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F08x4",
+  "specFixtureRow": "F08",
+  "title": "Supporting notes for metadata quarantine and first R09 conditions",
+  "scenario": "A usable final encounter 2026-08-24, final order 2026-09-08, receipt 2026-09-09T16:30:00Z and named supplier record are joined by four supporting notes. Note q has metadata subject SYN-OTH-F08X4 and a contentHash of different bytes. Note h has the case subject and a contentHash of different bytes, and holds an order-kind body. Note m has MIME text/plain, a matching hash and non-JSON bytes. Note u has a declared unreadable access status, a matching hash and non-JSON bytes. No supersession is asserted. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F08",
+    "D2",
+    "D3",
+    "R02.document_quarantined",
+    "R09.access_unreadable",
+    "R09.hash_mismatch",
+    "R09.mime_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "42ac6742b7444d89d637b58fdd2b5049cd825a03c605b7562864ac1f9218a7a6"
+    },
+    {
+      "path": "documents/f08x4-encounter.v1.json",
+      "sha256": "d33e7f906a72b6a7f10d38657c07be478d41fc6f3bf9e22f3a7038d3aed697a4"
+    },
+    {
+      "path": "documents/f08x4-encounter.v1.meta.json",
+      "sha256": "1519362d9a9398330be93840444ab967721dba6f533ff50acc24bf7352361ab5"
+    },
+    {
+      "path": "documents/f08x4-note-h.v1.json",
+      "sha256": "7b1dada69b17cf3454ba3bdfb409be73877c1f6f558b2a120ea8ca4c88b6f667"
+    },
+    {
+      "path": "documents/f08x4-note-h.v1.meta.json",
+      "sha256": "f9d5520e7ed921ec3d82c4f02dc4d99de1756ed5c82b076c7eb6c44fb71c1118"
+    },
+    {
+      "path": "documents/f08x4-note-m.v1.json",
+      "sha256": "33288a9f4e607da7ae086658e44fc279c4e67a9648795a4aa18cc81afff6b5d2"
+    },
+    {
+      "path": "documents/f08x4-note-m.v1.meta.json",
+      "sha256": "8817d916d1d07a391f2f6cceeeaa2b2814ec37bcb5335cff02f38b60e06070a8"
+    },
+    {
+      "path": "documents/f08x4-note-q.v1.json",
+      "sha256": "5326d94b5b786d3d42f157f7348fb8a970a1a339a7e6ffbd8c8538150998ee4c"
+    },
+    {
+      "path": "documents/f08x4-note-q.v1.meta.json",
+      "sha256": "a146e4934ff676f2149c25ed59518ee14aaa38c450ac6089b2bc8cb3bbc1302d"
+    },
+    {
+      "path": "documents/f08x4-note-u.v1.json",
+      "sha256": "9a442d942f6034e56f4fe669574eb7166f8972351901eade24dd8b6b48f86d2f"
+    },
+    {
+      "path": "documents/f08x4-note-u.v1.meta.json",
+      "sha256": "e1590d89a3bfe68d42980dfe6faf3302f75a66ae4cbe0674a9d230e6bb4e0a81"
+    },
+    {
+      "path": "documents/f08x4-order.v1.json",
+      "sha256": "76ac6e250c95ae7d6945f8cdf8b8340dd25771350dd82989ef1f060bd57ad6d6"
+    },
+    {
+      "path": "documents/f08x4-order.v1.meta.json",
+      "sha256": "d8b30e76e192b071090dd6963024bf90dbc409ba939e334ef27aacc083a065f9"
+    },
+    {
+      "path": "documents/f08x4-receipt.v1.json",
+      "sha256": "d2ead5a22dad6c13826094eaac9e1da87ff8a35a5335e80ab1dd2449b4ec39b6"
+    },
+    {
+      "path": "documents/f08x4-receipt.v1.meta.json",
+      "sha256": "02a2b8b6747559460e4f776ae2c55998018c72f23e50b6b5b324f35167081b5d"
+    },
+    {
+      "path": "documents/f08x4-supplier-status.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f08x4-supplier-status.v1.meta.json",
+      "sha256": "e21019ee812a3d5c9329fbfd1ecbc0be05eea02cca91a182bb7a7c078eba3997"
+    }
+  ]
+}

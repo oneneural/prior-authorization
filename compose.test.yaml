@@ -1,0 +1,27 @@
+# Disposable PostgreSQL for integration tests only. This is not the application
+# deployment: it has no app service, no evidence volume and no seeded data.
+# Tests create and drop their own databases and roles through the admin account.
+name: prior-authorization-test
+
+services:
+  db:
+    image: postgres:18.6-bookworm
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${PA_TEST_POSTGRES_PASSWORD:?set PA_TEST_POSTGRES_PASSWORD, see docs/development.md}
+      POSTGRES_DB: postgres
+    ports:
+      - 127.0.0.1:35105:5432
+    volumes:
+      # PostgreSQL 18 images keep PGDATA under /var/lib/postgresql/18/docker. The
+      # password applies only when this volume is first initialised, so
+      # `pnpm db:test:down` removes the volume (down -v) with the container.
+      - db-data:/var/lib/postgresql
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U postgres -d postgres]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  db-data:

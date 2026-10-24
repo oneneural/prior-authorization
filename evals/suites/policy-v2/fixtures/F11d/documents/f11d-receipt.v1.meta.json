@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f11d-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F11D",
+  "kind": "order_receipt",
+  "contentHash": "eadc1d70d6db943e20f8efb9255fd817d174326e300cf8ebf5eb5724d82e3985",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-05",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F11d. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

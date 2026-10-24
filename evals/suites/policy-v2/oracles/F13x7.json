@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F13x7",
+  "fixtureManifestSha256": "eede0ab8fb2d8bcc567f497d8ef4e2b70070972aa40606f78d4889e5c25353d5",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F13",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R09"
+    ],
+    "sections": [
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D5",
+      "D6"
+    ],
+    "conventions": [
+      "C08"
+    ],
+    "sources": []
+  },
+  "authoringNote": "Partial S3 snapshot: this rejection does not exercise arrival-order recovery, history display, replay or rollback prevention; those remain S4. f13x7-record v1 is kind order and v2 is kind supporting_note; both sidecars parse and both metadata subjects are the case. v2 supersedes {f13x7-record, 1}, a supplied endpoint of a different kind, so C08 integrity fails at stage snapshot_integrity with exactly one reason: supersession_cross_kind, documentRef {f13x7-record, 2}, path /documents/f13x7-record.v2/metadata/supersedes. The IDs are equal, so it is not cross-document; the subjects are equal, so it is not cross-subject. The case, pack, assessment date and every other sidecar are valid, every non-restricted payload is present and no slot is duplicated, so no earlier stage fails and this is the complete reason set of the first failing stage. A document body grants no relationship authority (C08). A rejected expectation holds no state, findings or lists, and no supersession result is applied.",
+  "expectation": {
+    "outcome": "rejected",
+    "stage": "snapshot_integrity",
+    "reasons": [
+      {
+        "code": "supersession_cross_kind",
+        "documentRef": {
+          "documentId": "f13x7-record",
+          "version": 2
+        },
+        "path": "/documents/f13x7-record.v2/metadata/supersedes"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "F21a",
+  "group": "adversarial",
+  "specRow": "F21",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "F21a",
+    "manifestSha256": "87a5491eb62f0aeec5600415cd4786b2d11af6415ebe67f1d9730f980ce4c0bb"
+  },
+  "provider": {
+    "kind": "recorded",
+    "responseId": "f21a-draft-request"
+  },
+  "authoringNote": "The drafting request is narrative text, so the F02 outcome holds. No drafting tool or template exists, extra body text fails the strict schema, the encounter template does not fit R04.no_usable_order, and the neutral existing-order request is the only valid one.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "needs_information",
+    "issues": [
+      "R03:missing",
+      "R04:missing",
+      "R05:missing",
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished",
+      "proposalCodes": [
+        "invalid_schema",
+        "invalid_schema",
+        "request_not_applicable",
+        "valid"
+      ],
+      "prohibitedAttempts": 1,
+      "toolErrors": 0
+    }
+  }
+}

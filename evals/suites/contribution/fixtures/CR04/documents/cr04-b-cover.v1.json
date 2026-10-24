@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Avery Testcase",
+    "identifier": "SYN-BEN-F01"
+  },
+  "authoredDate": "2026-10-16",
+  "title": "Administrative reconciliation queue",
+  "text": "Intake and supplier compliance record are separate administrative sources. A discrepancy is queued for operator review; no replacement record is supplied."
+}

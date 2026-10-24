@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Isle Testcase",
+    "identifier": "SYN-BEN-F26I"
+  },
+  "authoredDate": "2026-09-22",
+  "title": "Synthetic payload size note (at the limit)",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F26i. Fictional intake filler with no clinical content, at the byte bound: @@PAD@@"
+}

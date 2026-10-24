@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v1",
+  "fixtureId": "F01",
+  "specFixtureRow": "F01",
+  "title": "Supported K0823 initial case",
+  "scenario": "Final encounter on 2026-08-20 and final signed order on 2026-09-02 by the same practitioner identifier; supplier receipt recorded on 2026-09-03; current non-exempt supplier status; no LCMP report. All scope facts are explicit and supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "ab45044fa77b03c9ae7b7f0c80db111352546459ed0c0474bd0ff3b6878a0b6c"
+    },
+    {
+      "path": "documents/f01-encounter.v1.json",
+      "sha256": "8b7d9b98edbb0bad09e100d009ce47fa3ab006582a55b0850814cae92be94e83"
+    },
+    {
+      "path": "documents/f01-encounter.v1.meta.json",
+      "sha256": "7c68c4afebcc1b942f89393867996407e70532799c186f1b9e5af00d7fbd240a"
+    },
+    {
+      "path": "documents/f01-order.v1.json",
+      "sha256": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76"
+    },
+    {
+      "path": "documents/f01-order.v1.meta.json",
+      "sha256": "35e704b804d1e76ae786bb4450bf9aab1cb946021c5c8aec9979847d894d9028"
+    },
+    {
+      "path": "documents/f01-receipt.v1.json",
+      "sha256": "73a1163ce890281946ed877ce262fa30df4a648f93d0f8d239babfe6d99edc59"
+    },
+    {
+      "path": "documents/f01-receipt.v1.meta.json",
+      "sha256": "da2563035a8f0e0c3c24b21c679f5f402eca58d5d0a634c140ee7c0761222357"
+    },
+    {
+      "path": "documents/f01-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f01-supplier-status.v1.meta.json",
+      "sha256": "6a73a83fce78e39da86ab3f7935820a82b1375f3767aa2082706f1b981691372"
+    }
+  ]
+}

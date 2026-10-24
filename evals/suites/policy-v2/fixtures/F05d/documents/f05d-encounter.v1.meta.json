@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f05d-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F05D",
+  "kind": "encounter",
+  "contentHash": "cb2d89b844ea86c7ef1682b47049bed020033e6a874229aa2eff53c77a1bf2d3",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-20",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F05d. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

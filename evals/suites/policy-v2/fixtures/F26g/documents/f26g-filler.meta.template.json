@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26g-filler-@@N@@",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26G",
+  "kind": "supporting_note",
+  "contentHash": "084e310c2acae53823b6dbb03170dafcdd6d668481bfd0803d2421b37dd719bb",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:40:00Z",
+  "authoredAt": "2026-09-10",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic replicated filler note @@N@@ authored for fixture F26g. Fictional beneficiary and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

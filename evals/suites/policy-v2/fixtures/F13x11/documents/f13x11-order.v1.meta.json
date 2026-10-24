@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f13x11-order",
+  "version": 1,
+  "subjectId": "SYN-BEN-F13X11",
+  "kind": "order",
+  "contentHash": "df2a8f4e71befea6e05e90e288b0d329ca9801f4ddf9f8a15609a44386cdc67c",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-16T14:05:00Z",
+  "authoredAt": "2026-09-08",
+  "supersedes": {
+    "documentId": "f13x11-order",
+    "version": 2
+  },
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F13x11. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

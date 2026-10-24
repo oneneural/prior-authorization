@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+/* Pilot tokens: neutral surfaces with the violet administrative-healthcare accent.
+   Status is always stated in text, never by color alone. */
+@theme {
+  --color-canvas: #f7f7f8;
+  --color-panel: #ffffff;
+  --color-ink: #1c1b22;
+  --color-muted: #55525f;
+  --color-line: #dedce4;
+  --color-accent: #5b3cc4;
+  --color-accent-soft: #efeafc;
+  --color-warning: #8a4b00;
+  --color-warning-soft: #fff4e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-canvas: #141318;
+    --color-panel: #1d1b23;
+    --color-ink: #f1eff6;
+    --color-muted: #b4b0c0;
+    --color-line: #34313d;
+    --color-accent: #b9a6ff;
+    --color-accent-soft: #2a2340;
+    --color-warning: #ffc777;
+    --color-warning-soft: #33260f;
+  }
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}

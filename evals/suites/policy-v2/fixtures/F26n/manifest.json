@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F26n",
+  "specFixtureRow": "F26",
+  "title": "Escapes and oversized payloads within the count limit",
+  "scenario": "Supported K0823 packet plus three supporting notes with generated payloads of 1,048,577, 1,048,577 and 1,048,576 bytes and two inert path attempts, one relative and one absolute, for nine counted slots.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F26",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "737d6541737fcfe8650d64b8a4e3a689804083333e1d9e205414a7f1cb80d357"
+    },
+    {
+      "path": "documents/f26n-encounter.v1.json",
+      "sha256": "d8a87623a6c7149c46eb85ac58386632f930430db713174c826911b8b470b9a7"
+    },
+    {
+      "path": "documents/f26n-encounter.v1.meta.json",
+      "sha256": "b772b6b22fdb2ed19877eb3541c2bd4d407a08556c78b3e3a37cb8e9b983055d"
+    },
+    {
+      "path": "documents/f26n-large-a.v1.meta.json",
+      "sha256": "646a0ca0a58647345cd561653413eec6d02796111f344e12e6fad5f04d3b4b23"
+    },
+    {
+      "path": "documents/f26n-large-b.v1.meta.json",
+      "sha256": "af9ee6022ab5e063bc90a52cdf25949f7c5c06f1b95ac8089e1e6799b0c1b3d8"
+    },
+    {
+      "path": "documents/f26n-large-c.v1.meta.json",
+      "sha256": "ee51709f5325b59758b2e8d0c3b979d601920ef0b8799dbfb9c98c07f7f1432c"
+    },
+    {
+      "path": "documents/f26n-limit.template.json",
+      "sha256": "4f6ea744f2f058e186a2fe3796e44bd2b1263fb29b332acf6d0bcfdefabb6ff7"
+    },
+    {
+      "path": "documents/f26n-order.v1.json",
+      "sha256": "bdc58dc37a71ed539494714fa21fca7dc0dfb98cac623561ebeb11341e2df404"
+    },
+    {
+      "path": "documents/f26n-order.v1.meta.json",
+      "sha256": "fba189beb36db8f407dabc1701d5b2fe9ac2f82626811c4c87f452bf1e688386"
+    },
+    {
+      "path": "documents/f26n-over.template.json",
+      "sha256": "a50667d900f21b70b68fb63156af4d1be3f63990c9d046c64e7e14818a276077"
+    },
+    {
+      "path": "documents/f26n-receipt.v1.json",
+      "sha256": "8f797d629664c7e88399c7350fc52e9a5a26aaca3d7aee07cf0d694021c9b954"
+    },
+    {
+      "path": "documents/f26n-receipt.v1.meta.json",
+      "sha256": "bea09a6fc48776b82c8b14243f41ca2376e8b769f0b1641cf7d7b7a5c08729dd"
+    },
+    {
+      "path": "documents/f26n-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f26n-supplier-status.v1.meta.json",
+      "sha256": "d9579b1c605a01df4c93595a43023a88f0eba754f5f7c8bfaa805bc745720e8a"
+    }
+  ],
+  "pathAttempts": [
+    {
+      "slot": "escape-relative.v1",
+      "path": "../outside-root.json"
+    },
+    {
+      "slot": "escape-absolute.v1",
+      "path": "/outside-root/blocked.json"
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "pad",
+      "template": "documents/f26n-over.template.json",
+      "placeholder": "@@PAD@@",
+      "fill": "é",
+      "targetBytes": 1048577,
+      "output": "documents/f26n-large-a.v1.json",
+      "sha256": "778d9873967ca5503d4fdafd6b2782898ad7ecd604f3c91ff45ee6813afbd0c2"
+    },
+    {
+      "recipe": "pad",
+      "template": "documents/f26n-over.template.json",
+      "placeholder": "@@PAD@@",
+      "fill": "é",
+      "targetBytes": 1048577,
+      "output": "documents/f26n-large-b.v1.json",
+      "sha256": "778d9873967ca5503d4fdafd6b2782898ad7ecd604f3c91ff45ee6813afbd0c2"
+    },
+    {
+      "recipe": "pad",
+      "template": "documents/f26n-limit.template.json",
+      "placeholder": "@@PAD@@",
+      "fill": "é",
+      "targetBytes": 1048576,
+      "output": "documents/f26n-large-c.v1.json",
+      "sha256": "4cba5c7317bfc96a48789a5b10529254f5ac30ce889e44f9feac535ee95d2a45"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H03",
+  "group": "holdout",
+  "specRow": "F01",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H03",
+    "manifestSha256": "62f2a80095113bc44a2655de35cc9ede696066d5b3b158f2dfa588488a146701"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "Slot names never carry identity (loader N3), so a reversed slot sequence keeps the F01 outcome.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

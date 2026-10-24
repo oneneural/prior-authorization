@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Gray Testcase",
+    "identifier": "SYN-BEN-F23"
+  },
+  "orderReference": {
+    "documentId": "f23-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-09T17:30:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

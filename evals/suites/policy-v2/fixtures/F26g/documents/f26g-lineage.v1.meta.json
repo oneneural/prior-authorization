@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26g-lineage",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26G",
+  "kind": "supporting_note",
+  "contentHash": "a75fe5ca6592713fa06e403ebb469db072b38a8caba9308ec6dff1f6302f2667",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:20:00Z",
+  "authoredAt": "2026-09-08",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F26g. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F10e",
+  "specFixtureRow": "F10",
+  "title": "Expired supplier status interval",
+  "scenario": "Supported K0823 packet except that the case supplier status and the named supplier record both state the interval 2025-10-01 to 2026-09-30, which ended before the assessment date 2026-10-18.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F10",
+    "R01.case_supplier_interval_excludes_date",
+    "R01.supplier_record_interval_excludes_date"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "e8512d3ce4833096f69d1d3be67610decd09346caa7c705e07b597d35a1e2d08"
+    },
+    {
+      "path": "documents/f10e-encounter.v1.json",
+      "sha256": "c3e16a1796fd501d3e32ab2cbeb277af4ee56f4fb54891bd1b6f68d917bccba9"
+    },
+    {
+      "path": "documents/f10e-encounter.v1.meta.json",
+      "sha256": "78c2d1543c7d2cde7c557a043f8b53a7a7cbe354dd5f46bc19be8043123e99fb"
+    },
+    {
+      "path": "documents/f10e-order.v1.json",
+      "sha256": "a910f78102676df6098e7cc8cc4d157c2acbdf462f2b427faac3d5e0b675b485"
+    },
+    {
+      "path": "documents/f10e-order.v1.meta.json",
+      "sha256": "66b79797f91e3989765b0c558f28adb493961ebe72fae4d30372184588257f4f"
+    },
+    {
+      "path": "documents/f10e-receipt.v1.json",
+      "sha256": "7c9abbead87138ab6e6bf75871b589945b0ae5e30e2a03ead3e4cd42d56f822f"
+    },
+    {
+      "path": "documents/f10e-receipt.v1.meta.json",
+      "sha256": "a4ec89911f167e7e4d7db3893e9807633871a5d4f004d5d03eefe6ce6c693494"
+    },
+    {
+      "path": "documents/f10e-supplier-status.v1.json",
+      "sha256": "5082a4adcaadb5a75f8f9bf60e1c58288727feaca258925d1378cae0f738a3d0"
+    },
+    {
+      "path": "documents/f10e-supplier-status.v1.meta.json",
+      "sha256": "104ba6ebe558c13520c7df97a77f2a4764e180e5398f4cd7b134f2e73689c7a2"
+    }
+  ]
+}

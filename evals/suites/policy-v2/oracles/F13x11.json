@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F13x11",
+  "fixtureManifestSha256": "fb7327c1cdf5b0eb26b361cef73ff7d2ccca056b6c7cd037aca2a755502b7a06",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F13",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R09"
+    ],
+    "sections": [
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D5",
+      "D6"
+    ],
+    "conventions": [
+      "C08"
+    ],
+    "sources": []
+  },
+  "authoringNote": "Partial S3 snapshot: this rejection does not exercise arrival-order recovery, history display, replay or rollback prevention; those remain S4. Approved cycle and forward-reference reuse. f13x11-order v1 supersedes {f13x11-order, 2}, a forward same-ID reference, so only its sidecar fails the metadata schema: stage schema, document_metadata_invalid, documentRef {f13x11-order, 1}, path /documents/f13x11-order.v1/metadata. v2 supersedes the earlier v1, which is valid metadata. The snapshot stage is never reached, so there is no supersession_cycle reason; that code stays structurally defined and unreachable after valid metadata. The case, pack, assessment date and every other sidecar are valid, every non-restricted payload is present and no slot is duplicated, so no earlier stage fails and this is the complete reason set of the first failing stage. A document body grants no relationship authority (C08). A rejected expectation holds no state, findings or lists, and no supersession result is applied.",
+  "expectation": {
+    "outcome": "rejected",
+    "stage": "schema",
+    "reasons": [
+      {
+        "code": "document_metadata_invalid",
+        "documentRef": {
+          "documentId": "f13x11-order",
+          "version": 1
+        },
+        "path": "/documents/f13x11-order.v1/metadata"
+      }
+    ]
+  }
+}

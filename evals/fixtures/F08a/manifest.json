@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v1",
+  "fixtureId": "F08a",
+  "specFixtureRow": "F08",
+  "title": "Attachment with a different subject beside a valid order",
+  "scenario": "A complete supported packet (encounter 2026-08-14, order 2026-08-28, receipt 2026-08-29) plus an attached encounter summary whose metadata subject and stated beneficiary name and identifier belong to a different fictional beneficiary.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "7ba00fb7896913b25421dd32f3f7a0354ec0f01882c191186447f679aec81e5a"
+    },
+    {
+      "path": "documents/f08a-attachment.v1.json",
+      "sha256": "66680d7928cb697c22debb063307114156e71dc7a3180449382760cff7e1d44b"
+    },
+    {
+      "path": "documents/f08a-attachment.v1.meta.json",
+      "sha256": "73b58e69bfb6d78a04287daab16ad58ec9a0d475742ff7930a2c13a3637dfe5c"
+    },
+    {
+      "path": "documents/f08a-encounter.v1.json",
+      "sha256": "fe0255840aca7d70e88a5d9de9515b72d9ea6735324936a3e80ad67edf04ccc0"
+    },
+    {
+      "path": "documents/f08a-encounter.v1.meta.json",
+      "sha256": "21c9178edec94b5d9ea7f0966044eff785eb2ab2960689bfb4a56e66b39a5be4"
+    },
+    {
+      "path": "documents/f08a-order.v1.json",
+      "sha256": "df5fb4f09d2bf431f35a41f6b52a061eeeefff72e4af0b265cf42475332c16b6"
+    },
+    {
+      "path": "documents/f08a-order.v1.meta.json",
+      "sha256": "0e425ba742220230265d0553c1d7f90e738b90d16ff0feb141420b459bb8a8e5"
+    },
+    {
+      "path": "documents/f08a-receipt.v1.json",
+      "sha256": "2dbf5a9df61e5ef175da775fce1f759390c5ef9932c9ba2292077773c6410f82"
+    },
+    {
+      "path": "documents/f08a-receipt.v1.meta.json",
+      "sha256": "b96851e598890841252770c897bd8aa82089d06941ef11b48a5c19cd381582bd"
+    },
+    {
+      "path": "documents/f08a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f08a-supplier-status.v1.meta.json",
+      "sha256": "3ca8fe25d8691157c7d5e8114681a0008c3a230f354541be11788b04fae6b7b0"
+    }
+  ]
+}

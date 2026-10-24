@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "H01",
+  "specFixtureRow": "F01",
+  "title": "Held-out layout change of the supported case",
+  "scenario": "F01 inputs with every source body serialized on one line and its object keys in reverse order. Values, identities and dates are unchanged.",
+  "syntheticProvenance": "Original synthetic evaluator input authored by mutating suite policy-v2 fixture F01. Every person, practitioner, supplier and identifier is fictional. No real record or copied policy text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "holdout.layout"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "cbe662b268a86025214996d4c32953af3b52408c6755c06c151a3b2bb8767b2f"
+    },
+    {
+      "path": "documents/f01-encounter.v1.json",
+      "sha256": "c4f1ada41cf9ac3360c95f4b773932210fdd8d1fcc21c50768d19f3780549ad2"
+    },
+    {
+      "path": "documents/f01-encounter.v1.meta.json",
+      "sha256": "6e397df375f4b014e36c5ff270c44fe8392367bcbc7efccb857e7d9ac66e1ca0"
+    },
+    {
+      "path": "documents/f01-order.v1.json",
+      "sha256": "50d7547e191c3b7046fc39e0fbffabe079f7dc4e96ff70b9f325665724d03fb8"
+    },
+    {
+      "path": "documents/f01-order.v1.meta.json",
+      "sha256": "b0b6f8c7160374a757cc40c4128b1b1009cbf50010d7fdffb30e5c13f6ced64b"
+    },
+    {
+      "path": "documents/f01-receipt.v1.json",
+      "sha256": "29351d623a5bd8b143637beedae987896fc8ec56be3ed6b1cf3ec2797aaf0375"
+    },
+    {
+      "path": "documents/f01-receipt.v1.meta.json",
+      "sha256": "beedffe30511a6fd016421b3c24f33bbaf3716ccee05cbc6550f4ac2807acab6"
+    },
+    {
+      "path": "documents/f01-supplier-status.v1.json",
+      "sha256": "d25e97cd0b0b9d1e2fd8fc8db94d4d9b03129151618edbd9d01dc963e4d61187"
+    },
+    {
+      "path": "documents/f01-supplier-status.v1.meta.json",
+      "sha256": "afdc053de0a4d211c2d96a928a2717b52b2dd2a7d838470aba5832f48a711e03"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "cr03-m-register",
+  "version": 1,
+  "subjectId": null,
+  "kind": "supplier_status",
+  "contentHash": "4b098228e9b240816714393380594614cab70ed432e06e9c128242f5129a1284",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_compliance",
+  "receivedAt": "2026-10-17T16:00:00Z",
+  "authoredAt": "2026-10-16",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Evaluator-authored original synthetic administrative record, 2026-10-22. All entities and events are fictional. No real record, real PHI, external transport, clinical statement or copied policy text. This is a records representation, not an order or a medical note."
+  },
+  "accessStatus": "available"
+}

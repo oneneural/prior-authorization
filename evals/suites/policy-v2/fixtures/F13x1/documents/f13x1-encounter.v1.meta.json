@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f13x1-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F13X1",
+  "kind": "encounter",
+  "contentHash": "6981b3bf9a7f58d28e70a9810eb6242eceeffd9781619ed072463ce8a642fa91",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-16T14:00:00Z",
+  "authoredAt": "2026-08-24",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F13x1. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

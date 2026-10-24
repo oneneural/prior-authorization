@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f16g-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F16G",
+  "kind": "encounter",
+  "contentHash": "c10b702ffdc30bcab1ca2c482469f4ea00110a9bd60dab1834f01727e0c5595d",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-26",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F16g. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

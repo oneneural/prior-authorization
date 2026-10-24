@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H07",
+  "group": "holdout",
+  "specRow": "F05",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H07",
+    "manifestSha256": "9a55822dc57f42ed3f7934b7963dabdeb0d14a3991eb5b2c0bcb172741099031"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "Encounter 2026-01-20 gives the C01 bound 2026-07-20; the order of 2026-08-25 is after it (F05, R04.order_after_bound): R04 conflict and needs_human_review.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "issues": [
+      "R04:conflict",
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

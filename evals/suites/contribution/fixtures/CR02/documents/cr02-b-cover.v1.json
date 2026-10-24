@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Avery Testcase",
+    "identifier": "SYN-BEN-F01"
+  },
+  "authoredDate": "2026-10-16",
+  "title": "Administrative archive cover",
+  "text": "Record transfer envelope only; no receipt details are recorded in this cover."
+}

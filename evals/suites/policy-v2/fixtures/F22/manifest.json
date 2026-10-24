@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F22",
+  "specFixtureRow": "F22",
+  "title": "K0823 case without ATP, specialty evaluation or proof of delivery",
+  "scenario": "The supported case (encounter 2026-08-18, order 2026-08-31, receipt 2026-09-01) plus a supplier worksheet stating that an ATP evaluation, a specialty evaluation, a home assessment and proof of delivery are not on file.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included. Migrated to the version 2 suite on 2026-10-20: every source and metadata file is byte-identical to the first-slice original, and case.json changes only its schema version and policy pack ID.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F22",
+    "R07"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "d5fab388c4aee2bdc8531fe21af5f4e92a87a25dd9ff73c046fe718e2dd8ca93"
+    },
+    {
+      "path": "documents/f22-encounter.v1.json",
+      "sha256": "37debdde015c1a1050f69614e8d447996b4c8da4d56e457f0180f0ae73c37f41"
+    },
+    {
+      "path": "documents/f22-encounter.v1.meta.json",
+      "sha256": "06d84aa85ba650f592e8b71cbe3f62fb0f9df2674fecfa5e82ee0785f0923fd0"
+    },
+    {
+      "path": "documents/f22-order.v1.json",
+      "sha256": "33b49b0ae17fbdcb2d8deaccbc3dfabda36f03997d9345ee0a7dc7b7c4c8ad82"
+    },
+    {
+      "path": "documents/f22-order.v1.meta.json",
+      "sha256": "c05dadc483748347621773e623e65d225152445bd86f25362533c82b016e3cd5"
+    },
+    {
+      "path": "documents/f22-receipt.v1.json",
+      "sha256": "fe1d4a1bc1b0acd80856303c533e420f7e4917ea6d6efb51ecdb84e1f33c3d98"
+    },
+    {
+      "path": "documents/f22-receipt.v1.meta.json",
+      "sha256": "93de2397daacbe196ce3a767a0f0ab9f7a218a401b3fc5b538b5acc6db43b0e0"
+    },
+    {
+      "path": "documents/f22-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f22-supplier-status.v1.meta.json",
+      "sha256": "3c9770dc8a09dcd40b7b2c0471467ea0c3f2898b6f92cc6cff5e6db2b171192f"
+    },
+    {
+      "path": "documents/f22-worksheet.v1.json",
+      "sha256": "9cb535b82ac8b1ff9b691a14818dcbffe7f84146624faf34bc2edf81b9457bbd"
+    },
+    {
+      "path": "documents/f22-worksheet.v1.meta.json",
+      "sha256": "195ec520de8da3e159880e01f5bef846c82e4862ecfe91856b07cb082dfda34c"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Avery Testcase",
+    "identifier": "SYN-BEN-F01"
+  },
+  "orderReference": {
+    "documentId": "synthetic-archive-item",
+    "version": 1
+  },
+  "receivedAt": "2026-07-07T18:00:00Z",
+  "recordedByRole": "synthetic supplier records clerk"
+}

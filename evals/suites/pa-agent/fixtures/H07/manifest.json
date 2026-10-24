@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "H07",
+  "specFixtureRow": "F05",
+  "title": "Held-out date shift of the order outside the six-month interval",
+  "scenario": "F05a inputs with new dates: final encounter 2026-01-20, so the C01 bound is 2026-07-20, and a final order and signature dated 2026-08-25, after the bound. Receipt recorded on 2026-08-26T17:05:00Z.",
+  "syntheticProvenance": "Original synthetic evaluator input authored by mutating suite policy-v2 fixture F05a. Every person, practitioner, supplier and identifier is fictional. No real record or copied policy text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "holdout.dates"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "0fef65e0ae4eca7a1d034d2338321f8a57f8fc4254cba94441f0a99605c82b57"
+    },
+    {
+      "path": "documents/f05a-encounter.v1.json",
+      "sha256": "a072ceb68b9d3e6f24d1876cc59b3dca29c0a093c3923b2d513716b17789b135"
+    },
+    {
+      "path": "documents/f05a-encounter.v1.meta.json",
+      "sha256": "961677daecbd5aecf2ac62fc13e1b85eb2a1659c63bbf172a3d2f241a6582014"
+    },
+    {
+      "path": "documents/f05a-order.v1.json",
+      "sha256": "04218cb8b21250ff0dccaf068642023ad437184192d4b6a88bf23f829f84bede"
+    },
+    {
+      "path": "documents/f05a-order.v1.meta.json",
+      "sha256": "aac6c4ed89982d08e2c6dc71dfe4b88a3ebff3db40a43380dbf827b873e9d8ec"
+    },
+    {
+      "path": "documents/f05a-receipt.v1.json",
+      "sha256": "532c8b7bf216ad3b91ff0f320e99295ff33edee1a614d0d2da9669fafe64cec9"
+    },
+    {
+      "path": "documents/f05a-receipt.v1.meta.json",
+      "sha256": "ed670b7a3b8d7ac271113a2984215af7629b8415c14a395787319dabd315976c"
+    },
+    {
+      "path": "documents/f05a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f05a-supplier-status.v1.meta.json",
+      "sha256": "05c56c9e32b8f9b410f022945452aa3dd2942843c3f8aa9e1ca569aa7b249e4d"
+    }
+  ]
+}

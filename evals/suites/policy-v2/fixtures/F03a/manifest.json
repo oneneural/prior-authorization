@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F03a",
+  "specFixtureRow": "F03",
+  "title": "Order without signature metadata",
+  "scenario": "Final encounter on 2026-08-20 and a final order dated 2026-09-02 by the same practitioner identifier. The order states the beneficiary, date, item, quantity and practitioner but no signature metadata (signature null). Supplier receipt of that order recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F03",
+    "D2",
+    "R03.element_missing"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "103cb3ce32d76c19e59b810a6d8961533dece61537273c7610e64fc02b7741b3"
+    },
+    {
+      "path": "documents/f03a-encounter.v1.json",
+      "sha256": "7e74bd798f41210cc8bc3e6d62dad73d976f7b987f0c947d82a1a949842967c4"
+    },
+    {
+      "path": "documents/f03a-encounter.v1.meta.json",
+      "sha256": "b6cad95029aa10c5c8c37f9752bd2126f973f462ad69b1e39e3f7e1b577951a3"
+    },
+    {
+      "path": "documents/f03a-order.v1.json",
+      "sha256": "63c40152fc3b9c0f04fc9ec3aeedf83ac0b871991dddfb63d355f4ea9174c040"
+    },
+    {
+      "path": "documents/f03a-order.v1.meta.json",
+      "sha256": "facb2ba600121105328468cad2c7473e1168c8e8e53211b67591421ec435b786"
+    },
+    {
+      "path": "documents/f03a-receipt.v1.json",
+      "sha256": "5df1ad567d1c2c87e10f74af042734e9fc23f694da9967965767997ba94897d6"
+    },
+    {
+      "path": "documents/f03a-receipt.v1.meta.json",
+      "sha256": "40b89261b060c9614bb97734d18fe5e83c638c51341af5e267256839f34d96cb"
+    },
+    {
+      "path": "documents/f03a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f03a-supplier-status.v1.meta.json",
+      "sha256": "9d86d8efd69a5df31c95115e9b7df120fb017340ddf85f62c39f2258533d12f3"
+    }
+  ]
+}

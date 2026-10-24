@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "CR01",
+  "specFixtureRow": "F16",
+  "title": "Fragmented supplier interval and linked receipt",
+  "scenario": "Supplier interval and receipt linkage are in separate records. An older unlinked receipt and an intake cover note are distractors. The existing finalized synthetic order is unchanged. Encounter source bytes are restricted, not absent.",
+  "syntheticProvenance": "Evaluator-authored original synthetic administrative record, 2026-10-22. All entities and events are fictional. No real record, real PHI, external transport, clinical statement or copied policy text. This is a records representation, not an order or a medical note. Case composition is new. Where present, f01-order v1 and its metadata are reused without any byte change from the pinned repository original finalized synthetic fixture; they were not authored or altered here. Restricted encounter metadata is an administrative archive entry only, with no clinical payload.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "PA-A01",
+    "PA-A02",
+    "PA-A08",
+    "PA-A09",
+    "PA-PUB03",
+    "F16"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "70683208391de4ba3a1b828870a0e798e1e01d84ba67301e4adbde6f3090139c"
+    },
+    {
+      "path": "documents/cr01-a-capture.v1.json",
+      "sha256": "dff525a1b3ff0cbb2a263accafc4613ce60d03b73bdb0c7ab9d1dc747ee4c85f"
+    },
+    {
+      "path": "documents/cr01-a-capture.v1.meta.json",
+      "sha256": "0b0c37e96f1dc8d686a642edb744c274f1c1cf3f14cb016f4b75ee897f2d7961"
+    },
+    {
+      "path": "documents/cr01-b-cover.v1.json",
+      "sha256": "2cd720c1fba04c805a513fac30083d434f5fb2fa0fdaeeaefe3af4a88339a97a"
+    },
+    {
+      "path": "documents/cr01-b-cover.v1.meta.json",
+      "sha256": "0231ce48d7b4b12462b3aa8e114e5cc7140904914b479d6f5b1ae5bf3ec806b7"
+    },
+    {
+      "path": "documents/cr01-m-register.v1.json",
+      "sha256": "df01d7f8ed4afcff60911baaf65a2f2d0e7a5bacac3a5654da1dd8d22e366cce"
+    },
+    {
+      "path": "documents/cr01-m-register.v1.meta.json",
+      "sha256": "871a478f5c40f75fedc341eb2a6eebf39b9e9f07ed84d1e3aa4518a99ef7fffb"
+    },
+    {
+      "path": "documents/cr01-q-archive.v1.meta.json",
+      "sha256": "8916a4989ac466d66fe9a7cfffc1f6761e63c5bad10e9b3892d0a3ad0c416621"
+    },
+    {
+      "path": "documents/cr01-z-capture.v1.json",
+      "sha256": "c233c515398b1f694a6b415f737b735726ef795db91e97b02de3876f08830c90"
+    },
+    {
+      "path": "documents/cr01-z-capture.v1.meta.json",
+      "sha256": "120247254d425af9674679c0642af2fe6c4e1257215fccd4e92d875257d89b5f"
+    },
+    {
+      "path": "documents/f01-order.v1.json",
+      "sha256": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76"
+    },
+    {
+      "path": "documents/f01-order.v1.meta.json",
+      "sha256": "35e704b804d1e76ae786bb4450bf9aab1cb946021c5c8aec9979847d894d9028"
+    }
+  ]
+}

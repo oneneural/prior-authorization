@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Haven Testcase",
+    "identifier": "SYN-BEN-F13X3"
+  },
+  "orderReference": {
+    "documentId": "f13x3-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-09T16:30:00Z",
+  "recordedByRole": "supplier intake clerk (fictional)"
+}

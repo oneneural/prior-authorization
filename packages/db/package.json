@@ -1,0 +1,51 @@
+{
+  "name": "@pa/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "@pa/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./provision": {
+      "@pa/source": "./src/provision.ts",
+      "types": "./dist/provision.d.ts",
+      "default": "./dist/provision.js"
+    },
+    "./migrate": {
+      "@pa/source": "./src/migrate.ts",
+      "types": "./dist/migrate.d.ts",
+      "default": "./dist/migrate.js"
+    },
+    "./testing": {
+      "@pa/source": "./src/testing.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "generate": "drizzle-kit generate",
+    "provision": "node dist/bin/provision.js",
+    "migrate": "node dist/bin/migrate.js"
+  },
+  "dependencies": {
+    "@langchain/core": "catalog:",
+    "@langchain/langgraph-checkpoint": "catalog:",
+    "@langchain/langgraph-checkpoint-postgres": "catalog:",
+    "@opentelemetry/api": "catalog:",
+    "@pa/config": "workspace:*",
+    "@pa/contracts": "workspace:*",
+    "drizzle-orm": "catalog:",
+    "pg": "catalog:",
+    "pg-boss": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "catalog:",
+    "drizzle-kit": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

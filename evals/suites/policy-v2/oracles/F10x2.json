@@ -1,0 +1,377 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F10x2",
+  "fixtureManifestSha256": "3d9ec86924d4d38560bfc0aa7f795221d8936a1ab6cdcf8a6688b3c151bae14e",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F10",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Administrative requirements",
+      "Data contracts",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2",
+      "D4"
+    ],
+    "conventions": [
+      "C01",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "Snapshot only (D4 contrast to F10x1). f10x2-supplier-status v1 fails provenance: its contentHash is the SHA-256 of alternate bytes (the same body with effectiveTo 2026-06-29), and its held body states an expired interval 2025-07-01 to 2026-06-30. It supplies no fact. v2 of the same ID is available, hash-matching and states SYN-SUP-0001, non_exempt, established, no new enrollment or ownership change and 2026-02-01 to 2027-01-31, equal to the case. Its supersedes is null, and C08 infers no relationship from the larger version number, so this vector holds two current versions and no supersession edge; both lists are empty. A current usable supplier record named by supplierStatusEvidenceId exists, so the failed-provenance qualifier of R01 does not hold: R01 passes with no condition and an empty parent, citing the seven v2 supplier fields and the order /item/code (8). No v1 value is cited or compared. R09 still classifies v1: conflict for the administrative_reviewer with R09.hash_mismatch naming f10x2-supplier-status v1 (needs_human_review), parent [f10x2-supplier-status v1]. The usable v2 does not cure the v1 provenance failure. State needs_human_review. R02 to R05 pass with the standard citation sets (6, 9, 6, 4). R06 is manual_review for the qualified_clinical_reviewer with R06.clinical_review (no refs, effect none) and cites the five /clinical/ statements of the usable encounter; R07 passes citing /lcmpReport/incorporated (false; the null evaluationDate is not cited); R08 passes; R10 is not_applicable with R10.pure_assessment. clinicalReviewRequired is true. Every other parent is empty. Recorded reading: a rule cites evidence-field facts only from the documents it reads, and R04 reads only final current usable records; every usable encounter and order here is final, so no draft is excluded. The standard chronology holds: the order date 2026-09-08 is after the 2026-08-24 encounter (not the same day, so C02 does not apply) and inside the C01 bound 2027-02-24, and the receipt at 2026-09-09T16:30:00Z is after the C06 span of the order date, which ends 2026-09-09T12:00Z. Deferred to S4: replacing the failed record in a later snapshot and the reassessment it triggers are not exercised; no applied supersession relation is claimed.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f10x2-supplier-status",
+            "documentVersion": 2,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f10x2-supplier-status",
+            "documentVersion": 2,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f10x2-supplier-status",
+            "documentVersion": 2,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f10x2-supplier-status",
+            "documentVersion": 2,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f10x2-supplier-status",
+            "documentVersion": 2,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f10x2-supplier-status",
+            "documentVersion": 2,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f10x2-supplier-status",
+            "documentVersion": 2,
+            "locator": "/effectiveTo"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/item/code"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f10x2-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f10x2-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R03",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/signature/signerName"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/signature/signedDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R04",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R05",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f10x2-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f10x2-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f10x2-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f10x2-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f10x2-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "conflict",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [
+          {
+            "documentId": "f10x2-supplier-status",
+            "version": 1
+          }
+        ],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R09.hash_mismatch",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f10x2-supplier-status",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [],
+    "supersededDocuments": [],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "Snapshot only: two current supplier versions with no supersession edge; replacing the failed record in a later snapshot and the reassessment it triggers are not exercised, and no applied relation is claimed."
+      }
+    ]
+  }
+}

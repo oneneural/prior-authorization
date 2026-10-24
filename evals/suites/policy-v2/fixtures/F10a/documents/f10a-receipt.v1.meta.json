@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f10a-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F10A",
+  "kind": "order_receipt",
+  "contentHash": "051b88e4a32af43ac5513be1c5260c295ed0c1af07bf6b80f7f15bbced45231d",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-05",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F10a. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.agent-recording.v1",
+  "recordingId": "fail-truncated",
+  "synthetic": true,
+  "label": "scripted_fixture",
+  "provenance": "Evaluator-only scripted failure: after one read the provider returns text cut off in the middle of a tool call, as when an output token limit truncates a response. No live model output.",
+  "model": "recorded-evaluator-v1",
+  "turns": [
+    { "output": { "type": "call_tool", "tool": "list_documents", "input": {} } },
+    { "output": "{\"type\":\"call_tool\",\"tool\":\"propose_facts\",\"input\":{\"candidates\":[{\"field\":\"order.da" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f25-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F25",
+  "kind": "encounter",
+  "contentHash": "a34153d8cde2fcefa2fa7f3c28b88d9bdb9c8c3214c220697caf8cd1ef93eec6",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-19",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F25. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

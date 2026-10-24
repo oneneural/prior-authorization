@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f08a-attachment",
+  "version": 1,
+  "subjectId": "SYN-BEN-X801",
+  "kind": "encounter",
+  "contentHash": "66680d7928cb697c22debb063307114156e71dc7a3180449382760cff7e1d44b",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:20:00Z",
+  "authoredAt": "2026-07-30",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F08a. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

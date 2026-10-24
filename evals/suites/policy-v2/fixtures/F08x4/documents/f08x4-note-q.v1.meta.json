@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f08x4-note-q",
+  "version": 1,
+  "subjectId": "SYN-OTH-F08X4",
+  "kind": "supporting_note",
+  "contentHash": "daf3408c8c3c8f3ab4bdde726366141d200464ab8756a8e1d71465d7240e11d7",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-16T14:30:00Z",
+  "authoredAt": "2026-09-01",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F08x4. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

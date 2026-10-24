@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Lark Testcase",
+    "identifier": "SYN-BEN-F13X7"
+  },
+  "authoredDate": "2026-09-01",
+  "title": "Synthetic follow-up note",
+  "text": "Synthetic test text: fictional note recorded after the order."
+}

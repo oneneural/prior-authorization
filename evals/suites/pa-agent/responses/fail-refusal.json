@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "pa.agent-recording.v1",
+  "recordingId": "fail-refusal",
+  "synthetic": true,
+  "label": "scripted_fixture",
+  "provenance": "Evaluator-only scripted failure: the provider declines on its first turn with a refusal message instead of a tool call or finish. No live model output.",
+  "model": "recorded-evaluator-v1",
+  "turns": [
+    { "output": { "type": "refusal", "message": "I can not help with this request." } }
+  ]
+}

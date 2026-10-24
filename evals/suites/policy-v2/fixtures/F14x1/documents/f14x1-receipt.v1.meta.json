@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f14x1-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F14X1",
+  "kind": "order_receipt",
+  "contentHash": "bf0898f73a8635a423468356e06b9e08c8f90c1e479a209fbb54b3724f6313c8",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-02",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F14x1. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

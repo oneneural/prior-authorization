@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Heath Testcase",
+    "identifier": "SYN-BEN-F26H"
+  },
+  "authoredDate": "2026-09-16",
+  "title": "Synthetic scanned intake note",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F26h. Fictional note that the source system reports as unreadable; no rule reads this text."
+}

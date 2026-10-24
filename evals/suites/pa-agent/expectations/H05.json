@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H05",
+  "group": "holdout",
+  "specRow": "F04",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H05",
+    "manifestSha256": "05b5f7997bef1a0736cf6a84f80f2dbeb854a87d88b7a528488a69f279b92b22"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "The renamed practitioner identifiers still differ between encounter and order (F04, R04.practitioner_identifier_differs): R04 conflict and needs_human_review.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "issues": [
+      "R04:conflict",
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f16e-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F16E",
+  "kind": "encounter",
+  "contentHash": "77b9610b1a49aaecfd7df6b8294bbd1112b6c4e0c22e3fc5e7a1e498548ca92d",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-20",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F16e. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

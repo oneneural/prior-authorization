@@ -1,0 +1,332 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F16g",
+  "fixtureManifestSha256": "74c3654b73ffe0c9c3639fe47daf9a42d15d1ec52ade38d88d74715725597ea2",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F16",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Administrative requirements",
+      "Data contracts",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2"
+    ],
+    "conventions": [
+      "C05",
+      "C07",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "The encounter version f16g-encounter v1 is available with metadata kind encounter, the case subject and application/json, and its contentHash is the SHA-256 of the held bytes. Those bytes are UTF-8 JSON that parses fully as an exact pa.source.supporting-note.v1 body (documentKind supporting_note, synthetic true, the case beneficiary), not an invalid encounter. Under R09's first-condition order it is not restricted, the hash matches, it is not declared unreadable, the MIME type is supported and the body parses as an exact structured source body, so the first applicable condition is R09.kind_mismatch: conflict for the administrative reviewer, naming the version as the R09 parent (C07). It fails provenance validation and is excluded, not quarantined: R02 binds it by metadata subject only and never compares its body, so R02 passes citing the order and receipt beneficiary facts (four). No final current usable encounter exists and this current, non-quarantined version is a candidate (C09), so R04 holds R04.encounter_failed_provenance, manual_review for the administrative reviewer, naming it as the R04 parent, and R04.no_usable_encounter does not hold; there is no usable encounter pair, so no date, practitioner or LCMP condition. R04 reads only final current usable documents, so it cites the final order's status, date and practitioner identifier (three) and nothing from the encounter. No fact or citation comes from the mismatched version. R01 (eight), R03 (nine) and R05 (four; the receipt 2026-09-05T18:40:00Z follows the order's C06 span) pass. R06 stays manual_review for the qualified clinical reviewer with R06.clinical_review and no citation: an unverified record is not evidence that a clinical fact is absent. R07 passes with no citation because neither the case nor a current usable encounter states LCMP incorporation. R08 passes and R10 is not_applicable. The state is needs_human_review, from the R04 and R09 effects. Quarantine and superseded lists are empty. Citation counts R01 to R07: 8, 4, 9, 3, 4, 0, 0.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16g-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f16g-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f16g-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f16g-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f16g-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f16g-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f16g-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/item/code"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f16g-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f16g-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R03",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/signature/signerName"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/signature/signedDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R04",
+        "status": "manual_review",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [
+          {
+            "documentId": "f16g-encounter",
+            "version": 1
+          }
+        ],
+        "citations": [
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R04.encounter_failed_provenance",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f16g-encounter",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R05",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f16g-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f16g-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f16g-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f16g-order",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "conflict",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [
+          {
+            "documentId": "f16g-encounter",
+            "version": 1
+          }
+        ],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R09.kind_mismatch",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f16g-encounter",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [],
+    "supersededDocuments": [],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S6",
+        "statement": "R09.locator_unresolved for model-proposed locators is not exercised: the frozen assessment input has no proposed-locator field. This vector proves R09.kind_mismatch only."
+      }
+    ]
+  }
+}

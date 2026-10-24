@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F26a",
+  "specFixtureRow": "F26",
+  "title": "Supported packet with no receipt record",
+  "scenario": "Supported K0823 packet with a final encounter, a final signed date-only order and the named supplier record. No order receipt record is supplied: no receipt evidence exists in this snapshot, and no delivery is claimed.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F26",
+    "R05.no_usable_receipt"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "89d2b47de2021213985e1214c9008eecce992bcaf8b196a510ee199ee840b3c3"
+    },
+    {
+      "path": "documents/f26a-encounter.v1.json",
+      "sha256": "a74e021c2d20176f8d941fe67255864a09dceae72c5d5210d004baf6a454e4ec"
+    },
+    {
+      "path": "documents/f26a-encounter.v1.meta.json",
+      "sha256": "9f1eee6a04389f8c23e0c349bf98cabb235ce2e7b50b68c3bc3b264a5c30fa6e"
+    },
+    {
+      "path": "documents/f26a-order.v1.json",
+      "sha256": "236cfc41cdee4393976ae98fd843820e183049f5969467e650aef7ed8382e831"
+    },
+    {
+      "path": "documents/f26a-order.v1.meta.json",
+      "sha256": "a06fce5ba84d56fae64b74a3eb0af2d6a3598131dd85ba2e8f6529bc0a35191b"
+    },
+    {
+      "path": "documents/f26a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f26a-supplier-status.v1.meta.json",
+      "sha256": "99615c6e02fcb64ecb709bd65de6764e3bf9f3b0405dd40daac2f4fea9ca0523"
+    }
+  ]
+}

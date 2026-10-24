@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.encounter.v1",
+  "documentKind": "encounter",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Mica Testcase",
+    "identifier": "SYN-BEN-F01X3"
+  },
+  "encounterDate": "2026-08-20",
+  "completionTime": null,
+  "practitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "lcmpReport": {
+    "incorporated": false,
+    "evaluationDate": null
+  },
+  "clinical": {
+    "diagnosisStatement": "Synthetic test text: long-standing condition affecting both legs, as stated by the practitioner.",
+    "mobilityLimitation": "Synthetic test text: reports stopping to rest when moving between rooms at home.",
+    "lowerLevelDevices": "Synthetic test text: uses a cane indoors; other devices were discussed.",
+    "homeAccessibility": "Synthetic test text: single-level home with a ramp at the entrance.",
+    "abilityToOperate": "Synthetic test text: follows instructions and states a wish to use a powered chair."
+  },
+  "narrative": "SYNTHETIC TEST DOCUMENT for fixture F01x3. Fictional face-to-face encounter summary; not a medical record."
+}

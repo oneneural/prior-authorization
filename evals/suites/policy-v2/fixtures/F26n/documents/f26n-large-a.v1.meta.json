@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26n-large-a",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26N",
+  "kind": "supporting_note",
+  "contentHash": "778d9873967ca5503d4fdafd6b2782898ad7ecd604f3c91ff45ee6813afbd0c2",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:20:00Z",
+  "authoredAt": "2026-09-22",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F26n. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

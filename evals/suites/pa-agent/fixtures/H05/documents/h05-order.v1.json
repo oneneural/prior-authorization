@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.source.order.v1",
+  "documentKind": "order",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Sage Testcase",
+    "identifier": "SYN-BEN-H05"
+  },
+  "orderDate": "2026-09-02",
+  "orderTime": null,
+  "item": {
+    "description": "Power wheelchair, standard base, for synthetic test fixture F04a",
+    "code": "K0823",
+    "quantity": 1
+  },
+  "treatingPractitioner": {
+    "name": "Jordan Sample, DO (synthetic)",
+    "identifier": "SYN-PRAC-0502"
+  },
+  "signature": {
+    "signerName": "Jordan Sample, DO (synthetic)",
+    "signedDate": "2026-09-02"
+  }
+}

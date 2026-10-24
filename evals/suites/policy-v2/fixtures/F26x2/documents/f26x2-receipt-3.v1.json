@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Wren Testcase",
+    "identifier": "SYN-BEN-F26X2"
+  },
+  "orderReference": {
+    "documentId": "f26x2-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-01T20:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

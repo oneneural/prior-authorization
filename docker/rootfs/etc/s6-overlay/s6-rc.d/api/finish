@@ -1,0 +1,3 @@
+#!/bin/sh
+# $1 is the exit code (256 when killed by a signal), $2 the signal number.
+exec /usr/local/lib/pa/essential-finish api "$@"

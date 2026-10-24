@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F23",
+  "specFixtureRow": "F23",
+  "title": "LCMP report incorporated into the encounter record",
+  "scenario": "The case and the final encounter (2026-08-25) both state that an LCMP evaluation report (dated 2026-08-18) is incorporated into the encounter record. Order 2026-09-08 by the same practitioner identifier; receipt 2026-09-09; every other scope fact is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included. Migrated to the version 2 suite on 2026-10-20: every source and metadata file is byte-identical to the first-slice original, and case.json changes only its schema version and policy pack ID.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F23",
+    "R04.lcmp_stated_by_case",
+    "R04.lcmp_stated_by_encounter",
+    "R07.lcmp_stated_by_case",
+    "R07.lcmp_stated_by_encounter"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "ea551ce8d64dd182d2ba42857d4d11764c9626e8f5dcba386060995ae28ba831"
+    },
+    {
+      "path": "documents/f23-encounter.v1.json",
+      "sha256": "610e957e41b0f49e4cbadfb6fecc7f5afbe678a73743f477810fbaf0e844f6e6"
+    },
+    {
+      "path": "documents/f23-encounter.v1.meta.json",
+      "sha256": "2ef3cdc7f44ecb2d2f9cf54abf2ceb2ee5b13c07f93f493bdad73b77ce2920df"
+    },
+    {
+      "path": "documents/f23-order.v1.json",
+      "sha256": "dffbe7d26e118ffc81ab12fa193abd41f329b37478258ced26442e12b0da1008"
+    },
+    {
+      "path": "documents/f23-order.v1.meta.json",
+      "sha256": "7734cfd023322d6596f57f58a4710698549d28d4c6e44a2e026d92886436b1aa"
+    },
+    {
+      "path": "documents/f23-receipt.v1.json",
+      "sha256": "a86dbb86c998d2fa1104dbcdf884ae9d51a43d8f0e5b9cb6c8f45772bdb886f9"
+    },
+    {
+      "path": "documents/f23-receipt.v1.meta.json",
+      "sha256": "82dce02da68f28a185a1cec4b2492bb887f06be055aeb3640eb73462a20fcc26"
+    },
+    {
+      "path": "documents/f23-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f23-supplier-status.v1.meta.json",
+      "sha256": "1a918b85da0e0b02d1bfc4089850aaf0f36d9cdc5d6a3478ac08d701a32315bf"
+    }
+  ]
+}

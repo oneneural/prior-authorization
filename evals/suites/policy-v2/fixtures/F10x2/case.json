@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "pa.case.v2",
+  "caseId": "case-f10x2",
+  "revision": 1,
+  "synthetic": true,
+  "subjectId": "SYN-BEN-F10X2",
+  "subjectName": "Eden Testcase",
+  "assessmentDate": "2026-10-18",
+  "payerType": "medicare_ffs",
+  "payerPrimary": true,
+  "beneficiaryState": "CA",
+  "jurisdiction": "noridian_jd",
+  "itemCode": "K0823",
+  "requestKind": "initial",
+  "urgency": "standard",
+  "accessories": [],
+  "alreadyDelivered": false,
+  "lcmpIncorporated": false,
+  "supplierId": "SYN-SUP-0001",
+  "supplierStatus": {
+    "schemaVersion": "pa.supplier-status.v1",
+    "status": "non_exempt",
+    "established": true,
+    "newEnrollment": false,
+    "ownershipChange": false,
+    "effectiveFrom": "2026-02-01",
+    "effectiveTo": "2027-01-31",
+    "evidenceId": "f10x2-supplier-status"
+  },
+  "supplierStatusEvidenceId": "f10x2-supplier-status",
+  "policyPackId": "lab-k0823-jd-20261018-v2",
+  "state": "intake"
+}

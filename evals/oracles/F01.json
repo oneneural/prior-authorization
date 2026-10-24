@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "pa.oracle.v2",
+  "fixtureId": "F01",
+  "fixtureManifestSha256": "7e5557f6d386df86c847cb05aa0a98811f49c5fd68b6cd6708092dca9e3ff9d9",
+  "policyPackId": "lab-k0823-jd-20261018-v1",
+  "policyPackSha256": "0e88bb0b756be1eab93cd38f2ac17841ab0eeb807f12de042cc3da722cb1fc48",
+  "expectedState": "ready_for_review",
+  "expectedFindings": [
+    {
+      "ruleId": "R01",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f01-supplier-status", "documentVersion": 1, "locator": "/supplierId" },
+        { "documentId": "f01-supplier-status", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f01-supplier-status", "documentVersion": 1, "locator": "/established" },
+        { "documentId": "f01-supplier-status", "documentVersion": 1, "locator": "/newEnrollment" },
+        { "documentId": "f01-supplier-status", "documentVersion": 1, "locator": "/ownershipChange" },
+        { "documentId": "f01-supplier-status", "documentVersion": 1, "locator": "/effectiveFrom" },
+        { "documentId": "f01-supplier-status", "documentVersion": 1, "locator": "/effectiveTo" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/item/code" }
+      ]
+    },
+    {
+      "ruleId": "R02",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f01-receipt", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f01-receipt", "documentVersion": 1, "locator": "/beneficiary/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R03",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/item/description" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/item/quantity" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/treatingPractitioner/name" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/signature/signerName" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/signature/signedDate" }
+      ]
+    },
+    {
+      "ruleId": "R04",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/encounterDate" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/practitioner/identifier" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R05",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f01-receipt", "documentVersion": 1, "locator": "/orderReference/documentId" },
+        { "documentId": "f01-receipt", "documentVersion": 1, "locator": "/orderReference/version" },
+        { "documentId": "f01-receipt", "documentVersion": 1, "locator": "/receivedAt" },
+        { "documentId": "f01-order", "documentVersion": 1, "locator": "/orderDate" }
+      ]
+    },
+    {
+      "ruleId": "R06",
+      "status": "manual_review",
+      "responsibleRole": "qualified_clinical_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/clinical/diagnosisStatement" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/clinical/mobilityLimitation" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/clinical/lowerLevelDevices" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/clinical/homeAccessibility" },
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/clinical/abilityToOperate" }
+      ]
+    },
+    {
+      "ruleId": "R07",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f01-encounter", "documentVersion": 1, "locator": "/lcmpReport/incorporated" }
+      ]
+    },
+    { "ruleId": "R08", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R09", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R10", "status": "not_applicable", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] }
+  ],
+  "quarantinedDocumentIds": [],
+  "clinicalReviewRequired": true,
+  "specReferences": {
+    "fixtureRow": "F01",
+    "rules": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10"],
+    "sections": ["Scope", "Workflow and state", "Administrative requirements", "Critical fixture suite"],
+    "slicePlanDecisions": [2],
+    "sources": ["S06", "S07", "S08", "S09", "S10", "S14"]
+  },
+  "authoringNote": "Every administrative gate passes: supported, explicit scope (R01); all documents bound (R02); order elements present (R03); final encounter 2026-08-20 and order 2026-09-02 share the practitioner identifier, order after the encounter and before the 2027-02-20 bound (R04, C01); receipt references the order and was received the day after it (R05, C06); no LCMP incorporation (R07); reviewed pack and supported date (R08); hashes verify (R09). Clinical statements stay visible as one case-level R06 manual_review for qualified clinical review (decision 2), which does not block readiness, so the state is ready_for_review; reaching accepted_for_review still needs a human action. R10 is not evaluated by a pure assessment."
+}

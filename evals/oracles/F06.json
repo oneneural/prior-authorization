@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "pa.oracle.v2",
+  "fixtureId": "F06",
+  "fixtureManifestSha256": "83449df3192a2f76bf8d7e9cf3dd047e6a690a752775159af5e29f5b5a7ab272",
+  "policyPackId": "lab-k0823-jd-20261018-v1",
+  "policyPackSha256": "0e88bb0b756be1eab93cd38f2ac17841ab0eeb807f12de042cc3da722cb1fc48",
+  "expectedState": "needs_human_review",
+  "expectedFindings": [
+    {
+      "ruleId": "R01",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f06-supplier-status", "documentVersion": 1, "locator": "/supplierId" },
+        { "documentId": "f06-supplier-status", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f06-supplier-status", "documentVersion": 1, "locator": "/established" },
+        { "documentId": "f06-supplier-status", "documentVersion": 1, "locator": "/newEnrollment" },
+        { "documentId": "f06-supplier-status", "documentVersion": 1, "locator": "/ownershipChange" },
+        { "documentId": "f06-supplier-status", "documentVersion": 1, "locator": "/effectiveFrom" },
+        { "documentId": "f06-supplier-status", "documentVersion": 1, "locator": "/effectiveTo" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/item/code" }
+      ]
+    },
+    {
+      "ruleId": "R02",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f06-receipt", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f06-receipt", "documentVersion": 1, "locator": "/beneficiary/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R03",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/item/description" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/item/quantity" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/treatingPractitioner/name" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/signature/signerName" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/signature/signedDate" }
+      ]
+    },
+    {
+      "ruleId": "R04",
+      "status": "manual_review",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/encounterDate" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/practitioner/identifier" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R05",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f06-receipt", "documentVersion": 1, "locator": "/orderReference/documentId" },
+        { "documentId": "f06-receipt", "documentVersion": 1, "locator": "/orderReference/version" },
+        { "documentId": "f06-receipt", "documentVersion": 1, "locator": "/receivedAt" },
+        { "documentId": "f06-order", "documentVersion": 1, "locator": "/orderDate" }
+      ]
+    },
+    {
+      "ruleId": "R06",
+      "status": "manual_review",
+      "responsibleRole": "qualified_clinical_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/clinical/diagnosisStatement" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/clinical/mobilityLimitation" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/clinical/lowerLevelDevices" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/clinical/homeAccessibility" },
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/clinical/abilityToOperate" }
+      ]
+    },
+    {
+      "ruleId": "R07",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f06-encounter", "documentVersion": 1, "locator": "/lcmpReport/incorporated" }
+      ]
+    },
+    { "ruleId": "R08", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R09", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R10", "status": "not_applicable", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] }
+  ],
+  "quarantinedDocumentIds": [],
+  "clinicalReviewRequired": true,
+  "specReferences": {
+    "fixtureRow": "F06",
+    "rules": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10"],
+    "sections": ["Workflow and state", "Administrative requirements", "Data contracts", "Critical fixture suite"],
+    "slicePlanDecisions": [],
+    "sources": ["S06", "S07", "S08", "S09", "S10", "S14"]
+  },
+  "authoringNote": "Encounter and order are both dated 2026-09-10 and neither source states a time. R04 requires an unambiguous sequence and same-day dates alone need review (SPEC R04; convention C02), and no completion time may be inferred from a date-only record (SPEC Data contracts), so R04 is manual_review with the facts it consulted. The receipt on 2026-09-11 follows the order date span (R05, C06). Every other gate passes as in F01, so the case selects needs_human_review, never ready_for_review. R06 keeps the clinical statements for qualified review."
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F26f",
+  "specFixtureRow": "F26",
+  "title": "Receipt at the inclusive end of the order span",
+  "scenario": "Supported K0823 packet whose final signed order states the date 2026-09-04 and no order time; the single linked receipt is recorded at 2026-09-05T12:00:00Z.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F26",
+    "R05.receipt_unsequenced"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "d3cb22e370ffe2753830d7cf235b0f46764c8228d200cb85a12dfa5678bc0051"
+    },
+    {
+      "path": "documents/f26f-encounter.v1.json",
+      "sha256": "36a39cad660987d345f243659b3674988d04bcd831a5088bdbc60d7e2d85d711"
+    },
+    {
+      "path": "documents/f26f-encounter.v1.meta.json",
+      "sha256": "9e9a38de76198d99fa6489546a55e61507d1acfd2ecda2e4d38292cfc73671ed"
+    },
+    {
+      "path": "documents/f26f-order.v1.json",
+      "sha256": "275915c4dcf62e99d6404b900443651d6ea6bee7f90ed6eec6bad00a5e505784"
+    },
+    {
+      "path": "documents/f26f-order.v1.meta.json",
+      "sha256": "5e911d29ea9fe4319454b7176748bce3a654dbb6392a9c0956ea62e563afb517"
+    },
+    {
+      "path": "documents/f26f-receipt.v1.json",
+      "sha256": "f9f9dd56129729b7efc251bbf589da861180231bf1ffdd5b7f49e33940d2be96"
+    },
+    {
+      "path": "documents/f26f-receipt.v1.meta.json",
+      "sha256": "02f0f2615f95f6ef39485e81d6682a46f2fa820c243649e1f8e22d3f937cfad8"
+    },
+    {
+      "path": "documents/f26f-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f26f-supplier-status.v1.meta.json",
+      "sha256": "1bad54093b33a4afc405fef494bc83c4a67af4caa1e7118959fbaac94ff16d47"
+    }
+  ]
+}

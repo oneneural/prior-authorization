@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F16f",
+  "specFixtureRow": "F02",
+  "title": "Only a usable draft order, no final order",
+  "scenario": "Final encounter on 2026-08-20 by SYN-PRAC-0001. The only order (f16f-order v1) is an available draft dated 2026-09-02 that states every element, including signature metadata; no final order was supplied. The receipt references that draft order and states 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F02",
+    "D2",
+    "R04.order_not_final"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "475f372e9fcd5d4778d08a6bff7dbfc8ffab92ae599eca4d04f8b4c6f61fb2b4"
+    },
+    {
+      "path": "documents/f16f-encounter.v1.json",
+      "sha256": "090933ff72f4ab739e0377e5d91474a9d1c6e758c135ffd7be39ddc3370d2290"
+    },
+    {
+      "path": "documents/f16f-encounter.v1.meta.json",
+      "sha256": "6aa4920fb3bcd32c5115d46de87a02c9de76bdf1aa4ae78883c4a098692796c8"
+    },
+    {
+      "path": "documents/f16f-order.v1.json",
+      "sha256": "ca551777e92004cb04134c34da54f267986f88333b6b893897044b1f4014dfed"
+    },
+    {
+      "path": "documents/f16f-order.v1.meta.json",
+      "sha256": "49486c2a8e477d4e4848417328bef6ef5924735b0b37bd8e7d9866987e4f2e25"
+    },
+    {
+      "path": "documents/f16f-receipt.v1.json",
+      "sha256": "f033d341d351fc0eba40499892c9fe576d2cd3fe9edfac3735055e8eaf6d5cae"
+    },
+    {
+      "path": "documents/f16f-receipt.v1.meta.json",
+      "sha256": "4dc53159d8be15b8dbf6dbab253d4bd97bea9fc799b8cc875769c7ba82552921"
+    },
+    {
+      "path": "documents/f16f-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f16f-supplier-status.v1.meta.json",
+      "sha256": "2215f27f2411a6166e09f01a9e4d2c7719d0569bb97a80fe733cc7241c164cb7"
+    }
+  ]
+}

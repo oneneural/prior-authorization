@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "pa.case.v2",
+  "caseId": "case-f10b",
+  "revision": 1,
+  "synthetic": true,
+  "subjectId": "SYN-BEN-F10B",
+  "subjectName": "Finley Testcase",
+  "assessmentDate": "2026-10-18",
+  "payerType": "medicare_ffs",
+  "payerPrimary": true,
+  "beneficiaryState": "CA",
+  "jurisdiction": "noridian_jd",
+  "itemCode": "K0823",
+  "requestKind": "initial",
+  "urgency": "standard",
+  "accessories": [],
+  "alreadyDelivered": false,
+  "lcmpIncorporated": false,
+  "supplierId": "SYN-SUP-0001",
+  "supplierStatus": {
+    "schemaVersion": "pa.supplier-status.v1",
+    "status": "exempt",
+    "established": true,
+    "newEnrollment": false,
+    "ownershipChange": false,
+    "effectiveFrom": "2026-01-01",
+    "effectiveTo": "2026-12-31",
+    "evidenceId": "f10b-supplier-status"
+  },
+  "supplierStatusEvidenceId": "f10b-supplier-status",
+  "policyPackId": "lab-k0823-jd-20261018-v2",
+  "state": "intake"
+}

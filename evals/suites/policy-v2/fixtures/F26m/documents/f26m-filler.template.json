@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Maple Testcase",
+    "identifier": "SYN-BEN-F26M"
+  },
+  "authoredDate": "2026-09-10",
+  "title": "Synthetic count filler note",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F26m. Replicated fictional intake filler with no clinical, coverage or eligibility content; it only fills a counted document slot."
+}

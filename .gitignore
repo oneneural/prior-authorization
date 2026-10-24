@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.local/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+.env
+.venv/
+
+# Restored committed entries and workspace build output.
+node_modules/
+.env*
+!.env.example
+dist/
+build/
+.coverage
+.pytest_cache/
+.DS_Store
+.next/
+next-env.d.ts
+*.tsbuildinfo
+coverage/
+
+# Local deployment secrets created by scripts/init-secrets.sh.
+.secrets/

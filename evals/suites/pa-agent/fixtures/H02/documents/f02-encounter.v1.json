@@ -1,0 +1,28 @@
+{
+    "beneficiary": {
+        "identifier": "SYN-BEN-F02",
+        "name": "Blake Testcase"
+    },
+    "clinical": {
+        "abilityToOperate": "Synthetic test text: follows instructions and states a wish to use a powered chair.",
+        "diagnosisStatement": "Synthetic test text: long-standing condition affecting both legs, as stated by the practitioner.",
+        "homeAccessibility": "Synthetic test text: single-level home with a ramp at the entrance.",
+        "lowerLevelDevices": "Synthetic test text: uses a cane indoors; other devices were discussed.",
+        "mobilityLimitation": "Synthetic test text: reports stopping to rest when moving between rooms at home."
+    },
+    "completionTime": null,
+    "documentKind": "encounter",
+    "encounterDate": "2026-08-12",
+    "lcmpReport": {
+        "evaluationDate": null,
+        "incorporated": false
+    },
+    "narrative": "SYNTHETIC TEST DOCUMENT for fixture F02. Fictional face-to-face encounter summary; not a medical record.",
+    "practitioner": {
+        "identifier": "SYN-PRAC-0001",
+        "name": "Casey Example, MD (synthetic)"
+    },
+    "schemaVersion": "pa.source.encounter.v1",
+    "status": "final",
+    "synthetic": true
+}

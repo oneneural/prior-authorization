@@ -1,0 +1,18 @@
+#!/bin/sh
+# Usage: pa-halt EXIT_CODE REASON
+# Asks s6-overlay to stop the whole container so its restart policy can recover
+# the unit, and returns. The first caller records the container exit code; a
+# later failure during the same shutdown leaves it unchanged, so the first
+# failure is what Docker reports.
+code="$1"
+reason="$2"
+if mkdir /run/pa-halt 2>/dev/null; then
+  echo "pa: stopping the container with exit code $code: $reason" >&2
+  echo "$code" > /run/s6-linux-init-container-results/exitcode
+  # When this failure happens during startup, s6-overlay's stage 2 then fails too
+  # and writes its own code (1) here; a read-only file keeps the first failure's.
+  chmod 0444 /run/s6-linux-init-container-results/exitcode
+  /run/s6/basedir/bin/halt
+else
+  echo "pa: $reason (container already stopping)" >&2
+fi

@@ -1,0 +1,1287 @@
+{
+  "schemaVersion": "pa.policy-pack.v2",
+  "packId": "lab-k0823-jd-20261018-v2",
+  "version": 2,
+  "title": "Lab policy pack version 2: initial K0823 request packet, Medicare FFS, California, Noridian Jurisdiction D",
+  "reviewedAsOf": "2026-10-18",
+  "supportedAssessmentDates": ["2026-10-18"],
+  "scope": {
+    "payerType": "medicare_ffs",
+    "payerPrimary": true,
+    "beneficiaryStates": ["CA"],
+    "jurisdictions": ["noridian_jd"],
+    "itemCodes": ["K0823"],
+    "requestKinds": ["initial"],
+    "urgencies": ["standard"],
+    "accessoriesPermitted": false,
+    "alreadyDeliveredPermitted": false,
+    "supplier": {
+      "statuses": ["non_exempt"],
+      "established": true,
+      "newEnrollment": false,
+      "ownershipChange": false
+    },
+    "documentMimeTypes": ["application/json"],
+    "lcmpIncorporation": "manual_review_branch"
+  },
+  "rules": [
+    {
+      "ruleId": "R01",
+      "title": "Supported scope",
+      "requirement": "Every scope fact is stated explicitly and matches this pack's supported scope: Medicare FFS as primary payer, beneficiary state CA, jurisdiction Noridian JD, item code K0823, an initial request with standard handling and no accessories, an item not yet delivered, and an established, non-exempt supplier with no new enrollment or ownership change whose status interval contains the assessment date. The scope facts are the case fields payerType, payerPrimary, beneficiaryState, jurisdiction, itemCode, requestKind, urgency, accessories, alreadyDelivered, lcmpIncorporated, supplierStatusEvidenceId and supplierStatus, the current supplier status record named by supplierStatusEvidenceId and the item codes of current usable orders. A stated LCMP incorporation is not a scope failure; R04 and R07 route it to human review. Supplier evidence that cannot be verified is unknown scope context: it yields scope hold and never implies an exempt supplier.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every case assessed with this pack, before any other rule's result can make it ready. Only current versions (C08) are compared."
+      },
+      "severity": "blocking",
+      "evidenceFields": [
+        "supplier.id",
+        "supplier.status",
+        "supplier.established",
+        "supplier.new_enrollment",
+        "supplier.ownership_change",
+        "supplier.effective_from",
+        "supplier.effective_to",
+        "order.item_code"
+      ],
+      "basis": "source_and_lab",
+      "basisNote": "Payer process, supplier exemption and probation circumstances come from S06 and S07; the one-state, one-code, one-supplier boundary is the lab's proposed scope (SPEC Scope and R01). Reporting failed supplier provenance as manual_review with a scope hold is the lab's resolution of a gap in pack version 1, not a CMS outcome.",
+      "sourceSections": [
+        { "sourceRefId": "S06", "section": "Sections 4 to 7 (request contents, suppliers, power mobility devices), as summarized in docs/research.md" },
+        { "sourceRefId": "S07", "section": "2026 exemption and probationary process for newly enrolled suppliers and certain ownership changes, as summarized in docs/research.md" }
+      ],
+      "outcomes": [
+        {
+          "status": "conflict",
+          "condition": "A scope fact is stated but outside the supported scope, or stated scope facts disagree.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "scope_hold",
+          "conditions": [
+            {
+              "conditionKey": "R01.scope_fact_unsupported",
+              "qualifier": "case_scope_field",
+              "fields": [
+                "case.payerType",
+                "case.payerPrimary",
+                "case.beneficiaryState",
+                "case.jurisdiction",
+                "case.itemCode",
+                "case.requestKind",
+                "case.urgency",
+                "case.accessories",
+                "case.alreadyDelivered",
+                "case.supplierStatus.status",
+                "case.supplierStatus.established",
+                "case.supplierStatus.newEnrollment",
+                "case.supplierStatus.ownershipChange"
+              ],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "One instance per case field that states a known value outside the supported scope: a payer type other than medicare_ffs, payerPrimary false, a beneficiary state other than CA, a jurisdiction other than noridian_jd, an item code other than K0823, a request kind other than initial, an urgency other than standard, a non-empty accessories list, alreadyDelivered true, supplier status exempt, established false, newEnrollment true or ownershipChange true. Names no document."
+            },
+            {
+              "conditionKey": "R01.case_supplier_interval_excludes_date",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The case supplierStatus states both interval bounds and the interval does not contain the case assessment date (expired or not yet effective). Names no document."
+            },
+            {
+              "conditionKey": "R01.supplier_id_disagrees",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["supplier_status"],
+              "statement": "A current usable supplier status record whose document ID is the case supplierStatusEvidenceId states a supplierId different from the case supplierId. One instance per such record version; names it."
+            },
+            {
+              "conditionKey": "R01.supplier_record_disagrees",
+              "qualifier": "evidence_field",
+              "fields": [
+                "supplier.status",
+                "supplier.established",
+                "supplier.new_enrollment",
+                "supplier.ownership_change",
+                "supplier.effective_from",
+                "supplier.effective_to"
+              ],
+              "documentArity": "one",
+              "documentKinds": ["supplier_status"],
+              "statement": "One instance per field and record version where a current usable supplier status record named by supplierStatusEvidenceId states a known value (not null and not unknown) different from the corresponding case supplierStatus value, which is itself known. Names that record."
+            },
+            {
+              "conditionKey": "R01.supplier_record_interval_excludes_date",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["supplier_status"],
+              "statement": "A current usable supplier status record named by supplierStatusEvidenceId states both interval bounds and its interval does not contain the case assessment date. One instance per such record version; names it."
+            },
+            {
+              "conditionKey": "R01.order_item_code_disagrees",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "A current usable order, final or draft, states an item code different from the stated case itemCode. One instance per such order; names it. A superseded order is not compared (C08), and no code is inferred or recommended."
+            }
+          ]
+        },
+        {
+          "status": "manual_review",
+          "condition": "The named supplier status evidence failed provenance validation and no usable verified replacement exists.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "scope_hold",
+          "conditions": [
+            {
+              "conditionKey": "R01.supplier_record_failed_provenance",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["supplier_status"],
+              "statement": "No current usable supplier status record named by supplierStatusEvidenceId exists, and a current version with that document ID failed provenance validation (R09 conflict). One instance per such version; names it. Its unverified values are not used, and no supplier status is inferred."
+            }
+          ]
+        },
+        {
+          "status": "restricted",
+          "condition": "The named supplier status evidence is access restricted and no usable replacement exists.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "scope_hold",
+          "conditions": [
+            {
+              "conditionKey": "R01.supplier_record_restricted",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["supplier_status"],
+              "statement": "No current usable supplier status record named by supplierStatusEvidenceId exists, and a current version with that document ID is access restricted. One instance per such version; names it."
+            }
+          ]
+        },
+        {
+          "status": "unreadable",
+          "condition": "The named supplier status evidence is unreadable and no usable replacement exists.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "scope_hold",
+          "conditions": [
+            {
+              "conditionKey": "R01.supplier_record_unreadable",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["supplier_status"],
+              "statement": "No current usable supplier status record named by supplierStatusEvidenceId exists, and a current version with that document ID is unreadable (any R09 unreadable condition). One instance per such version; names it."
+            }
+          ]
+        },
+        {
+          "status": "missing",
+          "condition": "A scope fact is unknown, or the named supplier status evidence is not supplied.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "scope_hold",
+          "conditions": [
+            {
+              "conditionKey": "R01.scope_fact_unknown",
+              "qualifier": "case_scope_field",
+              "fields": [
+                "case.payerType",
+                "case.payerPrimary",
+                "case.beneficiaryState",
+                "case.jurisdiction",
+                "case.itemCode",
+                "case.requestKind",
+                "case.urgency",
+                "case.accessories",
+                "case.alreadyDelivered",
+                "case.lcmpIncorporated",
+                "case.supplierStatusEvidenceId",
+                "case.supplierStatus.status",
+                "case.supplierStatus.established",
+                "case.supplierStatus.newEnrollment",
+                "case.supplierStatus.ownershipChange",
+                "case.supplierStatus.effectiveFrom",
+                "case.supplierStatus.effectiveTo"
+              ],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "One instance per case scope field that is null or the enum member unknown. Names no document."
+            },
+            {
+              "conditionKey": "R01.supplier_record_value_unknown",
+              "qualifier": "evidence_field",
+              "fields": [
+                "supplier.status",
+                "supplier.established",
+                "supplier.new_enrollment",
+                "supplier.ownership_change",
+                "supplier.effective_from",
+                "supplier.effective_to"
+              ],
+              "documentArity": "one",
+              "documentKinds": ["supplier_status"],
+              "statement": "One instance per field and record version where a current usable supplier status record named by supplierStatusEvidenceId states null or unknown. Names that record."
+            },
+            {
+              "conditionKey": "R01.supplier_record_not_supplied",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The case states a supplierStatusEvidenceId but no current supplied version of kind supplier_status has that document ID, whether usable or not. Names no document."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "Every scope fact is explicit, supported and consistent with its current, verified supplier evidence and current usable orders.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R02",
+      "title": "Subject binding and quarantine",
+      "requirement": "Every supplied subject-scoped document version, current or superseded, is bound to the case subject: its metadata subjectId equals the case subjectId and, when its body has passed every R09 check, a stated beneficiary identifier equals the case subjectId and a stated beneficiary name equals the case subjectName exactly (no trimming, case folding or other normalization). A restricted or unreadable version, or one that failed provenance validation, is bound by its metadata subjectId only, and a body is never compared before its bytes are verified. A version failing any of these is quarantined by exact version: it contributes no facts, is never cited, its content appears in no finding or packet, and only this rule and the quarantine list name it, by ID and version only (C07). Another version of the same document ID is unaffected. Supplier status records concern no beneficiary and are not subject-scoped.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every supplied version whose kind is subject-scoped (order, encounter, order receipt, supporting note), after the R09 checks and before any other rule uses its facts. A version whose metadata subjectId differs from the case is quarantined whatever its R09 result. Otherwise a version with any R09 condition is not quarantined and its body is never compared, and only an available, provenance-valid body is compared."
+      },
+      "severity": "blocking",
+      "evidenceFields": [
+        "order.beneficiary_name",
+        "order.beneficiary_identifier",
+        "encounter.beneficiary_name",
+        "encounter.beneficiary_identifier",
+        "receipt.beneficiary_name",
+        "receipt.beneficiary_identifier",
+        "note.beneficiary_name",
+        "note.beneficiary_identifier"
+      ],
+      "basis": "lab",
+      "basisNote": "Proposed data-integrity requirement (SPEC R02). Exact string equality is an adopted lab convention, not a Medicare identity algorithm; no fuzzy name matching.",
+      "sourceSections": [],
+      "outcomes": [
+        {
+          "status": "conflict",
+          "condition": "At least one subject-scoped version is quarantined.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R02.document_quarantined",
+              "qualifier": "binding_basis",
+              "fields": ["binding.metadata_subject", "binding.stated_identifier", "binding.stated_name"],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supporting_note"],
+              "statement": "One instance per failing basis of each quarantined version: metadata_subject when the metadata subjectId differs from the case subjectId, in which case the body is not compared and no other basis is reported for that version; otherwise, for an available version with no R09 condition, stated_identifier when the body states a beneficiary identifier other than the case subjectId and stated_name when it states a beneficiary name not exactly equal to the case subjectName. Names that version by ID and version only."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "Every supplied subject-scoped version is bound to the case subject.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R03",
+      "title": "Existing order elements",
+      "requirement": "Every current usable order states the beneficiary name or identifier, the order date, an item description, a quantity, the treating practitioner name or identifier, and signature metadata (signer name and signed date). Where either alternative is permitted, one suffices and the other is never required or invented. Each current usable order is checked on its own and elements are never combined across orders (C09); current usable orders must not state different values for an element. A draft order is checked too, since final status is R04's gate. Signature metadata shows only that the synthetic document claims a signature; it is never reported as an authenticated signature.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every case; the order is an existing practitioner-authored document that the lab requests but never drafts or completes."
+      },
+      "severity": "blocking",
+      "evidenceFields": [
+        "order.beneficiary_name",
+        "order.beneficiary_identifier",
+        "order.date",
+        "order.item_description",
+        "order.quantity",
+        "order.practitioner_name",
+        "order.practitioner_identifier",
+        "order.signature_signer_name",
+        "order.signature_date"
+      ],
+      "basis": "source_and_lab",
+      "basisNote": "Standard written order elements and their name-or-identifier alternatives (S09) and order authorship (S08). Checking every current usable order separately is a conservative lab convention for reporting every known gap (C09), not a requirement attributed to S09.",
+      "sourceSections": [
+        { "sourceRefId": "S09", "section": "Standard written order elements, as summarized in docs/research.md" },
+        { "sourceRefId": "S08", "section": "Order authorship by the practitioner who completed the face-to-face requirements; supplier must not fill order elements, as summarized in docs/research.md" }
+      ],
+      "outcomes": [
+        {
+          "status": "conflict",
+          "condition": "Current usable orders state different values for an element.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R03.orders_disagree",
+              "qualifier": "evidence_field",
+              "fields": [
+                "order.beneficiary_name",
+                "order.beneficiary_identifier",
+                "order.date",
+                "order.item_description",
+                "order.quantity",
+                "order.practitioner_name",
+                "order.practitioner_identifier",
+                "order.signature_signer_name",
+                "order.signature_date"
+              ],
+              "documentArity": "two_or_more",
+              "documentKinds": ["order"],
+              "statement": "One instance per evidence field for which current usable orders, final or draft, state at least two different non-null values, compared exactly as accepted (D1). Names every current usable order that states a non-null value for that field. A stated value beside null is not a disagreement (C09)."
+            }
+          ]
+        },
+        {
+          "status": "manual_review",
+          "condition": "No current usable order exists and a candidate order failed provenance validation.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R03.order_failed_provenance",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "No current usable order exists and this current, non-quarantined order failed provenance validation (R09 conflict). One instance per such order; names it."
+            }
+          ]
+        },
+        {
+          "status": "restricted",
+          "condition": "No current usable order exists and a candidate order is access restricted.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R03.order_restricted",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "No current usable order exists and this current, non-quarantined order is access restricted. One instance per such order; names it."
+            }
+          ]
+        },
+        {
+          "status": "unreadable",
+          "condition": "No current usable order exists and a candidate order is unreadable.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R03.order_unreadable",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "No current usable order exists and this current, non-quarantined order is unreadable (any R09 unreadable condition). One instance per such order; names it."
+            }
+          ]
+        },
+        {
+          "status": "missing",
+          "condition": "No order is available as evidence, or a current usable order lacks a required element.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R03.no_usable_order",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "No current usable order exists and no current, non-quarantined order is restricted, unreadable or failed provenance validation, so no candidate explains the gap. A quarantined order is never a candidate. Names no document."
+            },
+            {
+              "conditionKey": "R03.element_missing",
+              "qualifier": "order_element",
+              "fields": [
+                "element.beneficiary",
+                "element.order_date",
+                "element.item_description",
+                "element.quantity",
+                "element.practitioner",
+                "element.signature"
+              ],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "One instance per required element absent from a current usable order, for every current usable order: beneficiary when both name and identifier are null, order_date, item_description or quantity when null, practitioner when both name and identifier are null, and signature when no signature metadata is stated. Names that order."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "At least one current usable order exists, every current usable order states every required element, and they agree wherever they state values.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R04",
+      "title": "Encounter and order chronology",
+      "requirement": "Final encounter and order evidence exist, name the same treating practitioner, and the order follows completion of the encounter within six calendar months (convention C01). The lab requires an unambiguous sequence: an order dated the same day as the encounter needs review unless both sources state explicit times showing the order after encounter completion (convention C02). Completion times are never inferred from a date-only record. Every pair of a final current usable encounter and a final current usable order is checked, and final current usable documents of one kind must not state different dates.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every case. Only current versions are considered (C08) and only final documents are sequenced. Candidates apply whenever no final current usable document of the kind exists, so a usable draft never hides a restricted, unreadable or failed version that may be the final one (C09)."
+      },
+      "severity": "blocking",
+      "evidenceFields": [
+        "encounter.status",
+        "encounter.date",
+        "encounter.completion_timestamp",
+        "encounter.practitioner_identifier",
+        "order.status",
+        "order.date",
+        "order.timestamp",
+        "order.practitioner_identifier"
+      ],
+      "basis": "source_and_lab",
+      "basisNote": "Face-to-face interval, practitioner and LCMP sequencing from S08 to S10; the same-day review rule, month arithmetic, identifier comparison and pairwise checks are conservative lab conventions (C01 to C04, C09).",
+      "sourceSections": [
+        { "sourceRefId": "S08", "section": "Face-to-face encounter and order requirements for power mobility devices, as summarized in docs/research.md" },
+        { "sourceRefId": "S09", "section": "Written order prior to delivery and the six-month face-to-face interval, as summarized in docs/research.md" },
+        { "sourceRefId": "S10", "section": "Practitioner and LCMP evaluation sequence, as summarized in docs/research.md" }
+      ],
+      "outcomes": [
+        {
+          "status": "conflict",
+          "condition": "A final encounter and order disagree on the practitioner, are out of sequence or outside the bound, or final documents disagree on a required date.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R04.practitioner_identifier_differs",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "two",
+              "documentKinds": ["encounter", "order"],
+              "statement": "A final current usable encounter and a final current usable order both state a practitioner identifier and the identifiers differ. One instance per such pair; names both."
+            },
+            {
+              "conditionKey": "R04.order_before_encounter",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "two",
+              "documentKinds": ["encounter", "order"],
+              "statement": "A final current usable encounter and a final current usable order both state a date and the order date is before the encounter date. One instance per such pair; names both."
+            },
+            {
+              "conditionKey": "R04.order_after_bound",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "two",
+              "documentKinds": ["encounter", "order"],
+              "statement": "A final current usable encounter and a final current usable order both state a date and the order date is after the encounter date plus six calendar months (C01, inclusive bound). One instance per such pair; names both."
+            },
+            {
+              "conditionKey": "R04.encounters_disagree",
+              "qualifier": "evidence_field",
+              "fields": ["encounter.date"],
+              "documentArity": "two_or_more",
+              "documentKinds": ["encounter"],
+              "statement": "Final current usable encounters state at least two different encounter dates. Names every final current usable encounter that states a date. Confidence never selects one of them."
+            },
+            {
+              "conditionKey": "R04.orders_disagree",
+              "qualifier": "evidence_field",
+              "fields": ["order.date"],
+              "documentArity": "two_or_more",
+              "documentKinds": ["order"],
+              "statement": "Final current usable orders state at least two different order dates. Names every final current usable order that states a date. Confidence never selects one of them."
+            }
+          ]
+        },
+        {
+          "status": "manual_review",
+          "condition": "The sequence or practitioner identity is not established automatically, the LCMP branch is present, or no final usable encounter or order exists and a candidate failed provenance validation.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R04.same_day_unsequenced",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "two",
+              "documentKinds": ["encounter", "order"],
+              "statement": "A final current usable encounter and a final current usable order state the same date, and the sources do not both state explicit times placing the order strictly after encounter completion (C02). One instance per such pair; names both."
+            },
+            {
+              "conditionKey": "R04.practitioner_identifier_absent",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "two",
+              "documentKinds": ["encounter", "order"],
+              "statement": "In a pair of a final current usable encounter and a final current usable order, at least one states no practitioner identifier, so sameness is not decided by name (C03). One instance per such pair; names both."
+            },
+            {
+              "conditionKey": "R04.lcmp_stated_by_case",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The case states lcmpIncorporated true, so the encounter date does not settle chronology automatically (C04). Names no document."
+            },
+            {
+              "conditionKey": "R04.lcmp_stated_by_encounter",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["encounter"],
+              "statement": "A current usable encounter, final or draft, states that an LCMP report is incorporated (C04). One instance per such encounter; names it."
+            },
+            {
+              "conditionKey": "R04.encounter_failed_provenance",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["encounter"],
+              "statement": "No final current usable encounter exists and this current, non-quarantined encounter failed provenance validation. One instance per such encounter; names it."
+            },
+            {
+              "conditionKey": "R04.order_failed_provenance",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "No final current usable order exists and this current, non-quarantined order failed provenance validation. One instance per such order; names it."
+            }
+          ]
+        },
+        {
+          "status": "restricted",
+          "condition": "No final current usable encounter or order exists and a candidate is access restricted.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R04.encounter_restricted",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["encounter"],
+              "statement": "No final current usable encounter exists and this current, non-quarantined encounter is access restricted. One instance per such encounter; names it."
+            },
+            {
+              "conditionKey": "R04.order_restricted",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "No final current usable order exists and this current, non-quarantined order is access restricted. One instance per such order; names it."
+            }
+          ]
+        },
+        {
+          "status": "unreadable",
+          "condition": "No final current usable encounter or order exists and a candidate is unreadable.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R04.encounter_unreadable",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["encounter"],
+              "statement": "No final current usable encounter exists and this current, non-quarantined encounter is unreadable (any R09 unreadable condition). One instance per such encounter; names it."
+            },
+            {
+              "conditionKey": "R04.order_unreadable",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "No final current usable order exists and this current, non-quarantined order is unreadable (any R09 unreadable condition). One instance per such order; names it."
+            }
+          ]
+        },
+        {
+          "status": "missing",
+          "condition": "Final encounter or order evidence, or a required date, is not available.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R04.no_usable_encounter",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "No current usable encounter exists and no current, non-quarantined encounter is restricted, unreadable or failed provenance validation. Names no document."
+            },
+            {
+              "conditionKey": "R04.no_usable_order",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "No current usable order exists and no current, non-quarantined order is restricted, unreadable or failed provenance validation. Names no document."
+            },
+            {
+              "conditionKey": "R04.encounter_not_final",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["encounter"],
+              "statement": "Current usable encounters exist but none is final. One instance per current usable draft encounter; names it."
+            },
+            {
+              "conditionKey": "R04.order_not_final",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "Current usable orders exist but none is final. One instance per current usable draft order; names it."
+            },
+            {
+              "conditionKey": "R04.date_not_stated",
+              "qualifier": "evidence_field",
+              "fields": ["encounter.date", "order.date"],
+              "documentArity": "one",
+              "documentKinds": ["encounter", "order"],
+              "statement": "A final current usable encounter or order states no date. One instance per such document, with the field of its kind; names it. Pairs involving it are not compared by date."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "Final current usable encounters and orders exist; every pair names the same practitioner identifier and places the order after the encounter date and within the inclusive six-calendar-month bound, or on the same date with explicit times placing the order after completion; final documents of a kind agree on their dates; and no LCMP incorporation is stated.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R05",
+      "title": "Supplier receipt of the finalized order",
+      "requirement": "Every current usable order has at least one linked receipt that follows it: a current usable supplier receipt record that references that order's document ID and version and states a receipt time not before the order (convention C06). Every linked receipt is sequenced, so a good receipt never hides a second linked receipt whose chronology conflicts or is ambiguous (C09). Missing receipt evidence is reported without claiming that delivery occurred or did not occur. Requiring receipt evidence at packet review is a conservative lab gate.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every case, including one with no order: receipt availability is assessed from receipt records first (C09). Only current versions are considered (C08); a draft order needs a receipt too."
+      },
+      "severity": "blocking",
+      "evidenceFields": [
+        "receipt.order_document_id",
+        "receipt.order_document_version",
+        "receipt.received_at",
+        "order.date",
+        "order.timestamp"
+      ],
+      "basis": "source_and_lab",
+      "basisNote": "A written order prior to delivery is communicated to the supplier before delivery (S08, S09), which gives receipt context; making receipt a packet gate and the order-centred quantifiers are the lab's choices (SPEC R05, C06, C09).",
+      "sourceSections": [
+        { "sourceRefId": "S09", "section": "Written order prior to delivery communicated to the supplier, as summarized in docs/research.md" },
+        { "sourceRefId": "S08", "section": "Order requirements before delivery, as summarized in docs/research.md" }
+      ],
+      "outcomes": [
+        {
+          "status": "conflict",
+          "condition": "A linked receipt is certainly before its order.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R05.receipt_before_order",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "two",
+              "documentKinds": ["order_receipt", "order"],
+              "statement": "A current usable receipt linked to a current usable order states a receipt time certainly before that order under C06. One instance per such receipt and order; names both."
+            }
+          ]
+        },
+        {
+          "status": "manual_review",
+          "condition": "A linked receipt is not sequenced with its order, or the only receipt candidate failed provenance validation.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R05.receipt_unsequenced",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "two",
+              "documentKinds": ["order_receipt", "order"],
+              "statement": "A current usable receipt linked to a current usable order states a receipt time that C06 does not sequence: within the order date's span when the order states no timestamp, the same instant as the stated order timestamp, or any time when the order states neither a date nor a timestamp. One instance per such receipt and order; names both."
+            },
+            {
+              "conditionKey": "R05.receipt_failed_provenance",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order_receipt"],
+              "statement": "No current usable receipt exists and this current, non-quarantined receipt failed provenance validation. One instance per such receipt; names it. No link is read from its body."
+            }
+          ]
+        },
+        {
+          "status": "restricted",
+          "condition": "No current usable receipt exists and a receipt candidate is access restricted.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R05.receipt_restricted",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order_receipt"],
+              "statement": "No current usable receipt exists and this current, non-quarantined receipt is access restricted. One instance per such receipt; names it. No link is assumed."
+            }
+          ]
+        },
+        {
+          "status": "unreadable",
+          "condition": "No current usable receipt exists and a receipt candidate is unreadable.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R05.receipt_unreadable",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order_receipt"],
+              "statement": "No current usable receipt exists and this current, non-quarantined receipt is unreadable (any R09 unreadable condition). One instance per such receipt; names it. No link is read from its body."
+            }
+          ]
+        },
+        {
+          "status": "missing",
+          "condition": "Receipt evidence is not supplied, an order has no linked receipt, or no usable order exists to link a receipt to.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R05.no_usable_receipt",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "No current usable receipt exists and no current, non-quarantined receipt is restricted, unreadable or failed provenance validation, whether or not an order exists. Names no document."
+            },
+            {
+              "conditionKey": "R05.order_receipt_missing",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order"],
+              "statement": "At least one current usable receipt exists and no current usable receipt is linked to this current usable order. A receipt that states no receipt time, or references another document or version, does not link. One instance per such order; names it."
+            },
+            {
+              "conditionKey": "R05.no_usable_order",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "At least one current usable receipt exists but no current usable order exists to link it to. Names no document."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "Every current usable order has at least one linked receipt that follows it (C06), and no linked receipt is before or unsequenced with its order.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R06",
+      "title": "Clinical evidence stays with qualified review",
+      "requirement": "Clinical statements are evidence candidates for qualified review. Every case reports one case-level clinical finding that cites every clinical fact from current usable documents and routes them to qualified clinical review. No medical necessity conclusion follows from a diagnosis, keyword, document count or confidence, and the finding never blocks or satisfies administrative readiness. An unavailable record is not evidence that a clinical fact is absent.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every case, including one with no clinical facts."
+      },
+      "severity": "non_blocking",
+      "evidenceFields": [
+        "clinical.diagnosis_statement",
+        "clinical.mobility_limitation",
+        "clinical.lower_level_devices",
+        "clinical.home_accessibility",
+        "clinical.ability_to_operate"
+      ],
+      "basis": "source_and_lab",
+      "basisNote": "Clinical criteria need qualified interpretation (S08); DTR separates administrative collection from clinical input (S14); the authority boundary is the lab's (SPEC R06).",
+      "sourceSections": [
+        { "sourceRefId": "S08", "section": "Coverage criteria requiring qualified clinical interpretation, as summarized in docs/research.md" },
+        { "sourceRefId": "S14", "section": "Separation of administrative data collection from clinical input; restricted versus nonexistent data, as summarized in docs/research.md" }
+      ],
+      "outcomes": [
+        {
+          "status": "manual_review",
+          "condition": "Always: clinical questions remain for qualified review whatever the administrative state.",
+          "responsibleRole": "qualified_clinical_reviewer",
+          "stateEffect": "none",
+          "conditions": [
+            {
+              "conditionKey": "R06.clinical_review",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "Always exactly one instance per case, with or without clinical facts. Names no document."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ruleId": "R07",
+      "title": "No generic checklist items; LCMP branch routed to review",
+      "requirement": "This pack imposes no assistive technology professional evaluation, specialty evaluation, home assessment or proof-of-delivery requirement on an initial K0823 packet, whatever a broad PMD checklist lists. Incorporation of an LCMP report into the encounter record is an unsupported automatic branch and is routed to human review.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every case. Only current usable encounters are read (C08, C09)."
+      },
+      "severity": "blocking",
+      "evidenceFields": [
+        "encounter.lcmp_report_incorporated",
+        "encounter.lcmp_evaluation_date"
+      ],
+      "basis": "source_and_lab",
+      "basisNote": "Category-specific boundaries (S08), LCMP sequencing (S10), post-affirmation delivery steps and the generic scope of the PMD page and checklist (S11, S12); excluding the LCMP branch from automation is the lab's choice.",
+      "sourceSections": [
+        { "sourceRefId": "S08", "section": "Additional requirements limited to particular wheelchair categories, as summarized in docs/research.md" },
+        { "sourceRefId": "S10", "section": "LCMP evaluation incorporated into the practitioner record, as summarized in docs/research.md" },
+        { "sourceRefId": "S11", "section": "PMD prior authorization process; home assessment and proof of delivery after affirmation, as summarized in docs/research.md" },
+        { "sourceRefId": "S12", "section": "Multi-category, full-lifecycle documentation checklist, as summarized in docs/research.md" }
+      ],
+      "outcomes": [
+        {
+          "status": "manual_review",
+          "condition": "An LCMP incorporation is stated by the case or a current usable encounter. The other scope facts are judged by R01.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R07.lcmp_stated_by_case",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The case states lcmpIncorporated true. Names no document."
+            },
+            {
+              "conditionKey": "R07.lcmp_stated_by_encounter",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["encounter"],
+              "statement": "A current usable encounter, final or draft, states that an LCMP report is incorporated. One instance per such encounter; names it."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "No LCMP incorporation is stated by the case or a current usable encounter. No category-specific or lifecycle item is required.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R08",
+      "title": "Policy snapshot",
+      "requirement": "The case names this pack, the pack has a reviewed date and source provenance, and the case assessment date is one of the pack's supported assessment dates. A changed pack invalidates readiness and any prior human acceptance.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every case. The explicit assessment date argument must equal the case assessment date; a difference is an input rejection, not an R08 finding."
+      },
+      "severity": "blocking",
+      "evidenceFields": [],
+      "basis": "lab",
+      "basisNote": "Proposed versioning rule (SPEC R08).",
+      "sourceSections": [],
+      "outcomes": [
+        {
+          "status": "conflict",
+          "condition": "The case names a different pack, or its assessment date is not a supported assessment date.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "scope_hold",
+          "conditions": [
+            {
+              "conditionKey": "R08.pack_id_differs",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The case policyPackId differs from the packId of the pack bytes supplied. Names no document."
+            },
+            {
+              "conditionKey": "R08.assessment_date_unsupported",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The case assessment date is not listed in supportedAssessmentDates. Names no document."
+            }
+          ]
+        },
+        {
+          "status": "missing",
+          "condition": "The pack has no reviewed date or no source references.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "scope_hold",
+          "conditions": [
+            {
+              "conditionKey": "R08.pack_unreviewed",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The pack's reviewedAsOf is null. Trusting such bytes for a test never marks the policy reviewed. Names no document."
+            },
+            {
+              "conditionKey": "R08.pack_unsourced",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "The pack lists no source references. Names no document. Reachable only for a pack whose every rule is lab-based: any other rule must cite a listed source, so an unsourced variant of this pack is rejected as policy_pack_invalid instead."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "The case names this reviewed, source-linked pack and a supported assessment date.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R09",
+      "title": "Source access and provenance",
+      "requirement": "Before any body is read, by R02 or any other rule, each supplied version's raw bytes match its contentHash, its body parses as the exact structured format for its kind, and every locator resolves in that exact version. Three conditions stay distinct. Access denied (accessStatus restricted, no bytes): the version contributes no facts and rules that needed it report restricted. Content unreadable (accessStatus unreadable, a MIME type outside the pack's documentMimeTypes, or a body that is not a valid structured source): no facts, and dependent rules report unreadable. Failed provenance validation (hash mismatch, a locator that does not resolve, or a body kind that differs from the metadata kind): the version is excluded (not quarantined), all its facts are excluded and dependent rules report manual_review; for R01 that outcome has the scope_hold effect. None of these is a negative clinical assertion. Every non-quarantined supplied version is classified, current or superseded, and receives only its first applicable condition in this order: access_restricted, hash_mismatch, access_unreadable, mime_unsupported, body_invalid, kind_mismatch, locator_unresolved. The one case-level finding takes the first outcome with a held condition and names every affected version (C07).",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Every supplied version, checked first, before R02 compares any body. Versions that R02 quarantines by metadata subject are reported by R02 and not by R09; a version quarantined on its verified body passed R09."
+      },
+      "severity": "blocking",
+      "evidenceFields": [],
+      "basis": "source_and_lab",
+      "basisNote": "Restricted data is not nonexistent data (S14); hash and locator verification is the lab's provenance rule (SPEC R09).",
+      "sourceSections": [
+        { "sourceRefId": "S14", "section": "Restricted versus nonexistent data in documentation collection, as summarized in docs/research.md" }
+      ],
+      "outcomes": [
+        {
+          "status": "conflict",
+          "condition": "A non-quarantined version failed provenance validation.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "needs_human_review",
+          "conditions": [
+            {
+              "conditionKey": "R09.hash_mismatch",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supplier_status", "supporting_note"],
+              "statement": "The held bytes differ from contentHash. Names that version."
+            },
+            {
+              "conditionKey": "R09.kind_mismatch",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supplier_status", "supporting_note"],
+              "statement": "The body parses as a structured source of a kind other than the metadata kind. Names that version."
+            },
+            {
+              "conditionKey": "R09.locator_unresolved",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supplier_status", "supporting_note"],
+              "statement": "A locator proposed for the version does not resolve to its stated value in that exact version. Names that version."
+            }
+          ]
+        },
+        {
+          "status": "restricted",
+          "condition": "A non-quarantined version is access restricted.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R09.access_restricted",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supplier_status", "supporting_note"],
+              "statement": "accessStatus is restricted and no bytes are held. Names that version."
+            }
+          ]
+        },
+        {
+          "status": "unreadable",
+          "condition": "A non-quarantined version is unreadable.",
+          "responsibleRole": "authorization_coordinator",
+          "stateEffect": "needs_information",
+          "conditions": [
+            {
+              "conditionKey": "R09.access_unreadable",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supplier_status", "supporting_note"],
+              "statement": "The source system reports accessStatus unreadable for bytes that match contentHash. Names that version."
+            },
+            {
+              "conditionKey": "R09.mime_unsupported",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supplier_status", "supporting_note"],
+              "statement": "The MIME type is outside documentMimeTypes (text/plain is unsupported in this pack). Names that version."
+            },
+            {
+              "conditionKey": "R09.body_invalid",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "one",
+              "documentKinds": ["order", "encounter", "order_receipt", "supplier_status", "supporting_note"],
+              "statement": "The bytes are not UTF-8 JSON that parses as an exact structured source body. Names that version."
+            }
+          ]
+        },
+        {
+          "status": "pass",
+          "condition": "Every non-quarantined version is available, has a supported MIME type, matches its hash, parses for its kind and its locators resolve.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "ruleId": "R10",
+      "title": "Duplicate and stale action prevention",
+      "requirement": "Replay, restart or changed evidence never duplicates a local request or reuses a stale approval or acceptance. The durable workflow enforces this; a pure assessment of a case creates no request, approval or acceptance.",
+      "applicability": {
+        "stage": "initial_request_packet",
+        "itemCodes": ["K0823"],
+        "requestKinds": ["initial"],
+        "condition": "Workflow actions (local requests, approvals, packet acceptance); not evaluated by a pure assessment."
+      },
+      "severity": "non_blocking",
+      "evidenceFields": [],
+      "basis": "lab",
+      "basisNote": "Proposed workflow rule (SPEC R10), enforced by the durable workflow in a later stage.",
+      "sourceSections": [],
+      "outcomes": [
+        {
+          "status": "not_applicable",
+          "condition": "Always for a pure assessment: no request, approval or acceptance exists to protect.",
+          "responsibleRole": "administrative_reviewer",
+          "stateEffect": "none",
+          "conditions": [
+            {
+              "conditionKey": "R10.pure_assessment",
+              "qualifier": "none",
+              "fields": [],
+              "documentArity": "none",
+              "documentKinds": [],
+              "statement": "Always exactly one instance per case. Names no document."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceRefs": [
+    {
+      "sourceRefId": "S06",
+      "title": "CMS DMEPOS operational guide",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/Research-Statistics-Data-and-Systems/Monitoring-Programs/Medicare-FFS-Compliance-Programs/DMEPOS/Downloads/Operational-Guide-for-DMEPOS-PA-current.pdf",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": null,
+      "updatedOn": "2026-09-02",
+      "version": null,
+      "usedFor": "Prior authorization request contents, supplier exemption handling and power mobility device process (R01).",
+      "limitation": "Operational guidance subject to change; summarized, not reproduced."
+    },
+    {
+      "sourceRefId": "S07",
+      "title": "CMS current DMEPOS prior authorization program",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/data-research/monitoring-programs/medicare-fee-service-compliance-programs/prior-authorization-and-pre-claim-review-initiatives/prior-authorization-process-certain-durable-medical-equipment-prosthetics-orthotics-and-supplies",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": null,
+      "updatedOn": null,
+      "version": null,
+      "usedFor": "Exemption, probation for new enrollment and certain ownership changes (R01).",
+      "limitation": "Current page as retrieved; no supplier's actual status is inferred from it."
+    },
+    {
+      "sourceRefId": "S08",
+      "title": "CMS LCD L33789",
+      "publisher": "Centers for Medicare & Medicaid Services, Medicare Coverage Database",
+      "url": "https://www.cms.gov/medicare-coverage-database/view/lcd.aspx?LCDId=33789",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": "2025-10-01",
+      "updatedOn": null,
+      "version": "Revision effective 2025-10-01",
+      "usedFor": "Order authorship, category-specific boundaries and the need for qualified clinical interpretation (R03, R04, R05, R06, R07).",
+      "limitation": "Clinical criteria require qualified interpretation; linked and summarized, not reproduced."
+    },
+    {
+      "sourceRefId": "S09",
+      "title": "CMS article A55426",
+      "publisher": "Centers for Medicare & Medicaid Services, Medicare Coverage Database",
+      "url": "https://www.cms.gov/medicare-coverage-database/view/article.aspx?articleid=55426",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": null,
+      "updatedOn": null,
+      "version": null,
+      "usedFor": "Standard written order elements, written order prior to delivery and the six-month face-to-face interval (R03, R04, R05).",
+      "limitation": "Policy-specific rules take precedence; current article as retrieved, effective date not recorded in the research register."
+    },
+    {
+      "sourceRefId": "S10",
+      "title": "CMS article A52498",
+      "publisher": "Centers for Medicare & Medicaid Services, Medicare Coverage Database",
+      "url": "https://www.cms.gov/medicare-coverage-database/view/article.aspx?articleId=52498",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": null,
+      "updatedOn": null,
+      "version": null,
+      "usedFor": "Practitioner and LCMP evaluation sequence (R04, R07).",
+      "limitation": "Current article as retrieved, effective date not recorded in the research register; file presence cannot settle clinical review."
+    },
+    {
+      "sourceRefId": "S11",
+      "title": "Noridian JD PMD prior authorization",
+      "publisher": "Noridian Healthcare Solutions",
+      "url": "https://med.noridianmedicare.com/web/jddme/cert-reviews/mr/pre-claim/required-programs/prior-authorization-for-pmds",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": null,
+      "updatedOn": "2026-03-25",
+      "version": null,
+      "usedFor": "Operator workflow; home assessment and proof of delivery after affirmation (R07).",
+      "limitation": "Generic PMD page, not a one-code checklist."
+    },
+    {
+      "sourceRefId": "S12",
+      "title": "Noridian PMD documentation checklist",
+      "publisher": "Noridian Healthcare Solutions",
+      "url": "https://med.noridianmedicare.com/documents/2230715/26734435/Documentation%2BChecklist%2B-%2BPower%2BMobility%2BDevices.pdf",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": null,
+      "updatedOn": "2025-08-13",
+      "version": null,
+      "usedFor": "Orientation only: shows the checklist spans categories and the full lifecycle (R07).",
+      "limitation": "Not all items apply at the initial prior authorization stage."
+    },
+    {
+      "sourceRefId": "S14",
+      "title": "HL7 DTR specification",
+      "publisher": "HL7 International",
+      "url": "https://www.hl7.org/fhir/us/davinci-dtr/en/specification.html",
+      "retrievedOn": "2026-10-18",
+      "effectiveOn": null,
+      "updatedOn": null,
+      "version": "2.2.0",
+      "usedFor": "Administrative versus clinical separation; restricted data is not nonexistent data (R06, R09).",
+      "limitation": "Design constraint only; no DTR conformance is claimed."
+    }
+  ],
+  "labConventions": [
+    {
+      "conventionId": "C01",
+      "ruleIds": ["R04"],
+      "statement": "Six calendar months are added to the encounter date by calendar-month addition; when the target month is shorter, the day clamps to its last day (2026-03-31 plus six months is 2026-09-30; 2027-08-31 plus six months is 2028-02-29). The upper bound is inclusive: an order on the bound date is within the interval. This is a lab convention, not a legal interpretation."
+    },
+    {
+      "conventionId": "C02",
+      "ruleIds": ["R04"],
+      "statement": "An order dated the same day as the encounter is treated as sequenced only when both sources state explicit times (timestamp with offset) placing the order strictly after encounter completion. Date-only evidence never establishes a same-day sequence, and no time is inferred. Otherwise the case needs human review."
+    },
+    {
+      "conventionId": "C03",
+      "ruleIds": ["R04"],
+      "statement": "Practitioner sameness is compared by identifier. When the encounter or order states only a practitioner name, the lab does not decide sameness by name and routes R04 to human review."
+    },
+    {
+      "conventionId": "C04",
+      "ruleIds": ["R04", "R07"],
+      "statement": "When an LCMP report is incorporated into the encounter record, the encounter date is not used to settle chronology automatically: R04 and R07 both report manual_review. The LCMP conditions are added to, and never suppress, any other R04 condition that holds."
+    },
+    {
+      "conventionId": "C05",
+      "ruleIds": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10"],
+      "statement": "Each rule reports exactly one finding per assessment. The finding lists every condition that held, from every outcome of the rule, identified by rule, condition key, field and sorted document references; duplicates are invalid. Its status, responsible role and state effect are those of the first outcome in the rule's list that owns a held condition, and each held condition keeps the status, role and state effect of its own outcome, also below the selected one. A pass has no condition. Outcomes are ordered so that no outcome precedes one with a higher state effect, and the case state is the highest state effect of all findings. A finding cites every fact whose field is in the rule's evidenceFields, taken from current usable documents (C08, C09); facts from quarantined, superseded or unusable versions are never cited. Usable does not imply final: a draft order is usable for R01, R03 and R05, and only R04 requires final status."
+    },
+    {
+      "conventionId": "C06",
+      "ruleIds": ["R05"],
+      "statement": "A receipt time (UTC) is compared with the order it references without inferring the order's time zone. The order date spans from the previous day at 10:00 UTC to the next day at 12:00 UTC across time zones, both ends included. A receipt before the order's stated timestamp, or before the start of that span, is certainly before the order (conflict). A receipt within the span when the order states no timestamp, or at the same instant as the stated order timestamp, is not sequenced (manual_review). A receipt after the span, or after the stated order timestamp, follows the order."
+    },
+    {
+      "conventionId": "C07",
+      "ruleIds": ["R01", "R02", "R03", "R04", "R05", "R09"],
+      "statement": "A finding's own document references (Finding documentRefs; affectedDocuments in an oracle) name, by document ID and version only, the documents it concerns but cannot cite through facts. R02 names every quarantined version. R09 names every version that has an R09 condition, whichever status it reports. R01, R03, R04 and R05 name the documents of their held restricted, unreadable and failed-provenance conditions whose status is the finding's status. Any other finding names none. Separately, each condition's documentRefs name the exact versions its pack declaration says it concerns, and may name a usable version that the finding also cites. A quarantined version appears only in the quarantine list, the superseded list and R02, and only R02 and R09 name a superseded version, in either set."
+    },
+    {
+      "conventionId": "C08",
+      "ruleIds": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R09"],
+      "statement": "Supersession is trusted, caller-owned, case-scoped registry metadata: the supersedes reference in a version's metadata, explicitly authored and pinned with the reviewed fixture metadata. It is never inferred from document text, a model response, a filename or confidence, and a document body can neither create nor cancel it. The relation graph is built from the complete supplied snapshot, independent of input order. A version may supersede only an earlier version of its own document ID; a reference to another document ID rejects the input (supersession_cross_document), and a later or equal version of the same ID is invalid metadata. Further checks apply to supplied endpoints only: both endpoints must have the same kind, and both must carry the case subjectId in their metadata (or both be supplier status records, which carry none); a cross-kind or cross-subject relation rejects the input with a content-free snapshot-integrity reason and no partial assessment. Because every edge points to a strictly earlier version, no cycle can form from this metadata; supersession_cycle stays in the frozen reason grammar. When a duplicate document version is supplied, no relation is checked or applied. A reference to a version that is not supplied has no effect; its kind and subject are checked again when that version is supplied (S4). An applied relation makes its target superseded: the target is retained and listed by reference in the superseded list, also when it is quarantined, contributes no facts, is never cited and is never a candidate for R01, R03 to R07. Several versions may supersede one target. A superseder that is restricted, unreadable, failed provenance or quarantined on its verified body does not revoke the relation, so older evidence is never silently made current again; the superseder's own condition is the blocker. R02 and R09 still classify every supplied version, so a superseded restricted version still blocks this pure snapshot through R09 (a recorded limitation until S4 designs recovery). This is a snapshot rule, not arrival-order recovery or audit history."
+    },
+    {
+      "conventionId": "C09",
+      "ruleIds": ["R01", "R03", "R04", "R05", "R06", "R07"],
+      "statement": "Candidates and quantifiers. A version is current when no applied relation supersedes it (C08). It is usable when it is not quarantined and has no R09 condition. A rule reads only current usable documents of its kinds, final or draft unless the rule requires final (R04). When no current usable document of a kind exists (for R04, no final current usable document), each current, non-quarantined version of that kind with an R09 condition is a candidate and yields the rule's restricted, unreadable or failed-provenance condition for it; the rule's no-usable condition holds only when no such candidate explains the gap, and a quarantined version is never a candidate. When such a document exists, other versions of that kind yield no candidate condition in that rule (R09 still reports them). R03 checks every current usable order separately and never combines elements across orders. R05 is order-centred: every current usable order needs at least one linked receipt that follows it, and every linked receipt is sequenced; a receipt that is unlinked satisfies no order but is still classified by R02 and R09 and cited under C05. Two different stated values disagree; a stated value beside null is not a disagreement, and the null document's own missing condition applies where null is an allowed unknown. Values compare exactly as accepted, with no trimming, inferred identifier or clinical conclusion. These are lab conventions for reporting every known gap, not CMS requirements."
+    }
+  ],
+  "limitations": [
+    "Authored lab subset for one synthetic scenario: initial K0823 base item, Medicare FFS primary, California, Noridian Jurisdiction D, established non-exempt supplier, assessment date 2026-10-18. It is not a complete statement of Medicare policy and has no payer endorsement.",
+    "Rules are original summaries linked to sources; no policy, checklist or questionnaire text is reproduced. Source sections are named as recorded in docs/research.md and were not reopened for this pack.",
+    "Administrative readiness only: no outcome means medical necessity, payer affirmation, payment or delivery. Clinical statements stay with qualified clinical review.",
+    "Lab conventions C01 to C09 are engineering choices for repeatable fixtures, not legal interpretations. A case that depends on an ambiguous interpretation goes to human review.",
+    "Signature metadata shows only that a synthetic document claims a signature; no signer is authenticated.",
+    "Only structured JSON source documents (application/json) are supported. The SPEC admits plain-text sources, but this pack has no plain-text extraction: a text/plain document is reported unreadable by R09 and contributes no facts.",
+    "Supersession is evaluated for one supplied snapshot only (C08). Arrival order, rollback, recovery and disposition of a superseded but unreadable version belong to the durable workflow.",
+    "Version 2 replaces version 1 for new candidate fixtures only after independent review and freeze; version 1 stays unchanged as historical evidence.",
+    "Assessment dates other than those listed, other states, jurisdictions, item codes, request kinds and supplier circumstances need a separately reviewed pack."
+  ]
+}

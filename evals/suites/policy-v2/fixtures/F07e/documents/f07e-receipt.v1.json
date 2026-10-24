@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Arden Testcase",
+    "identifier": "SYN-BEN-F07E"
+  },
+  "orderReference": {
+    "documentId": "f07e-order",
+    "version": 1
+  },
+  "receivedAt": "2024-03-01T17:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

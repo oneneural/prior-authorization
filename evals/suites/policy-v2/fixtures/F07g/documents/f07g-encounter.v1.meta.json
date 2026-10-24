@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f07g-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F07G",
+  "kind": "encounter",
+  "contentHash": "9f6ce7d4945d8c5c6d6a4efe025cd324e77f933b52e8a3b0385330697cfde23f",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2025-08-31",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F07g. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

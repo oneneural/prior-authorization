@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F10c",
+  "specFixtureRow": "F10",
+  "title": "Newly enrolled supplier",
+  "scenario": "Supported K0823 packet except that the case supplier status and the named supplier record both state newEnrollment true; established stays true, status non_exempt, and the interval contains the assessment date.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F10",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "6c393b8c189842e3a7f3d4900f3cb8b9205132bc7ce8b5583011cdee5d43d08b"
+    },
+    {
+      "path": "documents/f10c-encounter.v1.json",
+      "sha256": "3ff044ea06ead9fceac0b8508bd31b63f4f120c5a59e7c422a25cc6a173d2d0a"
+    },
+    {
+      "path": "documents/f10c-encounter.v1.meta.json",
+      "sha256": "a5ff6a668a1ad45b132b2c0ec5cb4f3ae7df398d2bd7777a3b7dd6d6e0e2ca74"
+    },
+    {
+      "path": "documents/f10c-order.v1.json",
+      "sha256": "5c3af4751d18d1b4c5d99bc700a126cd238b4ecb818220f4d762efaed72cfaa4"
+    },
+    {
+      "path": "documents/f10c-order.v1.meta.json",
+      "sha256": "cde1960d826e61a82a8a15465b40732bf6a5f29c6e514a42d654f1f9cc9bfb00"
+    },
+    {
+      "path": "documents/f10c-receipt.v1.json",
+      "sha256": "ef8b9c4538d328953d9c5c604ccd7e5dba2f4adfd51044836e27df5e71d94d5a"
+    },
+    {
+      "path": "documents/f10c-receipt.v1.meta.json",
+      "sha256": "11498e8a439c149942eeefd0650c9b6e2c364c55b9e49db8ff7863a8dfa09894"
+    },
+    {
+      "path": "documents/f10c-supplier-status.v1.json",
+      "sha256": "4579f02a234f5268c539fe3b4519870289cbf4e3f8b4190d02db03d83ae4d926"
+    },
+    {
+      "path": "documents/f10c-supplier-status.v1.meta.json",
+      "sha256": "ad0feb0f1263099387ae5e7eb3ce2a194c940f908a14732c4b54beba866c1bc8"
+    }
+  ]
+}

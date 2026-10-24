@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "pa.oracle.v2",
+  "fixtureId": "F08a",
+  "fixtureManifestSha256": "bf59b9578a2e31928018a63f8e1c7b7c3eef1f4fd104128397786cb43db3cbba",
+  "policyPackId": "lab-k0823-jd-20261018-v1",
+  "policyPackSha256": "0e88bb0b756be1eab93cd38f2ac17841ab0eeb807f12de042cc3da722cb1fc48",
+  "expectedState": "needs_human_review",
+  "expectedFindings": [
+    {
+      "ruleId": "R01",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f08a-supplier-status", "documentVersion": 1, "locator": "/supplierId" },
+        { "documentId": "f08a-supplier-status", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f08a-supplier-status", "documentVersion": 1, "locator": "/established" },
+        { "documentId": "f08a-supplier-status", "documentVersion": 1, "locator": "/newEnrollment" },
+        { "documentId": "f08a-supplier-status", "documentVersion": 1, "locator": "/ownershipChange" },
+        { "documentId": "f08a-supplier-status", "documentVersion": 1, "locator": "/effectiveFrom" },
+        { "documentId": "f08a-supplier-status", "documentVersion": 1, "locator": "/effectiveTo" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/item/code" }
+      ]
+    },
+    {
+      "ruleId": "R02",
+      "status": "conflict",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [{ "documentId": "f08a-attachment", "version": 1 }],
+      "citations": [
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f08a-receipt", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f08a-receipt", "documentVersion": 1, "locator": "/beneficiary/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R03",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/item/description" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/item/quantity" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/treatingPractitioner/name" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/signature/signerName" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/signature/signedDate" }
+      ]
+    },
+    {
+      "ruleId": "R04",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/encounterDate" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/practitioner/identifier" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R05",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f08a-receipt", "documentVersion": 1, "locator": "/orderReference/documentId" },
+        { "documentId": "f08a-receipt", "documentVersion": 1, "locator": "/orderReference/version" },
+        { "documentId": "f08a-receipt", "documentVersion": 1, "locator": "/receivedAt" },
+        { "documentId": "f08a-order", "documentVersion": 1, "locator": "/orderDate" }
+      ]
+    },
+    {
+      "ruleId": "R06",
+      "status": "manual_review",
+      "responsibleRole": "qualified_clinical_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/clinical/diagnosisStatement" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/clinical/mobilityLimitation" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/clinical/lowerLevelDevices" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/clinical/homeAccessibility" },
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/clinical/abilityToOperate" }
+      ]
+    },
+    {
+      "ruleId": "R07",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f08a-encounter", "documentVersion": 1, "locator": "/lcmpReport/incorporated" }
+      ]
+    },
+    { "ruleId": "R08", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R09", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R10", "status": "not_applicable", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] }
+  ],
+  "quarantinedDocumentIds": ["f08a-attachment"],
+  "clinicalReviewRequired": true,
+  "specReferences": {
+    "fixtureRow": "F08",
+    "rules": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10"],
+    "sections": ["Workflow and state", "Administrative requirements", "Failure, privacy, and recovery", "Critical fixture suite"],
+    "slicePlanDecisions": [1, 2],
+    "sources": ["S06", "S07", "S08", "S09", "S10", "S14"]
+  },
+  "authoringNote": "The attached encounter summary names a different fictional beneficiary in its metadata subjectId and in its stated name and identifier, so R02 quarantines it by metadata, before any body comparison: it contributes no facts, is cited nowhere and is named only in R02's affected documents (C07) (R02 cites only the bound order, encounter and receipt; R06 and R07 cite only the bound encounter). The rest of the packet is complete and passes every other gate, but an identity conflict selects needs_human_review by SPEC precedence (identity or administrative conflict before missing evidence and ready). Unlike F08b, the quarantined document was not the only order, so R03 passes on the valid order."
+}

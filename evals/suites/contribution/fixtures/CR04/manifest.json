@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "CR04",
+  "specFixtureRow": "F10",
+  "title": "Conflicting supplier status is preserved",
+  "scenario": "Intake says non_exempt while its named current supplier record says exempt. Preserve the source claim and the scope hold; do not choose a status or rewrite intake. Receipt linkage remains separately retrievable.",
+  "syntheticProvenance": "Evaluator-authored original synthetic administrative record, 2026-10-22. All entities and events are fictional. No real record, real PHI, external transport, clinical statement or copied policy text. This is a records representation, not an order or a medical note. Case composition is new. Where present, f01-order v1 and its metadata are reused without any byte change from the pinned repository original finalized synthetic fixture; they were not authored or altered here. Restricted encounter metadata is an administrative archive entry only, with no clinical payload.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "PA-A01",
+    "PA-A02",
+    "PA-A08",
+    "PA-A09",
+    "PA-PUB03",
+    "F10"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "4947c00498ac11995e03e1e3b16d222e6da385317b73295620db5fb9785c4af0"
+    },
+    {
+      "path": "documents/cr04-b-cover.v1.json",
+      "sha256": "f08c662d06fc3795d5f53933cbf8fd9100ff50e85761dfb40532c2d21ae8f53d"
+    },
+    {
+      "path": "documents/cr04-b-cover.v1.meta.json",
+      "sha256": "68d093adc758642b42557abc60ba8c1fd96c260f2ad1a585567164cbe049ac9a"
+    },
+    {
+      "path": "documents/cr04-m-register.v1.json",
+      "sha256": "78e4e8bc9e535327bebd6a295c5804d3969c1e830451ea92eba1944997413c82"
+    },
+    {
+      "path": "documents/cr04-m-register.v1.meta.json",
+      "sha256": "3eaeab4552f9a8d5c496cfdc2e135feedb7b1220ffe94dd19971e32d8e4edf34"
+    },
+    {
+      "path": "documents/cr04-q-archive.v1.meta.json",
+      "sha256": "1aae598b345ad5d584ad307326b91ad87d252c1343c69369d0fec58f69898331"
+    },
+    {
+      "path": "documents/cr04-r-capture.v1.json",
+      "sha256": "b82a7137d9518539f6e2bf16c6ff92055a7ffce6f3bfb4eea21e3928be685725"
+    },
+    {
+      "path": "documents/cr04-r-capture.v1.meta.json",
+      "sha256": "65d09bc58ab9ee996645530873690ac30749cf5df994ff321cd01af55b9ef781"
+    },
+    {
+      "path": "documents/f01-order.v1.json",
+      "sha256": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76"
+    },
+    {
+      "path": "documents/f01-order.v1.meta.json",
+      "sha256": "35e704b804d1e76ae786bb4450bf9aab1cb946021c5c8aec9979847d894d9028"
+    }
+  ]
+}

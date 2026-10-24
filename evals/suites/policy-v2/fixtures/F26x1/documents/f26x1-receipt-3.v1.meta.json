@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26x1-receipt-3",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26X1",
+  "kind": "order_receipt",
+  "contentHash": "05e5053e534f0c4046a569e7bc02c40b3d14107fe75a6c74b434eb20e7064b68",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-02",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F26x1. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

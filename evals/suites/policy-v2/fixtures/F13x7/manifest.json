@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F13x7",
+  "specFixtureRow": "F13",
+  "title": "Supersession across document kinds",
+  "scenario": "Document f13x7-record version 1 is kind order (a valid final order naming the case subject); version 2 is kind supporting_note (a valid note naming the case subject) and its metadata supersedes version 1. Both metadata subjects are the case. The receipt links version 1; a final encounter and the named supplier record are supplied.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F13",
+    "D5",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "1aa505a9b71eaed4b5f993d2e1012e12c12c4588273be6a7b948b0eeea254e3b"
+    },
+    {
+      "path": "documents/f13x7-encounter.v1.json",
+      "sha256": "66844a75ffa5c3b9444a9b63b442555d0577db8a8de3fde82ea6c19f868d9110"
+    },
+    {
+      "path": "documents/f13x7-encounter.v1.meta.json",
+      "sha256": "35762a41b534cbe45c9975da1592e045962a30f9a4292732ea5b8f2f3b59a656"
+    },
+    {
+      "path": "documents/f13x7-receipt.v1.json",
+      "sha256": "4095770b130d152280f91a5ac375c45fc7ade28d4224a849da4c17355478d725"
+    },
+    {
+      "path": "documents/f13x7-receipt.v1.meta.json",
+      "sha256": "41d78c168681d39cdb6cbcc818c493140c1181957d685ec663431076fd33ef77"
+    },
+    {
+      "path": "documents/f13x7-record.v1.json",
+      "sha256": "ecade3c3f815f459e5609d1b20336299228f0e91f69614174e2e035bc2596f68"
+    },
+    {
+      "path": "documents/f13x7-record.v1.meta.json",
+      "sha256": "85dd6b7336338ec709d0512a36797925f745beeff5322f66f69ade0a63b5ccbc"
+    },
+    {
+      "path": "documents/f13x7-record.v2.json",
+      "sha256": "335045c66ce7a2b491ceda9a63cccc9f17665d46a8339008faf5bd287d5bb006"
+    },
+    {
+      "path": "documents/f13x7-record.v2.meta.json",
+      "sha256": "9a573e385eaf7017f6abad0c66581260b6244a10901cf14c091899d953ef4847"
+    },
+    {
+      "path": "documents/f13x7-supplier-status.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f13x7-supplier-status.v1.meta.json",
+      "sha256": "67a2bd8caafc791929a507e76dce68d54fc20a844efeace13f18cd119398fb8a"
+    }
+  ]
+}

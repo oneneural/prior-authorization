@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f14x1-encounter-a",
+  "version": 1,
+  "subjectId": "SYN-BEN-F14X1",
+  "kind": "encounter",
+  "contentHash": "66b4c66d559c2ff24799a9193ed25e58b03634e1b325b81ade56fec62760aac5",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-10",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F14x1. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

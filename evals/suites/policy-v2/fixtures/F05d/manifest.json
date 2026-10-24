@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F05d",
+  "specFixtureRow": "F05",
+  "title": "Final order states no date",
+  "scenario": "Final encounter on 2026-08-20 by SYN-PRAC-0001. Final order by the same practitioner identifier with a null order date and no order time; its signature metadata states signed date 2026-09-02 and its metadata authoredAt is 2026-09-02. The receipt references that order and states 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F05",
+    "D2",
+    "R03.element_missing",
+    "R04.date_not_stated",
+    "R05.receipt_unsequenced"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "3c13ae84caf7e33022793872ee2032556d45a7b37836d77c950a70c07f2e0c7e"
+    },
+    {
+      "path": "documents/f05d-encounter.v1.json",
+      "sha256": "cb2d89b844ea86c7ef1682b47049bed020033e6a874229aa2eff53c77a1bf2d3"
+    },
+    {
+      "path": "documents/f05d-encounter.v1.meta.json",
+      "sha256": "81b144d2fc2bd3b60f7b15f44b2d70b19603ffa6bef03bc2f23d0f470b7ab9d5"
+    },
+    {
+      "path": "documents/f05d-order.v1.json",
+      "sha256": "fabd16df2f58c752fbe0f636802277529731afbb5fbaba92dccc9a3181a221b6"
+    },
+    {
+      "path": "documents/f05d-order.v1.meta.json",
+      "sha256": "e73346c621757fd895b496f4c2bbec4acaa0d1297f97b7f9cc2800a660189d44"
+    },
+    {
+      "path": "documents/f05d-receipt.v1.json",
+      "sha256": "65222a096926f2bb11e7c0adcc0922dbf808849bd85ee197b5cf08cf6075694a"
+    },
+    {
+      "path": "documents/f05d-receipt.v1.meta.json",
+      "sha256": "394e08ca6ec6bb5fa47e8b161124f9b92616dea17fc672aa522f1e8c2858fa10"
+    },
+    {
+      "path": "documents/f05d-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f05d-supplier-status.v1.meta.json",
+      "sha256": "49bc54cd3d4ed09c14fd13ccf1d3620303f44fc3b2491fd28600956b8975f396"
+    }
+  ]
+}

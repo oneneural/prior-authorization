@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Lane Testcase",
+    "identifier": "SYN-BEN-F16E"
+  },
+  "orderReference": {
+    "documentId": "f16e-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-03T17:05:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

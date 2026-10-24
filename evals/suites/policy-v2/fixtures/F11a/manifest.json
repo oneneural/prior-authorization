@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F11a",
+  "specFixtureRow": "F11",
+  "title": "Replacement request",
+  "scenario": "Supported K0823 packet except that the case states requestKind replacement. Encounter, signed order, linked receipt and the named supplier record are supplied and consistent.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F11",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "24e51da96b4a8ad71bedea07e64f628ab99090af6b5f7b039585393c2c748688"
+    },
+    {
+      "path": "documents/f11a-encounter.v1.json",
+      "sha256": "4b46b2b387f451ce8ae8f5374b52529dcd66ccc92abb18482c280c34c1dbabe7"
+    },
+    {
+      "path": "documents/f11a-encounter.v1.meta.json",
+      "sha256": "dc4d10f9e41c614ef56063154de98ee469010d7c5d79be0558b043a12c7d218e"
+    },
+    {
+      "path": "documents/f11a-order.v1.json",
+      "sha256": "b495b6c85e7bfaa2950f0b007a41bcc556430ae6a3035312bacc615eeb414c7e"
+    },
+    {
+      "path": "documents/f11a-order.v1.meta.json",
+      "sha256": "ec21f1b357d37e13ccda280a1c1e0fefd0bbb32ba06b071e47d6aef03c60dbe4"
+    },
+    {
+      "path": "documents/f11a-receipt.v1.json",
+      "sha256": "a08b397366e16a8022d057d605ca6d42001ed0612fefad85c9fb163c7a65c1b8"
+    },
+    {
+      "path": "documents/f11a-receipt.v1.meta.json",
+      "sha256": "b246369070074c44846683e444db567eb645203c2dc4739d3d3738d6378dd14c"
+    },
+    {
+      "path": "documents/f11a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f11a-supplier-status.v1.meta.json",
+      "sha256": "39bc298c09e5719ebc1b488e080daff54abbf687dd59ffd35ebc99c1004b0d9c"
+    }
+  ]
+}

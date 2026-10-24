@@ -1,0 +1,4 @@
+# Runs first during shutdown, after only the watchdog has stopped: tells the
+# API (SIGUSR2) to refuse new submissions and report not ready while the worker
+# drains and the internal result route stays open.
+/command/s6-svc -2 /run/service/api

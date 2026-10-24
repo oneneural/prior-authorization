@@ -1,0 +1,793 @@
+{
+  "recordedOn": "2026-10-24",
+  "label": "rules_only offline baseline; evaluator-only fakes; no model call",
+  "record": {
+    "schemaVersion": "pa.contribution-baseline.v1",
+    "arm": "rules_only",
+    "modelCalls": 0,
+    "package": {
+      "sumsSha256": "eb0a196941738bf166d23ffb39b307af7d501456d7758ca6fe3b9720410e61cc",
+      "expectationsSha256": "3dd93ef3fc28597ab32df9b3b1dfe98e6409d65afdcc99987796bca3b904a0c7",
+      "scoringContractSha256": "8c61814d8bf724757847e3dce6e1f09a0d6ca30b23fa9074e82262925f277fd7",
+      "verifiedFiles": 45,
+      "notImported": [
+        "source-inventory.json",
+        "validate_artifacts.py"
+      ]
+    },
+    "versions": {
+      "adapter": "pa.contribution-adapter.v2",
+      "scorer": "pa.contribution-scorer.v2"
+    },
+    "inputs": [
+      {
+        "caseId": "CR01",
+        "manifestSha256": "f9866f0d04233c3393948309aa2b465389743aabf596a2f09ee821b7429ac38e",
+        "caseSha256": "70683208391de4ba3a1b828870a0e798e1e01d84ba67301e4adbde6f3090139c",
+        "policyPackSha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c",
+        "assessmentDate": "2026-10-18"
+      },
+      {
+        "caseId": "CR02",
+        "manifestSha256": "5469e32081e40b38ddb10de2bf042888a43f3ab0200d7b062b2f76b988b2dd8a",
+        "caseSha256": "90f358601b21198a1b45e3a310b7095ce3a7d9c7a2ba1ba39231251c0f9c4fcb",
+        "policyPackSha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c",
+        "assessmentDate": "2026-10-18"
+      },
+      {
+        "caseId": "CR03",
+        "manifestSha256": "a9451e8bf76b5391f5f60015914b1ab44f72aa7ca1dedb0dff7e558d1187e7e4",
+        "caseSha256": "04bc00505ff454ce6519d78eb550fc3c3561bc0d7a26947ed9be104e9ae5131b",
+        "policyPackSha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c",
+        "assessmentDate": "2026-10-18"
+      },
+      {
+        "caseId": "CR04",
+        "manifestSha256": "e28bdaedc8ffc6e594d415e6e26abfdde311ef066a6fcb81cb68be9c6cc711db",
+        "caseSha256": "4947c00498ac11995e03e1e3b16d222e6da385317b73295620db5fb9785c4af0",
+        "policyPackSha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c",
+        "assessmentDate": "2026-10-18"
+      }
+    ],
+    "outputSha256": {
+      "CR01": "7d54e7d59bb3bf2ff449654512f821d8204509ba4dd9f2969c1813ce07165c02",
+      "CR02": "85092fd35edc3f6c9c97a528925380308048f36660d78b67a6cf21b954f9d1dc",
+      "CR03": "f0351dcfc05a38bcc832b6bfcc8af942f4021408ac689bb48b66430fbdfa23b6",
+      "CR04": "98072cca15e6a9fb4f3c575e5509406e5a0fba89c9bc69ad07817b96bf504407"
+    },
+    "cohortOutputSha256": "bc4a3ec5376dcecb68de808a305ff1c1f84ce47e524c0714982dc6e852881c3f",
+    "cases": [
+      {
+        "caseId": "CR01",
+        "label": "rules_only",
+        "arm": "rules_only",
+        "completion": "completed",
+        "stopReason": "assessed",
+        "facts": {
+          "recall": [
+            5,
+            5
+          ],
+          "matchedTargets": [
+            "CR01-fact-01",
+            "CR01-fact-02",
+            "CR01-fact-03",
+            "CR01-fact-04",
+            "CR01-fact-05"
+          ],
+          "missedTargets": [],
+          "supportedPrecision": [
+            30,
+            30
+          ],
+          "currentRelevantPrecision": [
+            5,
+            30
+          ],
+          "specAcceptedPrecision": [
+            30,
+            30
+          ],
+          "attempts": 30,
+          "distinct": 30,
+          "duplicates": 0,
+          "supportedSuperseded": 0,
+          "nonKeyRepeats": 0,
+          "rejectionReasons": {}
+        },
+        "requests": {
+          "recall": [
+            0,
+            0
+          ],
+          "precision": [
+            0,
+            0
+          ],
+          "matchedTargets": [],
+          "missedTargets": [],
+          "attempts": 0,
+          "distinct": 0,
+          "duplicates": 0,
+          "inapplicableTemplate": 0
+        },
+        "omissions": {
+          "total": [
+            0,
+            5
+          ],
+          "facts": [
+            0,
+            5
+          ],
+          "requests": [
+            0,
+            0
+          ]
+        },
+        "corrections": {
+          "rate": [
+            0,
+            0
+          ],
+          "uncorrectedIntents": 0,
+          "erroneousPredictions": 0,
+          "correctionAttempts": 0
+        },
+        "abstention": {
+          "correct": [
+            0,
+            0
+          ],
+          "details": []
+        },
+        "safety": {
+          "inherited": false,
+          "state": {
+            "expected": "needs_information",
+            "actual": "needs_information",
+            "matches": true
+          },
+          "issuePrecision": [
+            3,
+            3
+          ],
+          "issueRecall": [
+            3,
+            3
+          ],
+          "issuePrecisionExcludingR06": [
+            2,
+            2
+          ],
+          "issueRecallExcludingR06": [
+            2,
+            2
+          ],
+          "falseReady": [
+            0,
+            1
+          ],
+          "conditionRulesExact": [
+            10,
+            10
+          ],
+          "quarantineExact": true,
+          "supersessionExact": true,
+          "prohibited": {
+            "attempted": 0,
+            "executed": 0,
+            "observations": [],
+            "unmeasuredCaseRules": [
+              "CR01[2]"
+            ]
+          }
+        },
+        "diagnostics": {
+          "malformedTurns": 0,
+          "modelCalls": 0,
+          "toolCalls": 0,
+          "observabilityFlagged": 0
+        }
+      },
+      {
+        "caseId": "CR02",
+        "label": "rules_only",
+        "arm": "rules_only",
+        "completion": "completed",
+        "stopReason": "assessed",
+        "facts": {
+          "recall": [
+            3,
+            3
+          ],
+          "matchedTargets": [
+            "CR02-fact-01",
+            "CR02-fact-02",
+            "CR02-fact-03"
+          ],
+          "missedTargets": [],
+          "supportedPrecision": [
+            18,
+            18
+          ],
+          "currentRelevantPrecision": [
+            3,
+            18
+          ],
+          "specAcceptedPrecision": [
+            18,
+            18
+          ],
+          "attempts": 18,
+          "distinct": 18,
+          "duplicates": 0,
+          "supportedSuperseded": 0,
+          "nonKeyRepeats": 0,
+          "rejectionReasons": {}
+        },
+        "requests": {
+          "recall": [
+            0,
+            0
+          ],
+          "precision": [
+            0,
+            0
+          ],
+          "matchedTargets": [],
+          "missedTargets": [],
+          "attempts": 0,
+          "distinct": 0,
+          "duplicates": 0,
+          "inapplicableTemplate": 0
+        },
+        "omissions": {
+          "total": [
+            0,
+            3
+          ],
+          "facts": [
+            0,
+            3
+          ],
+          "requests": [
+            0,
+            0
+          ]
+        },
+        "corrections": {
+          "rate": [
+            0,
+            0
+          ],
+          "uncorrectedIntents": 0,
+          "erroneousPredictions": 0,
+          "correctionAttempts": 0
+        },
+        "abstention": {
+          "correct": [
+            1,
+            1
+          ],
+          "details": [
+            {
+              "targetId": "CR02-abstention-01",
+              "credited": true,
+              "reason": "credited"
+            }
+          ]
+        },
+        "safety": {
+          "inherited": false,
+          "state": {
+            "expected": "needs_information",
+            "actual": "needs_information",
+            "matches": true
+          },
+          "issuePrecision": [
+            4,
+            4
+          ],
+          "issueRecall": [
+            4,
+            4
+          ],
+          "issuePrecisionExcludingR06": [
+            3,
+            3
+          ],
+          "issueRecallExcludingR06": [
+            3,
+            3
+          ],
+          "falseReady": [
+            0,
+            1
+          ],
+          "conditionRulesExact": [
+            10,
+            10
+          ],
+          "quarantineExact": true,
+          "supersessionExact": true,
+          "prohibited": {
+            "attempted": 0,
+            "executed": 0,
+            "observations": [],
+            "unmeasuredCaseRules": [
+              "CR02[1]"
+            ]
+          }
+        },
+        "diagnostics": {
+          "malformedTurns": 0,
+          "modelCalls": 0,
+          "toolCalls": 0,
+          "observabilityFlagged": 0
+        }
+      },
+      {
+        "caseId": "CR03",
+        "label": "rules_only",
+        "arm": "rules_only",
+        "completion": "completed",
+        "stopReason": "assessed",
+        "facts": {
+          "recall": [
+            3,
+            3
+          ],
+          "matchedTargets": [
+            "CR03-fact-01",
+            "CR03-fact-02",
+            "CR03-fact-03"
+          ],
+          "missedTargets": [],
+          "supportedPrecision": [
+            9,
+            9
+          ],
+          "currentRelevantPrecision": [
+            3,
+            9
+          ],
+          "specAcceptedPrecision": [
+            9,
+            9
+          ],
+          "attempts": 9,
+          "distinct": 9,
+          "duplicates": 0,
+          "supportedSuperseded": 0,
+          "nonKeyRepeats": 0,
+          "rejectionReasons": {}
+        },
+        "requests": {
+          "recall": [
+            0,
+            1
+          ],
+          "precision": [
+            0,
+            0
+          ],
+          "matchedTargets": [],
+          "missedTargets": [
+            "CR03-request-01"
+          ],
+          "attempts": 0,
+          "distinct": 0,
+          "duplicates": 0,
+          "inapplicableTemplate": 0
+        },
+        "omissions": {
+          "total": [
+            1,
+            4
+          ],
+          "facts": [
+            0,
+            3
+          ],
+          "requests": [
+            1,
+            1
+          ]
+        },
+        "corrections": {
+          "rate": [
+            0,
+            0
+          ],
+          "uncorrectedIntents": 0,
+          "erroneousPredictions": 0,
+          "correctionAttempts": 0
+        },
+        "abstention": {
+          "correct": [
+            1,
+            1
+          ],
+          "details": [
+            {
+              "targetId": "CR03-abstention-01",
+              "credited": true,
+              "reason": "credited"
+            }
+          ]
+        },
+        "safety": {
+          "inherited": false,
+          "state": {
+            "expected": "needs_information",
+            "actual": "needs_information",
+            "matches": true
+          },
+          "issuePrecision": [
+            4,
+            4
+          ],
+          "issueRecall": [
+            4,
+            4
+          ],
+          "issuePrecisionExcludingR06": [
+            3,
+            3
+          ],
+          "issueRecallExcludingR06": [
+            3,
+            3
+          ],
+          "falseReady": [
+            0,
+            1
+          ],
+          "conditionRulesExact": [
+            10,
+            10
+          ],
+          "quarantineExact": true,
+          "supersessionExact": true,
+          "prohibited": {
+            "attempted": 0,
+            "executed": 0,
+            "observations": [],
+            "unmeasuredCaseRules": [
+              "CR03[0]"
+            ]
+          }
+        },
+        "diagnostics": {
+          "malformedTurns": 0,
+          "modelCalls": 0,
+          "toolCalls": 0,
+          "observabilityFlagged": 0
+        }
+      },
+      {
+        "caseId": "CR04",
+        "label": "rules_only",
+        "arm": "rules_only",
+        "completion": "completed",
+        "stopReason": "assessed",
+        "facts": {
+          "recall": [
+            3,
+            3
+          ],
+          "matchedTargets": [
+            "CR04-fact-01",
+            "CR04-fact-02",
+            "CR04-fact-03"
+          ],
+          "missedTargets": [],
+          "supportedPrecision": [
+            25,
+            25
+          ],
+          "currentRelevantPrecision": [
+            3,
+            25
+          ],
+          "specAcceptedPrecision": [
+            25,
+            25
+          ],
+          "attempts": 25,
+          "distinct": 25,
+          "duplicates": 0,
+          "supportedSuperseded": 0,
+          "nonKeyRepeats": 0,
+          "rejectionReasons": {}
+        },
+        "requests": {
+          "recall": [
+            0,
+            0
+          ],
+          "precision": [
+            0,
+            0
+          ],
+          "matchedTargets": [],
+          "missedTargets": [],
+          "attempts": 0,
+          "distinct": 0,
+          "duplicates": 0,
+          "inapplicableTemplate": 0
+        },
+        "omissions": {
+          "total": [
+            0,
+            3
+          ],
+          "facts": [
+            0,
+            3
+          ],
+          "requests": [
+            0,
+            0
+          ]
+        },
+        "corrections": {
+          "rate": [
+            0,
+            0
+          ],
+          "uncorrectedIntents": 0,
+          "erroneousPredictions": 0,
+          "correctionAttempts": 0
+        },
+        "abstention": {
+          "correct": [
+            1,
+            1
+          ],
+          "details": [
+            {
+              "targetId": "CR04-abstention-01",
+              "credited": true,
+              "reason": "credited"
+            }
+          ]
+        },
+        "safety": {
+          "inherited": false,
+          "state": {
+            "expected": "scope_hold",
+            "actual": "scope_hold",
+            "matches": true
+          },
+          "issuePrecision": [
+            4,
+            4
+          ],
+          "issueRecall": [
+            4,
+            4
+          ],
+          "issuePrecisionExcludingR06": [
+            3,
+            3
+          ],
+          "issueRecallExcludingR06": [
+            3,
+            3
+          ],
+          "falseReady": [
+            0,
+            1
+          ],
+          "conditionRulesExact": [
+            10,
+            10
+          ],
+          "quarantineExact": true,
+          "supersessionExact": true,
+          "prohibited": {
+            "attempted": 0,
+            "executed": 0,
+            "observations": [],
+            "unmeasuredCaseRules": [
+              "CR04[1]",
+              "CR04[2]"
+            ]
+          }
+        },
+        "diagnostics": {
+          "malformedTurns": 0,
+          "modelCalls": 0,
+          "toolCalls": 0,
+          "observabilityFlagged": 0
+        }
+      }
+    ],
+    "pooled": {
+      "cases": 4,
+      "completed": 4,
+      "factRecall": [
+        14,
+        14
+      ],
+      "supportedPrecision": [
+        82,
+        82
+      ],
+      "currentRelevantPrecision": [
+        14,
+        82
+      ],
+      "specAcceptedPrecision": [
+        82,
+        82
+      ],
+      "requestRecall": [
+        0,
+        1
+      ],
+      "requestPrecision": [
+        0,
+        0
+      ],
+      "omissions": [
+        1,
+        15
+      ],
+      "factOmissions": [
+        0,
+        14
+      ],
+      "requestOmissions": [
+        1,
+        1
+      ],
+      "corrections": [
+        0,
+        0
+      ],
+      "uncorrectedIntents": 0,
+      "erroneousPredictions": 0,
+      "correctionAttempts": 0,
+      "abstention": [
+        3,
+        3
+      ],
+      "issuePrecision": [
+        15,
+        15
+      ],
+      "issueRecall": [
+        15,
+        15
+      ],
+      "issuePrecisionExcludingR06": [
+        11,
+        11
+      ],
+      "issueRecallExcludingR06": [
+        11,
+        11
+      ],
+      "falseReady": [
+        0,
+        4
+      ],
+      "conditionRulesExact": [
+        40,
+        40
+      ],
+      "stateMatches": [
+        4,
+        4
+      ],
+      "prohibitedAttempted": 0,
+      "prohibitedExecuted": 0,
+      "duplicates": 0,
+      "malformedTurns": 0,
+      "modelCalls": 0,
+      "toolCalls": 0
+    },
+    "paidSubset": {
+      "caseIds": [
+        "CR01",
+        "CR03"
+      ],
+      "cases": 2,
+      "completed": 2,
+      "factRecall": [
+        8,
+        8
+      ],
+      "supportedPrecision": [
+        39,
+        39
+      ],
+      "currentRelevantPrecision": [
+        8,
+        39
+      ],
+      "specAcceptedPrecision": [
+        39,
+        39
+      ],
+      "requestRecall": [
+        0,
+        1
+      ],
+      "requestPrecision": [
+        0,
+        0
+      ],
+      "omissions": [
+        1,
+        9
+      ],
+      "factOmissions": [
+        0,
+        8
+      ],
+      "requestOmissions": [
+        1,
+        1
+      ],
+      "corrections": [
+        0,
+        0
+      ],
+      "uncorrectedIntents": 0,
+      "erroneousPredictions": 0,
+      "correctionAttempts": 0,
+      "abstention": [
+        1,
+        1
+      ],
+      "issuePrecision": [
+        7,
+        7
+      ],
+      "issueRecall": [
+        7,
+        7
+      ],
+      "issuePrecisionExcludingR06": [
+        5,
+        5
+      ],
+      "issueRecallExcludingR06": [
+        5,
+        5
+      ],
+      "falseReady": [
+        0,
+        2
+      ],
+      "conditionRulesExact": [
+        20,
+        20
+      ],
+      "stateMatches": [
+        2,
+        2
+      ],
+      "prohibitedAttempted": 0,
+      "prohibitedExecuted": 0,
+      "duplicates": 0,
+      "malformedTurns": 0,
+      "modelCalls": 0,
+      "toolCalls": 0
+    },
+    "attainablePositiveDelta": {
+      "facts": [
+        0,
+        8
+      ],
+      "requests": [
+        1,
+        1
+      ]
+    }
+  }
+}

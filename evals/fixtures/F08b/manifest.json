@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v1",
+  "fixtureId": "F08b",
+  "specFixtureRow": "F08",
+  "title": "Only order belongs to a different subject",
+  "scenario": "Final encounter on 2026-08-21 and current supplier status for this beneficiary. The only order is filed under this case's subject in its metadata, but its stated beneficiary name and identifier are another fictional beneficiary's. No supplier receipt record is supplied: receipt evidence is absent by construction of this fixture.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "f1ffa84299152276594636f4dc9bc83bb61e6662ec161b4cfd8c59177171f9cc"
+    },
+    {
+      "path": "documents/f08b-encounter.v1.json",
+      "sha256": "4451da593f2890b8755025bef2c1174e325a9bb3d222b8f75df61a163eb26c60"
+    },
+    {
+      "path": "documents/f08b-encounter.v1.meta.json",
+      "sha256": "2eaeb6fa20fac1745c987e02fa85c47b8a90240d44af7af7f6f584c78b727f1a"
+    },
+    {
+      "path": "documents/f08b-order.v1.json",
+      "sha256": "8e22c454012918c6fe8290eb4cd250ff2dbb9ce9508295ce68a9554f84031e30"
+    },
+    {
+      "path": "documents/f08b-order.v1.meta.json",
+      "sha256": "84c0c6e1040978b3c11c806a323f86d0ea1cfd13e3d82f0bd00ae9cb7bb04460"
+    },
+    {
+      "path": "documents/f08b-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f08b-supplier-status.v1.meta.json",
+      "sha256": "6259ff004094f8b97ac4fc74be5a3eeb250dbbdcfce915922a4cb862d78e922e"
+    }
+  ]
+}

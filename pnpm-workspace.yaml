@@ -1,0 +1,55 @@
+packages:
+  - apps/*
+  - packages/*
+  # Test-only fixtures, oracles and their validation; never built into the image.
+  - evals
+
+# Fail installation on a Node version outside the root `engines` range.
+engineStrict: true
+
+# Reviewed dependency build scripts. esbuild's postinstall only verifies or
+# downloads its platform binary; pnpm already installs the matching
+# @esbuild/<platform> optional package, so the script stays disabled.
+allowBuilds:
+  esbuild: false
+
+# Reviewed toolchain pins; the @types and lint helper choices are recorded in
+# docs/development.md.
+catalog:
+  '@anthropic-ai/sdk': 0.134.0
+  '@eslint/js': 10.0.1
+  '@langchain/core': 1.2.18
+  '@langchain/langgraph': 1.5.1
+  '@langchain/langgraph-checkpoint': 1.2.0
+  '@langchain/langgraph-checkpoint-postgres': 1.1.0
+  '@next/eslint-plugin-next': 16.4.2
+  '@opentelemetry/api': 1.9.1
+  '@tailwindcss/postcss': 4.3.3
+  '@types/node': 24.19.2
+  '@types/pg': 8.23.1
+  '@types/react': 19.3.0
+  '@types/react-dom': 19.3.0
+  better-auth: 1.7.10
+  drizzle-kit: 0.31.11
+  drizzle-orm: 0.45.4
+  eslint: 10.13.0
+  eslint-plugin-react-hooks: 7.1.1
+  fastify: 5.12.7
+  globals: 17.13.0
+  next: 16.4.2
+  pg: 8.23.1
+  pg-boss: 12.38.0
+  react: 19.3.1
+  react-dom: 19.3.1
+  tailwindcss: 4.3.3
+  typescript: 6.0.3
+  typescript-eslint: 8.71.2
+  vite: 8.3.4
+  vitest: 5.0.5
+  zod: 4.6.7
+
+# better-auth lists drizzle-kit as an optional peer for its schema CLI only; its
+# runtime never loads it. Without this, the workspace's dev pin satisfies the peer
+# and the production install ships drizzle-kit and esbuild in the app image.
+overrides:
+  'better-auth>drizzle-kit': '-'

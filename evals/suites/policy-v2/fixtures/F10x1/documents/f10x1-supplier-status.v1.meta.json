@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f10x1-supplier-status",
+  "version": 1,
+  "subjectId": null,
+  "kind": "supplier_status",
+  "contentHash": "dce808949e8c7d1eeab4ac92454a097653f6003917da43b20c9ace66455449c3",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_compliance",
+  "receivedAt": "2026-10-16T14:15:00Z",
+  "authoredAt": "2026-10-15",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F10x1. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

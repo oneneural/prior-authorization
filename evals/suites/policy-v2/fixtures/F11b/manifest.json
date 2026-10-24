@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F11b",
+  "specFixtureRow": "F11",
+  "title": "Accessory requested with the base item",
+  "scenario": "Supported K0823 packet except that the case lists one accessory entry, the code-shaped synthetic token Z0001, which has no code-set meaning. Encounter, signed order, linked receipt and the named supplier record are supplied and consistent.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F11",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "1a9aca843a55f74dcd74f3a4e4adab07ad39027852031146f9157e2441856058"
+    },
+    {
+      "path": "documents/f11b-encounter.v1.json",
+      "sha256": "5b5f6c39244d850fa0dd80718208d0e2139527563849a6a7ad1e752ab91218e7"
+    },
+    {
+      "path": "documents/f11b-encounter.v1.meta.json",
+      "sha256": "3aea67024161c2a21086cdd947c776589c86c8524a7305ce54f7e662b61995e4"
+    },
+    {
+      "path": "documents/f11b-order.v1.json",
+      "sha256": "a7ef22e7e112ef9606238ebe5c0efa9b48fd841157223b2574ee63bac5b4c06d"
+    },
+    {
+      "path": "documents/f11b-order.v1.meta.json",
+      "sha256": "58a303cfcb77b8222a6093d87de0403b0eceddfbb0913fc2d91e7b1bbb1ce4b0"
+    },
+    {
+      "path": "documents/f11b-receipt.v1.json",
+      "sha256": "56a5074c09367a3b242c77a8bd344157cffa607b65a1b742f7d3a8ae591472b0"
+    },
+    {
+      "path": "documents/f11b-receipt.v1.meta.json",
+      "sha256": "ffecfb073b5d0bd02fcaa945769c5b3c35da6a61bb547a845115aaca5c17ae59"
+    },
+    {
+      "path": "documents/f11b-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f11b-supplier-status.v1.meta.json",
+      "sha256": "2eae5a6a15366583da4111d715f5628a868eda1977c4a310a6bcb40f0b92d771"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Lark Testcase",
+    "identifier": "SYN-BEN-F13X7"
+  },
+  "orderReference": {
+    "documentId": "f13x7-record",
+    "version": 1
+  },
+  "receivedAt": "2026-09-09T16:30:00Z",
+  "recordedByRole": "supplier intake clerk (fictional)"
+}

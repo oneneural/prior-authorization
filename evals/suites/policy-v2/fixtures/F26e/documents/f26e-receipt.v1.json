@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Ember Testcase",
+    "identifier": "SYN-BEN-F26E"
+  },
+  "orderReference": {
+    "documentId": "f26e-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-03T10:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

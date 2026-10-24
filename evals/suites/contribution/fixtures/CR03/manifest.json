@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "CR03",
+  "specFixtureRow": "F02",
+  "title": "Missing existing order with neutral request",
+  "scenario": "No order, encounter or receipt payload or metadata is supplied. A supplier record and an administrative transfer note are available. Absence from this snapshot does not mean a document never existed.",
+  "syntheticProvenance": "Evaluator-authored original synthetic administrative record, 2026-10-22. All entities and events are fictional. No real record, real PHI, external transport, clinical statement or copied policy text. This is a records representation, not an order or a medical note. Case composition is new. Where present, f01-order v1 and its metadata are reused without any byte change from the pinned repository original finalized synthetic fixture; they were not authored or altered here. Restricted encounter metadata is an administrative archive entry only, with no clinical payload.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "PA-A01",
+    "PA-A02",
+    "PA-A08",
+    "PA-A09",
+    "PA-PUB03",
+    "F02"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "04bc00505ff454ce6519d78eb550fc3c3561bc0d7a26947ed9be104e9ae5131b"
+    },
+    {
+      "path": "documents/cr03-a-cover.v1.json",
+      "sha256": "bb076872efa4485b0da6f199165f8772c0f664d75aded2a0bc3d841f1aa30cb2"
+    },
+    {
+      "path": "documents/cr03-a-cover.v1.meta.json",
+      "sha256": "d892636721be6fb81d9b991ae85e67ba55c27b723b5d43f3e7a61482933a467d"
+    },
+    {
+      "path": "documents/cr03-m-register.v1.json",
+      "sha256": "4b098228e9b240816714393380594614cab70ed432e06e9c128242f5129a1284"
+    },
+    {
+      "path": "documents/cr03-m-register.v1.meta.json",
+      "sha256": "04ca7a68b27623c7cda8640034a62a22e7079e6149daa515ffd2692b4c43aad4"
+    }
+  ]
+}

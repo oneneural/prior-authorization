@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F09a",
+  "specFixtureRow": "F09",
+  "title": "Medicare Advantage payer",
+  "scenario": "Supported K0823 packet except that the case states payerType medicare_advantage (Medicare Advantage), with payerPrimary true. Encounter, signed order, linked receipt and the named supplier record are supplied and consistent.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F09",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "854d7b55b651f4ae4cd290ebc3096723a15fdf77eb6a30a7ef78f19a938d1329"
+    },
+    {
+      "path": "documents/f09a-encounter.v1.json",
+      "sha256": "c99df08efa236c03c1d72d844f8618daf6d642a53dd910c04465228f189ed932"
+    },
+    {
+      "path": "documents/f09a-encounter.v1.meta.json",
+      "sha256": "30c1d47a3a78aa3c4baf8b1f53b611ccd055ca721e1a723eb395314df312428b"
+    },
+    {
+      "path": "documents/f09a-order.v1.json",
+      "sha256": "7c40db59445f6682decf903578d86b2c5365e2534b3f41e4d0631ff3967fe6e9"
+    },
+    {
+      "path": "documents/f09a-order.v1.meta.json",
+      "sha256": "d563ee7391e93494fde2dc4ddf14ac92f4dfcbf399eac8961a595f721a335da3"
+    },
+    {
+      "path": "documents/f09a-receipt.v1.json",
+      "sha256": "7cac1f53ddf8bb2d75277635270406ba8d57dc12f1a16ce14cef53f4dda97d1d"
+    },
+    {
+      "path": "documents/f09a-receipt.v1.meta.json",
+      "sha256": "3bba35d855ac9a66577df1ea15edcceab315a632e1f4438c5232a8fe77330e3d"
+    },
+    {
+      "path": "documents/f09a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f09a-supplier-status.v1.meta.json",
+      "sha256": "0096723d6c4cff07650b7f3a38d97cba9b8d25860577fd83d470a8750542e5ea"
+    }
+  ]
+}

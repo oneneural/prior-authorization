@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F26l",
+  "fixtureManifestSha256": "23ea1692417c389f986bdf20888f2aa37eefdf84bcf3ba35756ea50dbda0d4e0",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F26",
+    "rules": [
+      "R09"
+    ],
+    "sections": [
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D6"
+    ],
+    "conventions": [],
+    "sources": []
+  },
+  "authoringNote": "Five slots are supplied, within the count bound: the encounter, order, receipt and supplier record and the path attempt escape-absolute.v1, which needs no metadata. Its absolute path /outside-root/blocked.json is outside the fixture root; the label is an inert approved string (matrix decision, answer 4), never a payload. No payload exceeds the size bound, so the rejection is stage input_boundary with exactly one reason: path_outside_root, documentRef null, path null. The reason echoes no host path or source text. The loader alone owns this input_boundary rejection, before any metadata, case or body is parsed and before any R09 finding exists; rules lists R09 only as the required provenance reference (matrix decision, answer 3), which transfers no input-boundary authority to R09. A rejected expectation holds no state, findings, citations, quarantine, superseded list or deferred expectation, and documentRef is null because the stage precedes metadata parsing. Production ingestion enforcement of the limits stays S4, and real-filesystem symbolic link proof stays with the structural temporary-tree tests, with assessment integration in the version 2 assessment evaluation.",
+  "expectation": {
+    "outcome": "rejected",
+    "stage": "input_boundary",
+    "reasons": [
+      {
+        "code": "path_outside_root",
+        "documentRef": null,
+        "path": null
+      }
+    ]
+  }
+}

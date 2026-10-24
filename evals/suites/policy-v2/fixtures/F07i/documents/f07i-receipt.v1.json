@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Ellis Testcase",
+    "identifier": "SYN-BEN-F07I"
+  },
+  "orderReference": {
+    "documentId": "f07i-order",
+    "version": 1
+  },
+  "receivedAt": "2024-08-31T17:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

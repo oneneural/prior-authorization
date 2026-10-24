@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f08x1-order",
+  "version": 1,
+  "subjectId": "SYN-BEN-F08X1",
+  "kind": "order",
+  "contentHash": "9af0112ec58f7622b5825324698f723121d3266030af9c68f16e12430825e550",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-16T14:05:00Z",
+  "authoredAt": "2026-09-08",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F08x1. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

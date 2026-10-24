@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Brook Testcase",
+    "identifier": "SYN-BEN-F08X2"
+  },
+  "orderReference": {
+    "documentId": "f08x2-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-09T16:30:00Z",
+  "recordedByRole": "supplier intake clerk (fictional)"
+}

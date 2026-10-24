@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Bellamy Testcase",
+    "identifier": "SYN-BEN-F07F"
+  },
+  "orderReference": {
+    "documentId": "f07f-order",
+    "version": 1
+  },
+  "receivedAt": "2026-03-01T17:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

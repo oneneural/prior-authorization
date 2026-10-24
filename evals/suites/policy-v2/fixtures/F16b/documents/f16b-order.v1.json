@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.source.order.v1",
+  "documentKind": "order",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Indigo Testcase",
+    "identifier": "SYN-BEN-F16B"
+  },
+  "orderDate": "2026-09-02",
+  "orderTime": null,
+  "item": {
+    "description": "Power wheelchair, standard base, for synthetic test fixture F16b",
+    "code": "K0823",
+    "quantity": 1
+  },
+  "treatingPractitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "signature": {
+    "signerName": "Casey Example, MD (synthetic)",
+    "signedDate": "2026-09-02"
+  }
+}

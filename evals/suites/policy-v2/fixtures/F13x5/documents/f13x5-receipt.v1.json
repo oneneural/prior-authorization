@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Jory Testcase",
+    "identifier": "SYN-BEN-F13X5"
+  },
+  "orderReference": {
+    "documentId": "f13x5-order",
+    "version": 2
+  },
+  "receivedAt": "2026-09-09T16:30:00Z",
+  "recordedByRole": "supplier intake clerk (fictional)"
+}

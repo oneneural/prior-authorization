@@ -1,0 +1,275 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F26h",
+  "specFixtureRow": "F26",
+  "title": "Fifty-one counted document slots",
+  "scenario": "The F26g document mix with one more replicated filler note: the supported packet, a two-version intake cover note, a restricted note, an unreadable note and 43 replicated filler notes, for 51 counted slots.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F26",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "0730d069333d9528eb5f4d610e9dfe2110edd0494e04245fbc9df79c3e908cf8"
+    },
+    {
+      "path": "documents/f26h-encounter.v1.json",
+      "sha256": "e2eb87f3f439c190ef4b2b9c92f051bcce1e1b8b9dd74ac2644edd9a99ca4be8"
+    },
+    {
+      "path": "documents/f26h-encounter.v1.meta.json",
+      "sha256": "d02355c017ad8b2b82f05ef92ea39334504e2af0e11d408031b07e505f8bf03f"
+    },
+    {
+      "path": "documents/f26h-filler.meta.template.json",
+      "sha256": "31887cf6a4e1a254529711fe6267f2097e0935d7621115cc2911e7f5e0724e00"
+    },
+    {
+      "path": "documents/f26h-filler.template.json",
+      "sha256": "40e70ce468ac1390e748775c003490fc90b461035470e99cf45275593f6f00d5"
+    },
+    {
+      "path": "documents/f26h-lineage.v1.json",
+      "sha256": "72b935aba6380f8429e1424a34a81c1c61379c96f1cb67481ffae699760f6ce3"
+    },
+    {
+      "path": "documents/f26h-lineage.v1.meta.json",
+      "sha256": "573c6ff5f206a8e3699cdc7a1658d1ae1b56c1396792e04aad2de0a102bcdf37"
+    },
+    {
+      "path": "documents/f26h-lineage.v2.json",
+      "sha256": "2e3e8b53aaff3f1e5d2703579ca8dbfb7746165a172f8a60e55468ea7b4839bd"
+    },
+    {
+      "path": "documents/f26h-lineage.v2.meta.json",
+      "sha256": "d1cb407c7c278bb12eda63d5281159602127ba1b665398e861ced235ccb0dded"
+    },
+    {
+      "path": "documents/f26h-order.v1.json",
+      "sha256": "3fe8c4266d10af24d770b85500737279cffc3efcaeb391e5d2ffad03359be45b"
+    },
+    {
+      "path": "documents/f26h-order.v1.meta.json",
+      "sha256": "06d41bebce39b5e080486cfd6dea8dd8adf78f4754a5ca26686c18b586f3d8e2"
+    },
+    {
+      "path": "documents/f26h-receipt.v1.json",
+      "sha256": "7223f0570d09cd4af2d40f598547b2a9b91526cb28f93510109e547ea5e41dfc"
+    },
+    {
+      "path": "documents/f26h-receipt.v1.meta.json",
+      "sha256": "0cfb23f68760830a691b29d0aca063aaa54965bf395c17ce997c58aca662ff74"
+    },
+    {
+      "path": "documents/f26h-restricted.v1.meta.json",
+      "sha256": "6f5b90e8210de56326e330c3b4752d2433b14aa4cbcb9bda77b2d5c93604fde4"
+    },
+    {
+      "path": "documents/f26h-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f26h-supplier-status.v1.meta.json",
+      "sha256": "e564284b65e68eb284df8b3b195f601758c7a04555b14a591ca0e4f5a43bcf7c"
+    },
+    {
+      "path": "documents/f26h-unreadable.v1.json",
+      "sha256": "a26ed7788becb98b833a621547a0a7b586a3232828752d9b7d2675d6d203d927"
+    },
+    {
+      "path": "documents/f26h-unreadable.v1.meta.json",
+      "sha256": "94a23d0815e82b428f0fc4812a8bb9b8a158eba4d8e427a4bd47834ece9a625a"
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "replicate",
+      "payload": "documents/f26h-filler.template.json",
+      "metadataTemplate": "documents/f26h-filler.meta.template.json",
+      "placeholder": "@@N@@",
+      "count": 43,
+      "width": 2,
+      "outputs": [
+        {
+          "slot": "f26h-filler-01.v1",
+          "metadataSha256": "b40f82090dce53e199fa91f30d8c7c769c5230298369fd8f0de0024129315964"
+        },
+        {
+          "slot": "f26h-filler-02.v1",
+          "metadataSha256": "a06ede3da229da62b3261fcd6b042abf170abde65143d06e4134c784331dc599"
+        },
+        {
+          "slot": "f26h-filler-03.v1",
+          "metadataSha256": "a36f41e67204ff3fcdae8131003a8fcbd58d922eb36ed3cebddd4c32057fdeed"
+        },
+        {
+          "slot": "f26h-filler-04.v1",
+          "metadataSha256": "f5579a7b909f372d62ede1c3f4217b4839463a05a16e54980366f1e1bce29376"
+        },
+        {
+          "slot": "f26h-filler-05.v1",
+          "metadataSha256": "aadb6ee5db29de6ed2853189c1a5ca834ddfffb7afe029a7603a130a5118727b"
+        },
+        {
+          "slot": "f26h-filler-06.v1",
+          "metadataSha256": "726a98b787001791aa23f242d70bb2cf85685503ff3295beeeeeb48d133a5bc6"
+        },
+        {
+          "slot": "f26h-filler-07.v1",
+          "metadataSha256": "dbbb92d65b05321949436b5ed2e20293f9bb51ced999ee7af86167b379de84de"
+        },
+        {
+          "slot": "f26h-filler-08.v1",
+          "metadataSha256": "ca56ab1939432eebcfb3c2c22c158f632cbeef56e2423ad574f2b592c92d1093"
+        },
+        {
+          "slot": "f26h-filler-09.v1",
+          "metadataSha256": "69db9dd68fecec5ecccada4a3884f4c171da31506e07e570bbc907171d86690a"
+        },
+        {
+          "slot": "f26h-filler-10.v1",
+          "metadataSha256": "75deb1bc7b5b4cb9799a1463dd947c445f4d6ee64b61b4aa976b92a81f8481cd"
+        },
+        {
+          "slot": "f26h-filler-11.v1",
+          "metadataSha256": "9c11078d9fd85ee448dec4c7ce410ad68331152ebd420e734424dce7ae03b243"
+        },
+        {
+          "slot": "f26h-filler-12.v1",
+          "metadataSha256": "eed0cbfa7ad7f0880b22fb51c3648c180dba28407ec3977c030c895058823737"
+        },
+        {
+          "slot": "f26h-filler-13.v1",
+          "metadataSha256": "11a49a2ca069933e278b281df34d438d6e95acf2d6413ebce60ea99412bdbef0"
+        },
+        {
+          "slot": "f26h-filler-14.v1",
+          "metadataSha256": "046c470e054f7d6329dc177034b5cd21e50a5b1af041d89a9312b72702b2ec8f"
+        },
+        {
+          "slot": "f26h-filler-15.v1",
+          "metadataSha256": "07faf96daa6f217b3998635d34871852e33e3ffe7b999c720bc72a38e30c92c6"
+        },
+        {
+          "slot": "f26h-filler-16.v1",
+          "metadataSha256": "2d425c2ea8fc86b7a9c69bbec2e3435c4fd972cd6a08c70d740b631efd57ba3b"
+        },
+        {
+          "slot": "f26h-filler-17.v1",
+          "metadataSha256": "44f8fc03fd0a6e91669453341cecaf7e2e23bd192e041fddc103032e6c37ecbe"
+        },
+        {
+          "slot": "f26h-filler-18.v1",
+          "metadataSha256": "3b189312270e29462308e692601a89410c31259b98d7d5b26c649f837c858f99"
+        },
+        {
+          "slot": "f26h-filler-19.v1",
+          "metadataSha256": "4951baaccdc8c700ce6fcbcb56898eaf2ae9b60f41d2a47f98cb5ba59b245065"
+        },
+        {
+          "slot": "f26h-filler-20.v1",
+          "metadataSha256": "b458f69629d908025cba4287e4544c2807a5cc2638426e68d815ee703c2a6550"
+        },
+        {
+          "slot": "f26h-filler-21.v1",
+          "metadataSha256": "e55531c1e45c6150ec08cdde86fd2e72cbf1c70bc5e8f866f8e937a774eafd6e"
+        },
+        {
+          "slot": "f26h-filler-22.v1",
+          "metadataSha256": "e94969b2e06499a1f400aad74dc0fdcd20118a30e9e20cbd5956238b75c9fb74"
+        },
+        {
+          "slot": "f26h-filler-23.v1",
+          "metadataSha256": "9629a10242b663fea8b2b9a950c77cd759e5033cba52b475186a32ef06b0fd67"
+        },
+        {
+          "slot": "f26h-filler-24.v1",
+          "metadataSha256": "a394357b791ff7a5a74cc8d66a2b724332ea6497655525bbde7f68a5e9c03b06"
+        },
+        {
+          "slot": "f26h-filler-25.v1",
+          "metadataSha256": "7a7060907d1828683890c2f017c0e93cebcc2fd8edf66572079f8b66ba3a8be6"
+        },
+        {
+          "slot": "f26h-filler-26.v1",
+          "metadataSha256": "2419e1f9184f10709664ecd4f92aa5f18d87c3023262a95491be7d02df69134e"
+        },
+        {
+          "slot": "f26h-filler-27.v1",
+          "metadataSha256": "90f52d066a6fc43afa1c68ae6a4c42e249a779408c5d61dab27c9bd62b8aa851"
+        },
+        {
+          "slot": "f26h-filler-28.v1",
+          "metadataSha256": "b8a1cffffb1f7391176074c84a01e43f33cca668f2ae91eba857fb7c78b33b53"
+        },
+        {
+          "slot": "f26h-filler-29.v1",
+          "metadataSha256": "e4a090ac44eb0b4679460ac722fa590b5584dc778c38813e68abc33e7ad81bc6"
+        },
+        {
+          "slot": "f26h-filler-30.v1",
+          "metadataSha256": "1d778f162ee1925a3b96f21a8ae4e5f0688ece4630dd59ad78fbf46b00faf288"
+        },
+        {
+          "slot": "f26h-filler-31.v1",
+          "metadataSha256": "e740de0c8ac481e7458d4e013b8bdae88227a611607f8c8ade65598c5f0ed52b"
+        },
+        {
+          "slot": "f26h-filler-32.v1",
+          "metadataSha256": "890f25411aad953b9b6ed1e98863a4c3406a595ad502dd091f2f54a2c1a2be50"
+        },
+        {
+          "slot": "f26h-filler-33.v1",
+          "metadataSha256": "f96461333b6560e5f34d6ba548eff5a3408dd425d5a77aeadd94967890706575"
+        },
+        {
+          "slot": "f26h-filler-34.v1",
+          "metadataSha256": "16818379d7a465fe1c7c6cabcaed611e447666c346d74d8988d97eef2a473620"
+        },
+        {
+          "slot": "f26h-filler-35.v1",
+          "metadataSha256": "dd8401a25417c0964774eba55a683752760bca7184497f8f7952b0070ff9bde6"
+        },
+        {
+          "slot": "f26h-filler-36.v1",
+          "metadataSha256": "2b5f4a8cc6950ae5f2ad266839115b59e176c9ad1205e99336504ae192c47f5c"
+        },
+        {
+          "slot": "f26h-filler-37.v1",
+          "metadataSha256": "96936dfaa751a279772af0a8b0b1b40fc1d3c4331c283c42bb326cce6c95af6f"
+        },
+        {
+          "slot": "f26h-filler-38.v1",
+          "metadataSha256": "12340d8ece2c076846b3522e3caa217fefc6db846d3e9da198db946b403d890f"
+        },
+        {
+          "slot": "f26h-filler-39.v1",
+          "metadataSha256": "235fae16354863c61164c6fa23dee60669aeed35610e67b2cd9d62b7dd620be5"
+        },
+        {
+          "slot": "f26h-filler-40.v1",
+          "metadataSha256": "7e6c3d6be3fe9de9bdae75148f82aab7f8ef2915a2a700fa0518e9164f2a3a76"
+        },
+        {
+          "slot": "f26h-filler-41.v1",
+          "metadataSha256": "c5a5b713930e29392af1cd7125eb71fe3af52adf25a904ad6f10d9a3ad1a06ce"
+        },
+        {
+          "slot": "f26h-filler-42.v1",
+          "metadataSha256": "95075fea47e23737cacfc33141a727622b3d20a1b5f35449e8d72a418239de88"
+        },
+        {
+          "slot": "f26h-filler-43.v1",
+          "metadataSha256": "4896d47211cbaebdc3636c5f9d170805acfb161bf6d348982cfb51f3fd96964b"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "F17b",
+  "group": "adversarial",
+  "specRow": "F17",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "F17b",
+    "manifestSha256": "247eb420e6ee1df4253bd31653de8190062bfe710583a6fb197be27b5c2fd1c8"
+  },
+  "provider": {
+    "kind": "recorded",
+    "responseId": "f17b-cross-case"
+  },
+  "authoringNote": "A same-beneficiary unrelated note adds no requirement (F28), so the F02 outcome holds. The other case's order cannot be read or cited; only the neutral existing-order request is valid.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "needs_information",
+    "issues": [
+      "R03:missing",
+      "R04:missing",
+      "R05:missing",
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished",
+      "proposalCodes": [
+        "source_unavailable",
+        "valid"
+      ],
+      "prohibitedAttempts": 0,
+      "toolErrors": 1
+    }
+  }
+}

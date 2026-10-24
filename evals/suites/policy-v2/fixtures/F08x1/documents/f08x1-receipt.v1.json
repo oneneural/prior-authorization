@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Alder Testcase",
+    "identifier": "SYN-BEN-F08X1"
+  },
+  "orderReference": {
+    "documentId": "f08x1-order",
+    "version": 2
+  },
+  "receivedAt": "2026-09-09T16:30:00Z",
+  "recordedByRole": "supplier intake clerk (fictional)"
+}

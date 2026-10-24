@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f08x4-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F08X4",
+  "kind": "order_receipt",
+  "contentHash": "d2ead5a22dad6c13826094eaac9e1da87ff8a35a5335e80ab1dd2449b4ec39b6",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-16T14:10:00Z",
+  "authoredAt": "2026-09-09",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F08x4. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

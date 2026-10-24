@@ -1,0 +1,295 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F08b",
+  "fixtureManifestSha256": "d794aea65950c4465100d91341ead1cb82644383a08017ba6cc86ab7fa89c480",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F08",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Scope",
+      "Workflow and state",
+      "Administrative requirements",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2",
+      "D3"
+    ],
+    "conventions": [
+      "C05",
+      "C07",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "Migrated from F08b; expectations re-derived under pack v2. f08b-order v1 carries the case subject in its metadata and passes every R09 check, so its body is compared: it states identifier SYN-BEN-X802 and name Morgan Othercase, neither equal to the case. R02 is conflict with two independent conditions on that version, binding.stated_identifier and binding.stated_name; the parent set and quarantine list are exactly f08b-order v1. A quarantined order is never a candidate (C09), so with no other order R03 and R04 each report missing with their no_usable_order condition (authorization coordinator, needs_information, no document), and R05 reports R05.no_usable_receipt because no receipt record is supplied (stated in the scenario) and no receipt candidate exists. R01 passes citing the seven supplier fields only (no usable order code). R02 cites the encounter name and identifier; R04 cites the encounter status, date and practitioner identifier; R03 and R05 cite nothing. The quarantined order appears only in R02 and the quarantine list. State needs_human_review (the R02 conflict outranks the needs_information gaps), as in v1. v2 adds two binding-basis tuples and the three absence tuples.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08b-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f08b-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f08b-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f08b-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f08b-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f08b-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f08b-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "conflict",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [
+          {
+            "documentId": "f08b-order",
+            "version": 1
+          }
+        ],
+        "citations": [
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R02.document_quarantined",
+            "field": "binding.stated_identifier",
+            "documents": [
+              {
+                "documentId": "f08b-order",
+                "version": 1
+              }
+            ]
+          },
+          {
+            "conditionKey": "R02.document_quarantined",
+            "field": "binding.stated_name",
+            "documents": [
+              {
+                "documentId": "f08b-order",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R03",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R03.no_usable_order",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R04",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R04.no_usable_order",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R05",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R05.no_usable_receipt",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08b-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [
+      {
+        "documentId": "f08b-order",
+        "version": 1
+      }
+    ],
+    "supersededDocuments": [],
+    "clinicalReviewRequired": true
+  }
+}

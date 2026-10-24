@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Skyler Testcase",
+    "identifier": "SYN-BEN-F07C"
+  },
+  "orderReference": {
+    "documentId": "f07c-order",
+    "version": 1
+  },
+  "receivedAt": "2026-10-01T17:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

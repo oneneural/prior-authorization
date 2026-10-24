@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "cr03-a-cover",
+  "version": 1,
+  "subjectId": "SYN-BEN-F01",
+  "kind": "supporting_note",
+  "contentHash": "bb076872efa4485b0da6f199165f8772c0f664d75aded2a0bc3d841f1aa30cb2",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T16:00:00Z",
+  "authoredAt": "2026-10-16",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Evaluator-authored original synthetic administrative record, 2026-10-22. All entities and events are fictional. No real record, real PHI, external transport, clinical statement or copied policy text. This is a records representation, not an order or a medical note."
+  },
+  "accessStatus": "available"
+}

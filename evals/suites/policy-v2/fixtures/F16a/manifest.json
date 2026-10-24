@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F16a",
+  "specFixtureRow": "F16",
+  "title": "Encounter record access denied",
+  "scenario": "The only encounter record (f16a-encounter v1) is access restricted: its metadata names the case subject, has a null content hash and no bytes are held. Final order dated 2026-09-02 by SYN-PRAC-0001 and its receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F16",
+    "D2",
+    "R04.encounter_restricted",
+    "R09.access_restricted"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "dd1376848a65632b13820889db16e4e6ba174ec74e219e0f4752940a0070ec9a"
+    },
+    {
+      "path": "documents/f16a-encounter.v1.meta.json",
+      "sha256": "65c7e077b096194641eda3bdadc97baf5de229da4afdc0e902e8541bc1a3a930"
+    },
+    {
+      "path": "documents/f16a-order.v1.json",
+      "sha256": "ddfacb2ed32441116fa6fffad6190507e2d655c7ac5766baf9d8a956828dbc61"
+    },
+    {
+      "path": "documents/f16a-order.v1.meta.json",
+      "sha256": "9040a4360cd8914a717e78d4e225c1db9ec645cd0df023dc5151e2875870c83e"
+    },
+    {
+      "path": "documents/f16a-receipt.v1.json",
+      "sha256": "d548cd79ccccebe5ca6e1725fbcce4aa331e65b0e6352019531bf202bb82f41f"
+    },
+    {
+      "path": "documents/f16a-receipt.v1.meta.json",
+      "sha256": "7d8b4e136dfe03da908e3af7b46491e8de52b252e254d9d888537b9345f7bdfe"
+    },
+    {
+      "path": "documents/f16a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f16a-supplier-status.v1.meta.json",
+      "sha256": "0bf89fbfde860ad4edd703d798740d88de07b01e1c294cac7da43ba81b6d2dca"
+    }
+  ]
+}

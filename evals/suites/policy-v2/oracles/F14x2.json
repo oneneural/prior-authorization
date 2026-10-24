@@ -1,0 +1,607 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F14x2",
+  "fixtureManifestSha256": "488470b2e1c642b9e876be7226c7575d4fd3334fa200b64565d5bacd80fa405b",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F14",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Scope",
+      "Administrative requirements",
+      "Data contracts",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2"
+    ],
+    "conventions": [
+      "C01",
+      "C02",
+      "C05",
+      "C06",
+      "C07",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "D2 regression (checkpoint #22): one finding keeps every held condition with its own routing. R03 checks each current usable order separately (C09): A is complete; B states no signature metadata, so R03.element_missing (element.signature, B) holds, missing, authorization coordinator, needs_information. The orders state different non-null dates and quantities, so R03.orders_disagree holds twice, once per field (order.date and order.quantity), each naming A and B. Signature is not a disagreement because B states null (a value beside null). R03 status is conflict (first outcome owning a held condition), administrative reviewer, and the missing condition stays beneath it. R04 reads both final encounters and orders: the encounters disagree (encounters_disagree, encounter.date, E1 and E2); the orders disagree (orders_disagree, order.date, A and B); pair (E2 2026-09-03, A 2026-09-01) is order_before_encounter; pair (E2, B) is the same date without times, so same_day_unsequenced (manual_review beneath conflict, C02); pairs (E1, A) and (E1, B) are sequenced within the bound with equal identifiers. R04 is conflict. R05: each receipt references its order version and follows the order span end (2026-09-02T12:00Z for A, 2026-09-04T12:00Z for B), so R05 passes. Parent sets are empty (no restricted, unreadable or failed-provenance condition). Citations: R01 seven supplier fields and both codes (nine); R02 twelve; R03 nine for A and seven for B (no signature facts); R04 twelve; R05 three per receipt and both order dates (eight); R06 ten; R07 two. State needs_human_review.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f14x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f14x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f14x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f14x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f14x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f14x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f14x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/item/code"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/item/code"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f14x2-receipt-a",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-receipt-a",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f14x2-receipt-b",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-receipt-b",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R03",
+        "status": "conflict",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/signature/signerName"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/signature/signedDate"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R03.element_missing",
+            "field": "element.signature",
+            "documents": [
+              {
+                "documentId": "f14x2-order-b",
+                "version": 1
+              }
+            ]
+          },
+          {
+            "conditionKey": "R03.orders_disagree",
+            "field": "order.date",
+            "documents": [
+              {
+                "documentId": "f14x2-order-a",
+                "version": 1
+              },
+              {
+                "documentId": "f14x2-order-b",
+                "version": 1
+              }
+            ]
+          },
+          {
+            "conditionKey": "R03.orders_disagree",
+            "field": "order.quantity",
+            "documents": [
+              {
+                "documentId": "f14x2-order-a",
+                "version": 1
+              },
+              {
+                "documentId": "f14x2-order-b",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R04",
+        "status": "conflict",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/treatingPractitioner/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R04.encounters_disagree",
+            "field": "encounter.date",
+            "documents": [
+              {
+                "documentId": "f14x2-encounter-1",
+                "version": 1
+              },
+              {
+                "documentId": "f14x2-encounter-2",
+                "version": 1
+              }
+            ]
+          },
+          {
+            "conditionKey": "R04.order_before_encounter",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f14x2-encounter-2",
+                "version": 1
+              },
+              {
+                "documentId": "f14x2-order-a",
+                "version": 1
+              }
+            ]
+          },
+          {
+            "conditionKey": "R04.orders_disagree",
+            "field": "order.date",
+            "documents": [
+              {
+                "documentId": "f14x2-order-a",
+                "version": 1
+              },
+              {
+                "documentId": "f14x2-order-b",
+                "version": 1
+              }
+            ]
+          },
+          {
+            "conditionKey": "R04.same_day_unsequenced",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f14x2-encounter-2",
+                "version": 1
+              },
+              {
+                "documentId": "f14x2-order-b",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R05",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f14x2-receipt-a",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f14x2-receipt-a",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f14x2-receipt-a",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f14x2-receipt-b",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f14x2-receipt-b",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f14x2-receipt-b",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f14x2-order-a",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f14x2-order-b",
+            "documentVersion": 1,
+            "locator": "/orderDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f14x2-encounter-1",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          },
+          {
+            "documentId": "f14x2-encounter-2",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [],
+    "supersededDocuments": [],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "Event-driven F14 reconciliation (which source arrived or was corrected later) is not exercised by this snapshot."
+      }
+    ]
+  }
+}

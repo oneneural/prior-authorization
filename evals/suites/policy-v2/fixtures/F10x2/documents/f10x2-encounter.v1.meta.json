@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f10x2-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F10X2",
+  "kind": "encounter",
+  "contentHash": "5e5a8f7b985835a92d6b8b9d444bb49e4a857b485f278aae42362fb3ee77bd40",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-16T14:00:00Z",
+  "authoredAt": "2026-08-24",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F10x2. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

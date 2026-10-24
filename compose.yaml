@@ -1,0 +1,139 @@
+# Local deployment of the prior authorization pilot: one application image (web,
+# API and worker under s6-overlay) beside PostgreSQL. Start with:
+#   cp .env.example .env && scripts/init-secrets.sh && docker compose up --build
+# The API seeds the synthetic demo queue on start (idempotent). Operations, the
+# credential matrix, backup and reset steps: docs/operations.md; demo: docs/demo.md.
+name: prior-authorization
+
+x-app-image: &app-image
+  image: prior-authorization-app:${PA_IMAGE_TAG:-local}
+  build:
+    context: .
+    args:
+      PA_BUILD_REVISION: ${PA_BUILD_REVISION:-unknown}
+      PA_BUILD_CREATED: ${PA_BUILD_CREATED:-unknown}
+
+# Application containers run as uid 10001 with no capabilities, no privilege
+# escalation and a read-only root filesystem.
+x-hardening: &hardening
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+
+services:
+  db:
+    # postgres:18.6-bookworm, multi-arch index digest.
+    image: postgres:18.6-bookworm@sha256:afc7e2d441324c0388fa80c3d24f733b4194a4eb7f47dd8ee2b08eb1a24a647c
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      # Both apply only when the volume is first initialised. Every TCP rule,
+      # including loopback inside this container, uses scram-sha-256 (the image
+      # default trusts 127.0.0.1); only the Unix socket, reachable solely through
+      # `docker exec`, keeps trust. POSTGRES_HOST_AUTH_METHOD is never trust.
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_INITDB_ARGS: --auth-host=scram-sha-256
+    secrets: [postgres_password]
+    volumes:
+      # PostgreSQL 18 keeps PGDATA under /var/lib/postgresql/18/docker.
+      - db-data:/var/lib/postgresql
+    # No host port: only containers on this project's network reach the database.
+    healthcheck:
+      # TCP, so the temporary socket-only server used during first
+      # initialisation is not mistaken for readiness.
+      test: [CMD-SHELL, pg_isready -h 127.0.0.1 -U postgres -d postgres]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    stop_grace_period: 30s
+    restart: unless-stopped
+
+  init:
+    <<: [*app-image, *hardening]
+    # Bounded one-off step: provision roles and the database idempotently with the
+    # admin credential, then migrate as the migrator role, then exit.
+    entrypoint: [/usr/local/bin/node, /app/packages/db/dist/bin/init.js]
+    environment:
+      APP_ID: prior-authorization
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      DATABASE_URL_ADMIN_FILE: /run/secrets/database_url_admin
+      DATABASE_URL_MIGRATOR_FILE: /run/secrets/database_url_migrator
+      DATABASE_URL_API_FILE: /run/secrets/database_url_api
+      DATABASE_URL_WORKER_FILE: /run/secrets/database_url_worker
+    secrets: [database_url_admin, database_url_migrator, database_url_api, database_url_worker]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  app:
+    <<: [*app-image, *hardening]
+    environment:
+      APP_ID: prior-authorization
+      DATA_MODE: ${DATA_MODE:-fixture}
+      AGENT_MODE: ${AGENT_MODE:-rules}
+      AUTH_MODE: ${AUTH_MODE:-fixture}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      WORKER_CONCURRENCY: ${WORKER_CONCURRENCY:-2}
+      PA_PUBLIC_ORIGIN: ${PA_PUBLIC_ORIGIN:-http://127.0.0.1:3105}
+      # Recorded (scripted fixture) investigation runs: off unless selected.
+      # Live Claude needs the separate compose.live.yaml overlay; without it the
+      # budgets must be 0, no key is mounted and no ledger is opened.
+      AGENT_GRAPH_PROVIDER: ${AGENT_GRAPH_PROVIDER:-off}
+      AGENT_RUN_BUDGET_USD: ${AGENT_RUN_BUDGET_USD:-0}
+      AGENT_DAILY_BUDGET_USD: ${AGENT_DAILY_BUDGET_USD:-0}
+      AGENT_TOTAL_BUDGET_USD: ${AGENT_TOTAL_BUDGET_USD:-0}
+      AGENT_MAX_TOOL_CALLS: ${AGENT_MAX_TOOL_CALLS:-}
+      AGENT_MAX_MODEL_CALLS: ${AGENT_MAX_MODEL_CALLS:-}
+      AGENT_MAX_RUN_SECONDS: ${AGENT_MAX_RUN_SECONDS:-}
+      # File paths only; each service receives just its own (docker/rootfs/usr/local/lib/pa/launch.mjs).
+      DATABASE_URL_API_FILE: /run/secrets/database_url_api
+      DATABASE_URL_WORKER_FILE: /run/secrets/database_url_worker
+      WORKER_SERVICE_TOKEN_FILE: /run/secrets/worker_service_token
+      BETTER_AUTH_SECRET_FILE: /run/secrets/better_auth_secret
+    # Never the admin or migrator credential.
+    secrets: [database_url_api, database_url_worker, worker_service_token, better_auth_secret]
+    ports:
+      - 127.0.0.1:${APP_HOST_PORT:-3105}:3105
+    volumes:
+      - evidence:/var/lib/app/evidence
+    tmpfs:
+      # s6-overlay copies its service tree here and runs it, so /run needs exec
+      # and must belong to the container user.
+      - /run:uid=10001,gid=10001,mode=0755,exec
+      - /tmp:uid=10001,gid=10001,mode=0700
+    depends_on:
+      db:
+        condition: service_healthy
+      init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: [CMD, /usr/local/bin/node, /usr/local/lib/pa/healthcheck.mjs]
+      interval: 10s
+      timeout: 5s
+      start_period: 60s
+      start_interval: 2s
+      retries: 3
+    # 27-second application drain inside a 60-second stop grace period.
+    stop_grace_period: 60s
+    restart: unless-stopped
+
+secrets:
+  postgres_password:
+    file: ${PA_SECRETS_DIR:-./.secrets}/postgres_password
+  database_url_admin:
+    file: ${PA_SECRETS_DIR:-./.secrets}/database_url_admin
+  database_url_migrator:
+    file: ${PA_SECRETS_DIR:-./.secrets}/database_url_migrator
+  database_url_api:
+    file: ${PA_SECRETS_DIR:-./.secrets}/database_url_api
+  database_url_worker:
+    file: ${PA_SECRETS_DIR:-./.secrets}/database_url_worker
+  worker_service_token:
+    file: ${PA_SECRETS_DIR:-./.secrets}/worker_service_token
+  better_auth_secret:
+    file: ${PA_SECRETS_DIR:-./.secrets}/better_auth_secret
+
+volumes:
+  db-data:
+  evidence:

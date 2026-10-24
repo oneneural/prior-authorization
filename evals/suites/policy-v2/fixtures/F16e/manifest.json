@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F16e",
+  "specFixtureRow": "F16",
+  "title": "Encounter record failed provenance validation",
+  "scenario": "The only encounter record (f16e-encounter v1) is available with MIME application/json and names the case subject, but its metadata contentHash is the SHA-256 of different bytes (the same body with encounter date 2026-08-21), so the held well-formed encounter body does not match it. Final order dated 2026-09-02 by SYN-PRAC-0001 and its receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F16",
+    "D2",
+    "R04.encounter_failed_provenance",
+    "R09.hash_mismatch"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "a05d2c8b933a4288b46a638ef92f14e114f122785b4ba149a1b71ea11a9f37bd"
+    },
+    {
+      "path": "documents/f16e-encounter.v1.json",
+      "sha256": "7c91c7fd3fadcfbe160deb98defb0798ed14f12838cfe059ed24f1d5b2a0264d"
+    },
+    {
+      "path": "documents/f16e-encounter.v1.meta.json",
+      "sha256": "faa52be0bd7a099b97d52c16aa258212ce29eef18f3a83d5e8fbb68e2d8b31b8"
+    },
+    {
+      "path": "documents/f16e-order.v1.json",
+      "sha256": "e996d2181f3f0d47fd5a80068036aa2e6fd305d5bfa6b38966473e392367faa7"
+    },
+    {
+      "path": "documents/f16e-order.v1.meta.json",
+      "sha256": "59d5369de599fc42ac58ca54b3ccb8fa585a4b13a7c19bb406d17f5e16be50c4"
+    },
+    {
+      "path": "documents/f16e-receipt.v1.json",
+      "sha256": "44d7f4c94f1d63509fb4f62a2408165964859273bcb021ad790e33ad7ceb87f8"
+    },
+    {
+      "path": "documents/f16e-receipt.v1.meta.json",
+      "sha256": "763e1cda269d283853446250711e59de0a83178b28ee2e31c8b39409ab856faa"
+    },
+    {
+      "path": "documents/f16e-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f16e-supplier-status.v1.meta.json",
+      "sha256": "e7bd38b0d742f1b067e263ab539f21280a3a2f349d63a7c2d4bef4747e38771a"
+    }
+  ]
+}

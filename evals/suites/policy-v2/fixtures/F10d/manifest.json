@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F10d",
+  "specFixtureRow": "F10",
+  "title": "Supplier ownership change",
+  "scenario": "Supported K0823 packet except that the case supplier status and the named supplier record both state ownershipChange true; every other supplier value is the supported value and the interval contains the assessment date.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F10",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "5e12fea3a1b50368a33b5c888b3af0fb1592d0c8b5a20010af240e820461995d"
+    },
+    {
+      "path": "documents/f10d-encounter.v1.json",
+      "sha256": "05c0db3f6fc3b9926f2426afc8918d369fe16f671610321d3c715aa4fd63ae39"
+    },
+    {
+      "path": "documents/f10d-encounter.v1.meta.json",
+      "sha256": "5c4f4c896f08879f116174fb40cc7e831f91094bc8c35411700bce4162fdcc01"
+    },
+    {
+      "path": "documents/f10d-order.v1.json",
+      "sha256": "794219845750a157035d79b36725df3c2140b6c3010e13dc538a5f8e9be76d6a"
+    },
+    {
+      "path": "documents/f10d-order.v1.meta.json",
+      "sha256": "b920d13d32cf59c5fd600703d0a5c300325710b5cae781fac3f0697723d61b5c"
+    },
+    {
+      "path": "documents/f10d-receipt.v1.json",
+      "sha256": "b2e627f02ea203ec63ae75ff5adeaa2dee8719621a6699cc62fdfb68556c549d"
+    },
+    {
+      "path": "documents/f10d-receipt.v1.meta.json",
+      "sha256": "efc6ca4db5eda02e802c5709bd0030ed2ae2496cc2bc2a123a391a03e39c92ad"
+    },
+    {
+      "path": "documents/f10d-supplier-status.v1.json",
+      "sha256": "57492f7eed1a911c936b8574841fa3bb3b4e1f422f1e65358926fd5eba35ebe6"
+    },
+    {
+      "path": "documents/f10d-supplier-status.v1.meta.json",
+      "sha256": "94c7f80446c7c707861f634dfad43b32ed7010d72090cf10b76290b6206045ab"
+    }
+  ]
+}

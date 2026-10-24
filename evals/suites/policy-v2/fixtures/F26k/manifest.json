@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F26k",
+  "specFixtureRow": "F26",
+  "title": "Relative path attempt outside the fixture root",
+  "scenario": "Supported K0823 packet plus one inert path attempt, slot escape-relative.v1, whose relative path leaves the fixture root. The attempted target is never created, opened or read.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F26",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "7d821cf3cc681178e3fca59dc6b6d41654429f32c712b691a42ab57768bd3701"
+    },
+    {
+      "path": "documents/f26k-encounter.v1.json",
+      "sha256": "9aa20eaa09d29625f4bf78366181b3ba70dcb55ac0a3901f5c2a0e7fdafcdcee"
+    },
+    {
+      "path": "documents/f26k-encounter.v1.meta.json",
+      "sha256": "40a00e018094ee0b781dd1b9aaac2e58456dcdd62bdee1cbe718e387e2d2502e"
+    },
+    {
+      "path": "documents/f26k-order.v1.json",
+      "sha256": "dd15d2288ef0c01814b2d6f8f992c3c846da785930a038ed551df22a08b149fe"
+    },
+    {
+      "path": "documents/f26k-order.v1.meta.json",
+      "sha256": "b5864561c17e5407ce3f89841af7027e8a82faca5c27e46493380a1764405756"
+    },
+    {
+      "path": "documents/f26k-receipt.v1.json",
+      "sha256": "c0c8b7e185ad1252f0116da30e407f300ead98f87337093aa2d6465ae21c533e"
+    },
+    {
+      "path": "documents/f26k-receipt.v1.meta.json",
+      "sha256": "78a709ccecbc5e37597938454f43ab40f877d899970806f9098d0343285b0522"
+    },
+    {
+      "path": "documents/f26k-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f26k-supplier-status.v1.meta.json",
+      "sha256": "49067ea80e8acacc5df88cf91262b6637bd15668d25869450c585197f69442fb"
+    }
+  ],
+  "pathAttempts": [
+    {
+      "slot": "escape-relative.v1",
+      "path": "../outside-root.json"
+    }
+  ]
+}

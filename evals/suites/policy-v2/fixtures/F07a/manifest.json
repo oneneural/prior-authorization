@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F07a",
+  "specFixtureRow": "F07",
+  "title": "Order exactly six calendar months after the encounter",
+  "scenario": "Final encounter on 2026-03-15 and final order dated 2026-09-15 by the same practitioner identifier; the C01 bound is 2026-09-15. Receipt recorded on 2026-09-16T17:00:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F07"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "5afb715d1fd67b041b6d86e1b558ff5921c951baacd49f7b8b11c709a629d239"
+    },
+    {
+      "path": "documents/f07a-encounter.v1.json",
+      "sha256": "8d1f6900d2d2b94d238e3dd37cef20161d95b4e5aeaf3b07122807576401f63b"
+    },
+    {
+      "path": "documents/f07a-encounter.v1.meta.json",
+      "sha256": "17debd13d611fea992e991e954058860edbac4a99e9ea0d3fc85c982bbe63e9b"
+    },
+    {
+      "path": "documents/f07a-order.v1.json",
+      "sha256": "5f585eb3e859c2b8ac6041e200125450756d56e45e9cfe44fb06ce7cbf271ef7"
+    },
+    {
+      "path": "documents/f07a-order.v1.meta.json",
+      "sha256": "ff6bd8a76889d5d404d08223d8469d5a52efdab757b7c8aaab1a7ec9593b2507"
+    },
+    {
+      "path": "documents/f07a-receipt.v1.json",
+      "sha256": "4d8e3fbf51dffd59b8edcc44c35c7a5ec8e37368f55bc774b7711c339d05b59f"
+    },
+    {
+      "path": "documents/f07a-receipt.v1.meta.json",
+      "sha256": "75efc07c0203cbff14260f7f95bbaf681d243740198ec01cc051e4aa26ce3db1"
+    },
+    {
+      "path": "documents/f07a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f07a-supplier-status.v1.meta.json",
+      "sha256": "ddcc1da9d553555be434364acd468d0a29eff4c53a08a7f86a7bf6c9d973e1a4"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@pa/evals",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@langchain/langgraph": "catalog:",
+    "@pa/agents": "workspace:*",
+    "@pa/contracts": "workspace:*",
+    "@pa/domain": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "catalog:",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

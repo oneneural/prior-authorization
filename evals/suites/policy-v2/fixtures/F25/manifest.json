@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F25",
+  "specFixtureRow": "F25",
+  "title": "Order uses the beneficiary name without an identifier",
+  "scenario": "The supported case (encounter 2026-08-19, order 2026-09-01, receipt 2026-09-02) except that the order states the beneficiary name only; its beneficiary identifier is null. The other documents state both.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included. Migrated to the version 2 suite on 2026-10-20: every source and metadata file is byte-identical to the first-slice original, and case.json changes only its schema version and policy pack ID.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F25",
+    "R03"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "81ab7b57bb1a920c92bea1836dda932120bb3466ac910c21150270eb484826ec"
+    },
+    {
+      "path": "documents/f25-encounter.v1.json",
+      "sha256": "a34153d8cde2fcefa2fa7f3c28b88d9bdb9c8c3214c220697caf8cd1ef93eec6"
+    },
+    {
+      "path": "documents/f25-encounter.v1.meta.json",
+      "sha256": "864182b6d9d830bff50efcc2f8bffcfaae42cf540f7324873ba597deba962355"
+    },
+    {
+      "path": "documents/f25-order.v1.json",
+      "sha256": "d63efc409c64b6405599dc931e7dbdc235da7fb219b4902942faef8f8009628e"
+    },
+    {
+      "path": "documents/f25-order.v1.meta.json",
+      "sha256": "b6cd418c0a5bc0559137b5c424157f26c24b5e656fe010356b999075b2b520fa"
+    },
+    {
+      "path": "documents/f25-receipt.v1.json",
+      "sha256": "a926bcd2b7881f8adf1374f6e86d77256b739da212481bfc066803b32ed42296"
+    },
+    {
+      "path": "documents/f25-receipt.v1.meta.json",
+      "sha256": "5e9b1747d4c0465b36701e904484298b0ea52a91ef62b9badf963e7b29bbff07"
+    },
+    {
+      "path": "documents/f25-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f25-supplier-status.v1.meta.json",
+      "sha256": "620fd4388cec0d8cfdbd876e5a283accdcd81f8865afb2056f3f9a5ecd06835a"
+    }
+  ]
+}

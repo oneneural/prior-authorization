@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.source.order.v1",
+  "documentKind": "order",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Remy Testcase",
+    "identifier": "SYN-BEN-F14X2"
+  },
+  "orderDate": "2026-09-01",
+  "orderTime": null,
+  "item": {
+    "description": "Power wheelchair, standard base, for synthetic test fixture F14x2",
+    "code": "K0823",
+    "quantity": 1
+  },
+  "treatingPractitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "signature": {
+    "signerName": "Casey Example, MD (synthetic)",
+    "signedDate": "2026-09-01"
+  }
+}

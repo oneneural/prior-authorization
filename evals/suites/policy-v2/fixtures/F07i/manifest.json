@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F07i",
+  "specFixtureRow": "F07",
+  "title": "Order one day after the leap-day encounter bound",
+  "scenario": "Final encounter on 2024-02-29 and final order dated 2024-08-30 by the same practitioner identifier; the C01 bound is 2024-08-29. Receipt recorded on 2024-08-31T17:00:00Z. The case assessment date is 2026-10-18 and scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F07",
+    "D2",
+    "R04.order_after_bound"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "bd2218338a4d3b0b585a6a927d596aa33984b08914846e1fe610e4dd8606a516"
+    },
+    {
+      "path": "documents/f07i-encounter.v1.json",
+      "sha256": "8a5b4e8fef1a938cf4a4ef2121711e741ffc66f67503f82444a48514e169548c"
+    },
+    {
+      "path": "documents/f07i-encounter.v1.meta.json",
+      "sha256": "7c33853f55fe5f3914f3924ca4c20c1d30acfaccbfa3b83a95d25acfe8be7027"
+    },
+    {
+      "path": "documents/f07i-order.v1.json",
+      "sha256": "3dfc7f0b0ca4d8adefaa88a13cd7c6bf00a33ffd75e9cf80fdfc7cbcfe296bac"
+    },
+    {
+      "path": "documents/f07i-order.v1.meta.json",
+      "sha256": "2e10da80d578cec807fdae1f9bb9611b6ccc4854973f385391e0723540566190"
+    },
+    {
+      "path": "documents/f07i-receipt.v1.json",
+      "sha256": "7e40848c4b9b733640bf31c34d1aafaac96a812d35be52ce75a3b0a9c14dbf65"
+    },
+    {
+      "path": "documents/f07i-receipt.v1.meta.json",
+      "sha256": "8f7daa004b90a457299056eb29f87e3da5193f5814d120b550f10f00036651a1"
+    },
+    {
+      "path": "documents/f07i-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f07i-supplier-status.v1.meta.json",
+      "sha256": "6d84fa382559d8b0a4deb92a404a15a31509cdddd098c52f14540513de5528a4"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "pa.oracle.v2",
+  "fixtureId": "F25",
+  "fixtureManifestSha256": "b950dd71bfe18d7f1d169118ba0516078ae482615bc93bc2a54ec0b662022e83",
+  "policyPackId": "lab-k0823-jd-20261018-v1",
+  "policyPackSha256": "0e88bb0b756be1eab93cd38f2ac17841ab0eeb807f12de042cc3da722cb1fc48",
+  "expectedState": "ready_for_review",
+  "expectedFindings": [
+    {
+      "ruleId": "R01",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f25-supplier-status", "documentVersion": 1, "locator": "/supplierId" },
+        { "documentId": "f25-supplier-status", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f25-supplier-status", "documentVersion": 1, "locator": "/established" },
+        { "documentId": "f25-supplier-status", "documentVersion": 1, "locator": "/newEnrollment" },
+        { "documentId": "f25-supplier-status", "documentVersion": 1, "locator": "/ownershipChange" },
+        { "documentId": "f25-supplier-status", "documentVersion": 1, "locator": "/effectiveFrom" },
+        { "documentId": "f25-supplier-status", "documentVersion": 1, "locator": "/effectiveTo" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/item/code" }
+      ]
+    },
+    {
+      "ruleId": "R02",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f25-receipt", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f25-receipt", "documentVersion": 1, "locator": "/beneficiary/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R03",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/item/description" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/item/quantity" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/treatingPractitioner/name" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/signature/signerName" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/signature/signedDate" }
+      ]
+    },
+    {
+      "ruleId": "R04",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/encounterDate" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/practitioner/identifier" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R05",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f25-receipt", "documentVersion": 1, "locator": "/orderReference/documentId" },
+        { "documentId": "f25-receipt", "documentVersion": 1, "locator": "/orderReference/version" },
+        { "documentId": "f25-receipt", "documentVersion": 1, "locator": "/receivedAt" },
+        { "documentId": "f25-order", "documentVersion": 1, "locator": "/orderDate" }
+      ]
+    },
+    {
+      "ruleId": "R06",
+      "status": "manual_review",
+      "responsibleRole": "qualified_clinical_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/clinical/diagnosisStatement" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/clinical/mobilityLimitation" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/clinical/lowerLevelDevices" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/clinical/homeAccessibility" },
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/clinical/abilityToOperate" }
+      ]
+    },
+    {
+      "ruleId": "R07",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f25-encounter", "documentVersion": 1, "locator": "/lcmpReport/incorporated" }
+      ]
+    },
+    { "ruleId": "R08", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R09", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R10", "status": "not_applicable", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] }
+  ],
+  "quarantinedDocumentIds": [],
+  "clinicalReviewRequired": true,
+  "specReferences": {
+    "fixtureRow": "F25",
+    "rules": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10"],
+    "sections": ["Administrative requirements", "Data contracts", "Critical fixture suite"],
+    "slicePlanDecisions": [2],
+    "sources": ["S06", "S07", "S08", "S09", "S10", "S14"]
+  },
+  "authoringNote": "The order states the beneficiary name and leaves the identifier null; the other documents state both. R03 accepts the name alternative the standard written order permits (S09) and does not require or invent an identifier, so R03 passes citing the name. R02 binds the order through its metadata subjectId and the stated name matching the case subjectName; with no identifier stated there is nothing to cite or compare for it. Every other gate passes as in F01, so the state is ready_for_review."
+}

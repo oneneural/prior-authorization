@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Bay Testcase",
+    "identifier": "SYN-BEN-F26B"
+  },
+  "orderReference": {
+    "documentId": "f26b-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-04T16:29:59Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

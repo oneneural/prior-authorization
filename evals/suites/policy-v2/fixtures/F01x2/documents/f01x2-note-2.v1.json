@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Lane Testcase",
+    "identifier": "SYN-BEN-F01X2"
+  },
+  "authoredDate": "2026-10-16",
+  "title": "Supplier follow-up note (synthetic)",
+  "text": "  \n  "
+}

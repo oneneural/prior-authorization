@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f28a-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F28A",
+  "kind": "order_receipt",
+  "contentHash": "e4501c00cfa4f054944f6a91095b61e13b2a8b3f39ca1c47de43c9ed02fb7a3d",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-05",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F28a. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

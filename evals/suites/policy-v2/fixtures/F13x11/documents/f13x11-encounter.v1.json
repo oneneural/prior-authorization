@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.encounter.v1",
+  "documentKind": "encounter",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Pax Testcase",
+    "identifier": "SYN-BEN-F13X11"
+  },
+  "encounterDate": "2026-08-24",
+  "completionTime": null,
+  "practitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "lcmpReport": {
+    "incorporated": false,
+    "evaluationDate": null
+  },
+  "clinical": {
+    "diagnosisStatement": "Synthetic test text: long-term neuromuscular condition limiting walking endurance, as stated by the practitioner.",
+    "mobilityLimitation": "Synthetic test text: stops to rest several times when moving between rooms at home.",
+    "lowerLevelDevices": "Synthetic test text: a cane and a walker were tried, as recorded by the practitioner.",
+    "homeAccessibility": "Synthetic test text: single-level home; doorways reported as wide enough for a powered chair.",
+    "abilityToOperate": "Synthetic test text: operated the joystick controls during the visit and wishes to use the device."
+  },
+  "narrative": "SYNTHETIC TEST DOCUMENT for fixture F13x11. Fictional face-to-face encounter summary, not a medical record."
+}

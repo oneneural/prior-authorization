@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F25x2",
+  "fixtureManifestSha256": "74b3b4243ca038de4f57879a359b80f2435d38877aa7413d719d7b16320a9801",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F25",
+    "rules": [
+      "R02"
+    ],
+    "sections": [
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D1",
+      "D6"
+    ],
+    "conventions": [],
+    "sources": []
+  },
+  "authoringNote": "D1 reject contrast for case and metadata text. A whitespace-only subjectName fails CanonicalText, and the metadata provenance statement is ExactText, so the empty and whitespace-only statements fail DocumentExact. Schema reasons are reported together (D6): case_invalid at /case, then one document_metadata_invalid per invalid sidecar at /documents/<slot>/metadata. Both sidecars state a documentId and version that parse, so each reason carries that reference. Canonical order is by code, then reference (f25x2-encounter before f25x2-order). Each reason isolates its own input, so dropping any check changes the set. Source bodies are valid; no R09 result, no snapshot stage and no partial assessment.",
+  "expectation": {
+    "outcome": "rejected",
+    "stage": "schema",
+    "reasons": [
+      {
+        "code": "case_invalid",
+        "documentRef": null,
+        "path": "/case"
+      },
+      {
+        "code": "document_metadata_invalid",
+        "documentRef": {
+          "documentId": "f25x2-encounter",
+          "version": 1
+        },
+        "path": "/documents/f25x2-encounter.v1/metadata"
+      },
+      {
+        "code": "document_metadata_invalid",
+        "documentRef": {
+          "documentId": "f25x2-order",
+          "version": 1
+        },
+        "path": "/documents/f25x2-order.v1/metadata"
+      }
+    ]
+  }
+}

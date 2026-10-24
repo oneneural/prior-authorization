@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Dakota Testcase",
+    "identifier": "SYN-BEN-F07H"
+  },
+  "orderReference": {
+    "documentId": "f07h-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-03T17:05:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

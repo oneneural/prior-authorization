@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.agent-recording.v1",
+  "recordingId": "fail-invalid",
+  "synthetic": true,
+  "label": "scripted_fixture",
+  "provenance": "Evaluator-only scripted failure: after one read the provider returns a structurally invalid turn whose tool name is a number and which has no input. No live model output.",
+  "model": "recorded-evaluator-v1",
+  "turns": [
+    { "output": { "type": "call_tool", "tool": "list_documents", "input": {} } },
+    { "output": { "type": "call_tool", "tool": 42 } }
+  ]
+}

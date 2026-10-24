@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F16d",
+  "specFixtureRow": "F16",
+  "title": "Usable draft encounter beside a restricted encounter",
+  "scenario": "Two encounter records, neither superseding the other: f16d-encounter-a v1 is access restricted (null content hash, no bytes held) and f16d-encounter-b v1 is an available draft dated 2026-08-20 by SYN-PRAC-0001 with no LCMP incorporation. No final usable encounter exists. Final order dated 2026-09-02 by SYN-PRAC-0001 and its receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F16",
+    "D2",
+    "R04.encounter_not_final",
+    "R04.encounter_restricted",
+    "R09.access_restricted"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "c4625cda6bc964ee72f5d355b3209f049257fc546d7cc13da9f7592dba9bb8d2"
+    },
+    {
+      "path": "documents/f16d-encounter-a.v1.meta.json",
+      "sha256": "fea50f017d8fdc7741af0c2be4d3057cde229d3b2a3424c1f3a5155deda4c413"
+    },
+    {
+      "path": "documents/f16d-encounter-b.v1.json",
+      "sha256": "07969a59f946e25ce8f361ffc57e2d5b372a4a0d790cbcebd045d84b9526ed3e"
+    },
+    {
+      "path": "documents/f16d-encounter-b.v1.meta.json",
+      "sha256": "4f3754087611232a778ef838c93279f330092b52d218f68cd1fef3d22df1c1e4"
+    },
+    {
+      "path": "documents/f16d-order.v1.json",
+      "sha256": "4b78372d56c19cff0347866f5fe206f6ccd8f1ca640474d093f090e13cabb65d"
+    },
+    {
+      "path": "documents/f16d-order.v1.meta.json",
+      "sha256": "8ea6c327e85a045e8771a5e3865fdacccc249296b260c0f47217065a4a12b2da"
+    },
+    {
+      "path": "documents/f16d-receipt.v1.json",
+      "sha256": "a852168cd7c9c7328ef4955a67551364cde5f86acef8b0501bc505ca2f381c95"
+    },
+    {
+      "path": "documents/f16d-receipt.v1.meta.json",
+      "sha256": "60796f2f6f59ed268b440ae267306037cf684ab539755996c9e9ac0b1f86aac5"
+    },
+    {
+      "path": "documents/f16d-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f16d-supplier-status.v1.meta.json",
+      "sha256": "0c3d158bd64f4339a5091883e4101f00781ed2978c2a5d9b7b188db3b3e90d47"
+    }
+  ]
+}

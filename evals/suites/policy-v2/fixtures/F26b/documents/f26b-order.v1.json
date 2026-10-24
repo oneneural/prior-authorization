@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.order.v1",
+  "documentKind": "order",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Bay Testcase",
+    "identifier": "SYN-BEN-F26B"
+  },
+  "orderDate": "2026-09-04",
+  "orderTime": {
+    "timestamp": "2026-09-04T09:30:00-07:00",
+    "timeZone": "America/Los_Angeles"
+  },
+  "item": {
+    "description": "Power wheelchair base item for synthetic test fixture F26b",
+    "code": "K0823",
+    "quantity": 1
+  },
+  "treatingPractitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "signature": {
+    "signerName": "Casey Example, MD (synthetic)",
+    "signedDate": "2026-09-04"
+  }
+}

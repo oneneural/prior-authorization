@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "H09",
+  "specFixtureRow": "F28",
+  "title": "Held-out irrelevant supporting note change",
+  "scenario": "F28a inputs whose unrelated supporting note now concerns a fictional library card renewal instead of a utility hardship notice. It has no mobility, medical or eligibility content.",
+  "syntheticProvenance": "Original synthetic evaluator input authored by mutating suite policy-v2 fixture F28a. Every person, practitioner, supplier and identifier is fictional. No real record or copied policy text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "holdout.irrelevant_text"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "e2f7dbce12f5b8fbd54a894364c9935eba21cfc6c86f1d5cdba6e79b9915742f"
+    },
+    {
+      "path": "documents/f28a-encounter.v1.json",
+      "sha256": "e9abf18bca6c29806b75e6bc0df08f4c36b0d53a225d5ab68948c878e2e6e846"
+    },
+    {
+      "path": "documents/f28a-encounter.v1.meta.json",
+      "sha256": "ed42f1880b017c2389d1641ad864f3355208de50cb712ab3f1278c30d327cafe"
+    },
+    {
+      "path": "documents/f28a-note.v1.json",
+      "sha256": "3b12b0331d2a16c6310e6a3413ef0aa1107f7911294f221bf38e8c4d9fd1271f"
+    },
+    {
+      "path": "documents/f28a-note.v1.meta.json",
+      "sha256": "13f41a651fdd07da7bda166b0fea4d8dad2584b760aa2a78da497d61a8f05655"
+    },
+    {
+      "path": "documents/f28a-order.v1.json",
+      "sha256": "7a7bed86d0ceb1606f7e3f986b9985bab7520fcd5b8cbb2456e77f39e80486e9"
+    },
+    {
+      "path": "documents/f28a-order.v1.meta.json",
+      "sha256": "37807d66daa1d065721d69bf95d88cebc01b886912c30a3cc3a1c8bdeaf1880c"
+    },
+    {
+      "path": "documents/f28a-receipt.v1.json",
+      "sha256": "e4501c00cfa4f054944f6a91095b61e13b2a8b3f39ca1c47de43c9ed02fb7a3d"
+    },
+    {
+      "path": "documents/f28a-receipt.v1.meta.json",
+      "sha256": "40fd3e51c2140aee934a38da7af3dcfe84a9a95bfc469d95682282d28f243875"
+    },
+    {
+      "path": "documents/f28a-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f28a-supplier-status.v1.meta.json",
+      "sha256": "769514e0832c2df4982c1b36fc733d710d416d5c434c142870774ab07b24dd2f"
+    }
+  ]
+}

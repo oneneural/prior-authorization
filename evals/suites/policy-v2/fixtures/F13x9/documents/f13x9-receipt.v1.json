@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Nash Testcase",
+    "identifier": "SYN-BEN-F13X9"
+  },
+  "orderReference": {
+    "documentId": "f13x9-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-09T16:30:00Z",
+  "recordedByRole": "supplier intake clerk (fictional)"
+}

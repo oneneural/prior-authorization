@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H02",
+  "group": "holdout",
+  "specRow": "F02",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H02",
+    "manifestSha256": "1ad4f1bf4e51ceadca18568cdb39548cf2a9a51b1f925d3a4d01e699355a9ab5"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "Layout only: the F02 oracle outcome holds; the order and receipt remain absent.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "needs_information",
+    "issues": [
+      "R03:missing",
+      "R04:missing",
+      "R05:missing",
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

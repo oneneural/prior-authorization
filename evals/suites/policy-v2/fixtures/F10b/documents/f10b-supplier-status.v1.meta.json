@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f10b-supplier-status",
+  "version": 1,
+  "subjectId": null,
+  "kind": "supplier_status",
+  "contentHash": "4c1164e7c1792ae2203935ee9bdc9fba0dfbec45ee31eabb7e9f0a157aada01c",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_compliance",
+  "receivedAt": "2026-10-17T15:15:00Z",
+  "authoredAt": "2026-10-16",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F10b. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f25x2-order",
+  "version": 1,
+  "subjectId": "SYN-BEN-F25X2",
+  "kind": "order",
+  "contentHash": "f14ffc8adf1252b3844341955eadc4c1394e9f518ad00febfe8338de49c0d52c",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:05:00Z",
+  "authoredAt": "2026-09-01",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": ""
+  },
+  "accessStatus": "available"
+}

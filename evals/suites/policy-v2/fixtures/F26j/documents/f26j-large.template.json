@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Juniper Testcase",
+    "identifier": "SYN-BEN-F26J"
+  },
+  "authoredDate": "2026-09-22",
+  "title": "Synthetic payload size note (one byte over)",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F26j. Fictional intake filler with no clinical content: @@PAD@@"
+}

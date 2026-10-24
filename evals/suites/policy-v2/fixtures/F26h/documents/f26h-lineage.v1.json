@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Heath Testcase",
+    "identifier": "SYN-BEN-F26H"
+  },
+  "authoredDate": "2026-09-08",
+  "title": "Synthetic intake cover note",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F26h. Fictional intake cover note, first version, listing two enclosed pages and no clinical content."
+}

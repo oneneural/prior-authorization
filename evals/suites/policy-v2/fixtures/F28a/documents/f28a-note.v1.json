@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Rowan Testcase",
+    "identifier": "SYN-BEN-F28A"
+  },
+  "authoredDate": "2026-09-20",
+  "title": "Unrelated personal correspondence (synthetic)",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F28a. Fictional household utility account hardship notice for reference SYN-ACCT-0042, listing a fictional overdue balance and a fictional payment plan. It concerns no mobility equipment, medical event or coverage question."
+}

@@ -1,0 +1,494 @@
+{
+  "schemaVersion": "pa.live-eval-report.v1",
+  "label": "live_claude",
+  "runLabel": "smoke-f01",
+  "runId": "live-2026-10-21T10-36-46-726Z-smoke-f01",
+  "uncommittedPaths": 0,
+  "startedAt": "2026-10-21T10:36:46.726Z",
+  "finishedAt": "2026-10-21T10:37:27.477Z",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "maxOutputTokens": 8192,
+  "thinking": "adaptive (parameter omitted; display omitted)",
+  "toolChoice": "auto, parallel tool use disabled, strict tools",
+  "serverSideFallbacks": "none",
+  "promptVersion": "pa-evidence-prompt.v1:3aed9621f38e23cc",
+  "toolsVersion": "3d7b40bbb53d1600",
+  "promptNote": "Prompt and tool definitions were fixed before any live call and not changed during the run.",
+  "priceSnapshot": {
+    "model": "claude-opus-5-5",
+    "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "readOn": "2026-10-21",
+    "usdPerMTok": {
+      "inputPerMTok": 4,
+      "outputPerMTok": 20,
+      "cacheWritePerMTok": 5,
+      "cacheReadPerMTok": 0.2
+    }
+  },
+  "caps": {
+    "runUsd": 1,
+    "dailyUsd": 20,
+    "totalUsd": 20
+  },
+  "ledger": {
+    "runCalls": 5,
+    "runCommittedUsd": 0.098734,
+    "dayCommittedUsd": 0.098734,
+    "totalCommittedUsd": 0.098734
+  },
+  "totals": {
+    "rules": {
+      "cases": 1,
+      "issuePrecision": [
+        1,
+        1
+      ],
+      "issueRecall": [
+        1,
+        1
+      ],
+      "supportedEvidence": [
+        34,
+        34
+      ],
+      "abstentions": [
+        0,
+        1
+      ],
+      "notRun": 0,
+      "prohibitedAttemptedExecuted": [
+        0,
+        0
+      ],
+      "falseReady": [
+        0,
+        0
+      ],
+      "latencyMs": {
+        "total": 0.8755409999998847,
+        "median": 0.8755409999998847
+      },
+      "matchesRules": [
+        10,
+        10
+      ]
+    },
+    "live": {
+      "cases": 1,
+      "issuePrecision": [
+        1,
+        1
+      ],
+      "issueRecall": [
+        1,
+        1
+      ],
+      "supportedEvidence": [
+        10,
+        10
+      ],
+      "abstentions": [
+        0,
+        1
+      ],
+      "notRun": 0,
+      "prohibitedAttemptedExecuted": [
+        0,
+        0
+      ],
+      "falseReady": [
+        0,
+        0
+      ],
+      "latencyMs": {
+        "total": 39089.367625,
+        "median": 39089.367625
+      },
+      "matchesRules": [
+        10,
+        10
+      ]
+    },
+    "provider": {
+      "calls": 5,
+      "outcomes": {
+        "tool_use": 4,
+        "finish": 1,
+        "refusal": 0,
+        "max_tokens": 0,
+        "unexpected_stop": 0,
+        "api_error": 0,
+        "budget_refused": 0
+      },
+      "refusals": [
+        0,
+        5
+      ],
+      "refusalCategories": [],
+      "invalidOutputs": [
+        0,
+        1
+      ],
+      "invalidToolInputs": [
+        0,
+        4
+      ],
+      "tokens": {
+        "input": 12,
+        "cacheWrite": 7401,
+        "cacheRead": 15705,
+        "output": 2927
+      },
+      "reconciledUsd": 0.098734,
+      "heldUsd": 0,
+      "modelLatencyMs": {
+        "total": 38933.452834,
+        "median": 8019.95925
+      }
+    }
+  },
+  "identicalIssues": [
+    1,
+    1
+  ],
+  "byGroup": [
+    {
+      "group": "snapshot",
+      "rules": {
+        "cases": 1,
+        "issuePrecision": [
+          1,
+          1
+        ],
+        "issueRecall": [
+          1,
+          1
+        ],
+        "supportedEvidence": [
+          34,
+          34
+        ],
+        "abstentions": [
+          0,
+          1
+        ],
+        "notRun": 0,
+        "prohibitedAttemptedExecuted": [
+          0,
+          0
+        ],
+        "falseReady": [
+          0,
+          0
+        ],
+        "latencyMs": {
+          "total": 0.8755409999998847,
+          "median": 0.8755409999998847
+        },
+        "matchesRules": [
+          10,
+          10
+        ]
+      },
+      "live": {
+        "cases": 1,
+        "issuePrecision": [
+          1,
+          1
+        ],
+        "issueRecall": [
+          1,
+          1
+        ],
+        "supportedEvidence": [
+          10,
+          10
+        ],
+        "abstentions": [
+          0,
+          1
+        ],
+        "notRun": 0,
+        "prohibitedAttemptedExecuted": [
+          0,
+          0
+        ],
+        "falseReady": [
+          0,
+          0
+        ],
+        "latencyMs": {
+          "total": 39089.367625,
+          "median": 39089.367625
+        },
+        "matchesRules": [
+          10,
+          10
+        ]
+      },
+      "provider": {
+        "calls": 5,
+        "outcomes": {
+          "tool_use": 4,
+          "finish": 1,
+          "refusal": 0,
+          "max_tokens": 0,
+          "unexpected_stop": 0,
+          "api_error": 0,
+          "budget_refused": 0
+        },
+        "refusals": [
+          0,
+          5
+        ],
+        "refusalCategories": [],
+        "invalidOutputs": [
+          0,
+          1
+        ],
+        "invalidToolInputs": [
+          0,
+          4
+        ],
+        "tokens": {
+          "input": 12,
+          "cacheWrite": 7401,
+          "cacheRead": 15705,
+          "output": 2927
+        },
+        "reconciledUsd": 0.098734,
+        "heldUsd": 0,
+        "modelLatencyMs": {
+          "total": 38933.452834,
+          "median": 8019.95925
+        }
+      }
+    }
+  ],
+  "cases": [
+    {
+      "caseId": "F01",
+      "group": "snapshot",
+      "expected": {
+        "state": "ready_for_review",
+        "issues": [
+          "R06:manual_review"
+        ]
+      },
+      "rules": {
+        "state": "ready_for_review",
+        "issues": [
+          "R06:manual_review"
+        ],
+        "latencyMs": 0.8755409999998847
+      },
+      "live": {
+        "stopReason": "finished",
+        "issues": [
+          "R06:manual_review"
+        ],
+        "evidence": 10,
+        "supported": 10,
+        "proposalCodes": [
+          "fact:valid",
+          "fact:valid",
+          "fact:valid",
+          "fact:valid",
+          "fact:valid",
+          "fact:valid",
+          "fact:valid",
+          "fact:valid",
+          "fact:valid",
+          "fact:valid"
+        ],
+        "prohibitedAttempts": 0,
+        "prohibitedExecuted": 0,
+        "toolErrors": 0,
+        "latencyMs": 39089.367625,
+        "trace": [
+          {
+            "step": 0,
+            "kind": "model",
+            "name": "anthropic",
+            "outcome": "tool_requested",
+            "inputHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "outputHash": "060344a34a17104ef8456ffecde61c84a30104f588e79368b49dac8fa80d3363",
+            "elapsedMs": 8060,
+            "retries": 0
+          },
+          {
+            "step": 1,
+            "kind": "tool",
+            "name": "get_policy_pack",
+            "outcome": "ok",
+            "inputHash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "outputHash": "380edbeb6b0f430a90aa99edcbefa8764b4805696682fc55b07206e0bb2d6e01",
+            "elapsedMs": 0,
+            "retries": 0
+          },
+          {
+            "step": 2,
+            "kind": "model",
+            "name": "anthropic",
+            "outcome": "tool_requested",
+            "inputHash": "9864a2a72ff9aca39d65896fa712ead04823b80cb6b4c9afa90c7d37e537aa3f",
+            "outputHash": "60d5cd77b912fb5f0a1bd7e8509cd6c9bafd512dbaddf01abcb3b031fd4058e6",
+            "elapsedMs": 2382,
+            "retries": 0
+          },
+          {
+            "step": 3,
+            "kind": "tool",
+            "name": "list_documents",
+            "outcome": "ok",
+            "inputHash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "outputHash": "ad04647332e57b687540a329ee443b60a5a3f242e66e40d00766e0ee243f3c93",
+            "elapsedMs": 1,
+            "retries": 0
+          },
+          {
+            "step": 4,
+            "kind": "model",
+            "name": "anthropic",
+            "outcome": "tool_requested",
+            "inputHash": "55c5b1511ec19f79f5097bb4d89fa3e75358f657d08e9ed8c5be75673e55ef33",
+            "outputHash": "e2b4dfdd46adac8228a2be4df5d0179d76c3b48f8a2101a91040ab35090883a3",
+            "elapsedMs": 4844,
+            "retries": 0
+          },
+          {
+            "step": 5,
+            "kind": "tool",
+            "name": "read_document",
+            "outcome": "ok",
+            "inputHash": "5371b8fedca2947244683a3c47610fa6bbf61a368134681b221e0a929bdc9fa4",
+            "outputHash": "5bfec48f44644c70ba9acf7e167ed80002fa63f393e49464401b9572ea7d1388",
+            "elapsedMs": 0,
+            "retries": 0
+          },
+          {
+            "step": 6,
+            "kind": "model",
+            "name": "anthropic",
+            "outcome": "tool_requested",
+            "inputHash": "140cf41f097d9974509972a15e6e92419cd934099cd7a082fe069b3edc24635b",
+            "outputHash": "899c307a343b2bee2f81489616af09c37cae8c8622fc0f084e36a13ccfeb85e7",
+            "elapsedMs": 14875,
+            "retries": 0
+          },
+          {
+            "step": 7,
+            "kind": "tool",
+            "name": "propose_facts",
+            "outcome": "ok",
+            "inputHash": "21bb92df8ef34b52f9826cd6575fef637fa93ac84d01505892ce99f247e5933e",
+            "outputHash": "8d0ae3a8de0e324af2ccaee4627df851cb19cb148867eac1b2eabdd334269801",
+            "elapsedMs": 2,
+            "retries": 0
+          },
+          {
+            "step": 8,
+            "kind": "model",
+            "name": "anthropic",
+            "outcome": "finish",
+            "inputHash": "51c20a834b5e4c2c0e87bdf2a94df30686ca20287cfa89ea986876373d6e690f",
+            "outputHash": "55f6ead821451de90c7f25b5d4b20d67ac03b90c64c75b9be50c51870a047c2c",
+            "elapsedMs": 8901,
+            "retries": 0
+          }
+        ],
+        "calls": [
+          {
+            "turn": 0,
+            "stopReason": "tool_use",
+            "refusalCategory": null,
+            "tool": "get_policy_pack",
+            "usage": {
+              "inputTokens": 4,
+              "outputTokens": 101,
+              "cacheCreationInputTokens": 3018,
+              "cacheReadInputTokens": 0
+            },
+            "reservedUsd": 0.20251,
+            "costUsd": 0.017126,
+            "latencyMs": 8019.95925,
+            "error": null,
+            "outcome": "tool_use"
+          },
+          {
+            "turn": 1,
+            "stopReason": "tool_use",
+            "refusalCategory": null,
+            "tool": "list_documents",
+            "usage": {
+              "inputTokens": 2,
+              "outputTokens": 58,
+              "cacheCreationInputTokens": 616,
+              "cacheReadInputTokens": 3018
+            },
+            "reservedUsd": 0.21543,
+            "costUsd": 0.0048516,
+            "latencyMs": 2340.66575,
+            "error": null,
+            "outcome": "tool_use"
+          },
+          {
+            "turn": 2,
+            "stopReason": "tool_use",
+            "refusalCategory": null,
+            "tool": "read_document",
+            "usage": {
+              "inputTokens": 2,
+              "outputTokens": 215,
+              "cacheCreationInputTokens": 442,
+              "cacheReadInputTokens": 3634
+            },
+            "reservedUsd": 0.226795,
+            "costUsd": 0.0072448,
+            "latencyMs": 4829.150584000001,
+            "error": null,
+            "outcome": "tool_use"
+          },
+          {
+            "turn": 3,
+            "stopReason": "tool_use",
+            "refusalCategory": null,
+            "tool": "propose_facts",
+            "usage": {
+              "inputTokens": 2,
+              "outputTokens": 1856,
+              "cacheCreationInputTokens": 901,
+              "cacheReadInputTokens": 4076
+            },
+            "reservedUsd": 0.24419,
+            "costUsd": 0.0424482,
+            "latencyMs": 14855.05375,
+            "error": null,
+            "outcome": "tool_use"
+          },
+          {
+            "turn": 4,
+            "stopReason": "end_turn",
+            "refusalCategory": null,
+            "tool": null,
+            "usage": {
+              "inputTokens": 2,
+              "outputTokens": 697,
+              "cacheCreationInputTokens": 2424,
+              "cacheReadInputTokens": 4977
+            },
+            "reservedUsd": 0.277365,
+            "costUsd": 0.0270634,
+            "latencyMs": 8888.623500000002,
+            "error": null,
+            "outcome": "finish"
+          }
+        ],
+        "costUsd": 0.098734
+      },
+      "gateProblems": [],
+      "behaviorNotes": []
+    }
+  ]
+}

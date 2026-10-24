@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F16c",
+  "specFixtureRow": "F16",
+  "title": "Encounter record reported unreadable",
+  "scenario": "The only encounter record (f16c-encounter v1) is reported unreadable by its source system: accessStatus unreadable, MIME application/json, and the held bytes, a well-formed encounter body, match its content hash. Final order dated 2026-09-02 by SYN-PRAC-0001 and its receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F16",
+    "D2",
+    "R04.encounter_unreadable",
+    "R09.access_unreadable"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "fd83417e200b042af8caeb912ab156cacc378cf6a2af20e3ed6984ea19edd610"
+    },
+    {
+      "path": "documents/f16c-encounter.v1.json",
+      "sha256": "b35919721b237f65b9638aa4dd70202315013fa3bce68c57379410ffc4cf852b"
+    },
+    {
+      "path": "documents/f16c-encounter.v1.meta.json",
+      "sha256": "997f5b54dfd66545e9d660b0bfb7f458ca56b0b36a298d6c8441bba97c3be96a"
+    },
+    {
+      "path": "documents/f16c-order.v1.json",
+      "sha256": "96d28d19b6dc9839e57ba88cac0a7205027209ec0f5aa7f201da12d0110c4a9e"
+    },
+    {
+      "path": "documents/f16c-order.v1.meta.json",
+      "sha256": "8a8d388bb4e2fd4032a5204944fee7940c8312c195e7a1f9d1908602f24258c5"
+    },
+    {
+      "path": "documents/f16c-receipt.v1.json",
+      "sha256": "202cdba14b03bbfab1c8c68e44d54a6aa941795a997b7531df6c5aadadefaf7a"
+    },
+    {
+      "path": "documents/f16c-receipt.v1.meta.json",
+      "sha256": "074e6752b16a1cb6a4f11054234b145f82d39bea249902dd041d31152b2523d2"
+    },
+    {
+      "path": "documents/f16c-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f16c-supplier-status.v1.meta.json",
+      "sha256": "01d4321b4da1b4410adaf1398c0687a187283d7240e99a9d874e1c2d7f6f7cc5"
+    }
+  ]
+}

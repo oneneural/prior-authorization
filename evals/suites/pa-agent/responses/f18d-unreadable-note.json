@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.agent-recording.v1",
+  "recordingId": "f18d-unreadable-note",
+  "synthetic": true,
+  "label": "scripted_fixture",
+  "provenance": "Evaluator-only scripted provider turns authored against suite policy-v2 fixture F08x4. The turns read the text/plain non-JSON note and the quarantined note and cite the former. No live model output.",
+  "model": "recorded-evaluator-v1",
+  "turns": [
+    { "output": { "type": "call_tool", "tool": "list_documents", "input": {} } },
+    { "output": { "type": "call_tool", "tool": "read_document", "input": { "documentId": "f08x4-note-m", "version": 1 } } },
+    {
+      "output": {
+        "type": "call_tool",
+        "tool": "propose_facts",
+        "input": {
+          "candidates": [
+            { "field": "encounter.date", "documentId": "f08x4-note-m", "documentVersion": 1, "locator": "/encounterDate", "value": "2026-08-24", "originalText": "2026-08-24", "confidence": 0.9, "sourceContentHash": "33288a9f4e607da7ae086658e44fc279c4e67a9648795a4aa18cc81afff6b5d2" }
+          ]
+        }
+      }
+    },
+    { "output": { "type": "call_tool", "tool": "read_document", "input": { "documentId": "f08x4-note-q", "version": 1 } } },
+    { "output": { "type": "finish" } }
+  ]
+}

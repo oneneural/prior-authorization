@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "H05",
+  "specFixtureRow": "F04",
+  "title": "Held-out identity change of the practitioner identifier conflict",
+  "scenario": "F04a inputs with a different fictional beneficiary and practitioner applied consistently. The encounter practitioner identifier is SYN-PRAC-0501 and the order treating practitioner identifier is SYN-PRAC-0502 under the same name, as in F04a.",
+  "syntheticProvenance": "Original synthetic evaluator input authored by mutating suite policy-v2 fixture F04a. Every person, practitioner, supplier and identifier is fictional. No real record or copied policy text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "holdout.identity"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "dc07724ab9bbf5d3822065a926cdf0e058325ce034785e8c7513a6d44d9bf436"
+    },
+    {
+      "path": "documents/h05-encounter.v1.json",
+      "sha256": "46a27342f373f477e0abde615db8924438755c5c9a2c6e1cf0d3791738e36ad2"
+    },
+    {
+      "path": "documents/h05-encounter.v1.meta.json",
+      "sha256": "eda2e8fb99a2e2acb0a739d4df99e2da3bbc9eff07ca3143c70fb1fe97d687e5"
+    },
+    {
+      "path": "documents/h05-order.v1.json",
+      "sha256": "fa00a09534081ec970eec5e4f28c4005ad7bfdb3193e8e02e6a844fb1a8e66db"
+    },
+    {
+      "path": "documents/h05-order.v1.meta.json",
+      "sha256": "9075949742600ea898db26f62193bca047baa409ad9a24d2fc12c00293276e60"
+    },
+    {
+      "path": "documents/h05-receipt.v1.json",
+      "sha256": "2b4a38a22f6e3704950eb5808d3421ac89acc89090a523d2da92f1aed08f606e"
+    },
+    {
+      "path": "documents/h05-receipt.v1.meta.json",
+      "sha256": "c5cc14ffa6f591a152747a555e49cad0c915c4aedbf342f13ba6fd462ff57241"
+    },
+    {
+      "path": "documents/h05-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/h05-supplier-status.v1.meta.json",
+      "sha256": "b1ea73ce4a98678f41046f43a15488260af7ed3347ee243d3314e39fb73d0802"
+    }
+  ]
+}

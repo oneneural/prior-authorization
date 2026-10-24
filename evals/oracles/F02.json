@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "pa.oracle.v2",
+  "fixtureId": "F02",
+  "fixtureManifestSha256": "ba4d0281f46212027c2a06b4ad176c1512a663b961eddfa52c057e9cd0f0d80c",
+  "policyPackId": "lab-k0823-jd-20261018-v1",
+  "policyPackSha256": "0e88bb0b756be1eab93cd38f2ac17841ab0eeb807f12de042cc3da722cb1fc48",
+  "expectedState": "needs_information",
+  "expectedFindings": [
+    {
+      "ruleId": "R01",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f02-supplier-status", "documentVersion": 1, "locator": "/supplierId" },
+        { "documentId": "f02-supplier-status", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f02-supplier-status", "documentVersion": 1, "locator": "/established" },
+        { "documentId": "f02-supplier-status", "documentVersion": 1, "locator": "/newEnrollment" },
+        { "documentId": "f02-supplier-status", "documentVersion": 1, "locator": "/ownershipChange" },
+        { "documentId": "f02-supplier-status", "documentVersion": 1, "locator": "/effectiveFrom" },
+        { "documentId": "f02-supplier-status", "documentVersion": 1, "locator": "/effectiveTo" }
+      ]
+    },
+    {
+      "ruleId": "R02",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/beneficiary/identifier" }
+      ]
+    },
+    { "ruleId": "R03", "status": "missing", "responsibleRole": "authorization_coordinator", "affectedDocuments": [], "citations": [] },
+    {
+      "ruleId": "R04",
+      "status": "missing",
+      "responsibleRole": "authorization_coordinator",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/encounterDate" },
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/practitioner/identifier" }
+      ]
+    },
+    { "ruleId": "R05", "status": "missing", "responsibleRole": "authorization_coordinator", "affectedDocuments": [], "citations": [] },
+    {
+      "ruleId": "R06",
+      "status": "manual_review",
+      "responsibleRole": "qualified_clinical_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/clinical/diagnosisStatement" },
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/clinical/mobilityLimitation" },
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/clinical/lowerLevelDevices" },
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/clinical/homeAccessibility" },
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/clinical/abilityToOperate" }
+      ]
+    },
+    {
+      "ruleId": "R07",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f02-encounter", "documentVersion": 1, "locator": "/lcmpReport/incorporated" }
+      ]
+    },
+    { "ruleId": "R08", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R09", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R10", "status": "not_applicable", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] }
+  ],
+  "quarantinedDocumentIds": [],
+  "clinicalReviewRequired": true,
+  "specReferences": {
+    "fixtureRow": "F02",
+    "rules": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10"],
+    "sections": ["Workflow and state", "Administrative requirements", "Critical fixture suite"],
+    "slicePlanDecisions": [2, 4],
+    "sources": ["S06", "S07", "S08", "S09", "S10", "S14"]
+  },
+  "authoringNote": "No order is supplied, so R03 is missing. R04 requires finalized order evidence, so it is missing too, citing the encounter facts it consulted. The fixture states that no receipt record exists, so R05 stays applicable and is missing (decision 4), not inferred from the absent order. Scope, binding and provenance pass, so the highest effect is needs_information. The expected follow-up is a neutral local request for the existing finalized order (a later workflow stage); nothing in the result drafts or completes an order. R06 keeps the encounter's clinical statements for qualified review."
+}

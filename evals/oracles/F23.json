@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "pa.oracle.v2",
+  "fixtureId": "F23",
+  "fixtureManifestSha256": "a3e8ad2e0434807a7433a1f831a3c3949ceafa84274435446d8aed001ba0bdac",
+  "policyPackId": "lab-k0823-jd-20261018-v1",
+  "policyPackSha256": "0e88bb0b756be1eab93cd38f2ac17841ab0eeb807f12de042cc3da722cb1fc48",
+  "expectedState": "needs_human_review",
+  "expectedFindings": [
+    {
+      "ruleId": "R01",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f23-supplier-status", "documentVersion": 1, "locator": "/supplierId" },
+        { "documentId": "f23-supplier-status", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f23-supplier-status", "documentVersion": 1, "locator": "/established" },
+        { "documentId": "f23-supplier-status", "documentVersion": 1, "locator": "/newEnrollment" },
+        { "documentId": "f23-supplier-status", "documentVersion": 1, "locator": "/ownershipChange" },
+        { "documentId": "f23-supplier-status", "documentVersion": 1, "locator": "/effectiveFrom" },
+        { "documentId": "f23-supplier-status", "documentVersion": 1, "locator": "/effectiveTo" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/item/code" }
+      ]
+    },
+    {
+      "ruleId": "R02",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f23-receipt", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f23-receipt", "documentVersion": 1, "locator": "/beneficiary/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R03",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/beneficiary/name" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/beneficiary/identifier" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/item/description" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/item/quantity" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/treatingPractitioner/name" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/signature/signerName" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/signature/signedDate" }
+      ]
+    },
+    {
+      "ruleId": "R04",
+      "status": "manual_review",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/encounterDate" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/practitioner/identifier" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/status" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/orderDate" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/treatingPractitioner/identifier" }
+      ]
+    },
+    {
+      "ruleId": "R05",
+      "status": "pass",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f23-receipt", "documentVersion": 1, "locator": "/orderReference/documentId" },
+        { "documentId": "f23-receipt", "documentVersion": 1, "locator": "/orderReference/version" },
+        { "documentId": "f23-receipt", "documentVersion": 1, "locator": "/receivedAt" },
+        { "documentId": "f23-order", "documentVersion": 1, "locator": "/orderDate" }
+      ]
+    },
+    {
+      "ruleId": "R06",
+      "status": "manual_review",
+      "responsibleRole": "qualified_clinical_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/clinical/diagnosisStatement" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/clinical/mobilityLimitation" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/clinical/lowerLevelDevices" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/clinical/homeAccessibility" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/clinical/abilityToOperate" }
+      ]
+    },
+    {
+      "ruleId": "R07",
+      "status": "manual_review",
+      "responsibleRole": "administrative_reviewer",
+      "affectedDocuments": [],
+      "citations": [
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/lcmpReport/incorporated" },
+        { "documentId": "f23-encounter", "documentVersion": 1, "locator": "/lcmpReport/evaluationDate" }
+      ]
+    },
+    { "ruleId": "R08", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R09", "status": "pass", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] },
+    { "ruleId": "R10", "status": "not_applicable", "responsibleRole": "administrative_reviewer", "affectedDocuments": [], "citations": [] }
+  ],
+  "quarantinedDocumentIds": [],
+  "clinicalReviewRequired": true,
+  "specReferences": {
+    "fixtureRow": "F23",
+    "rules": ["R01", "R02", "R03", "R04", "R05", "R06", "R07", "R08", "R09", "R10"],
+    "sections": ["Scope", "Workflow and state", "Administrative requirements", "Critical fixture suite"],
+    "slicePlanDecisions": [2, 3],
+    "sources": ["S06", "S07", "S08", "S09", "S10", "S14"]
+  },
+  "authoringNote": "The case and the bound encounter both state that an LCMP evaluation report is incorporated into the encounter record. This is the named unsupported automatic branch: R07 reports one manual_review finding (decision 3), sending the LCMP exception to human review rather than assessing it; R01 still passes because every other scope fact is supported, so the state is needs_human_review, not scope_hold. The SPEC forbids automatic timing simplification for this case, so R04 does not pass on the encounter date alone and reports manual_review with the facts it consulted (convention C04), as oracle decision 3 settles: that decision sets which rule carries the LCMP routing (R07, not R01) and does not make R04 pass. R06 keeps the clinical statements for qualified review."
+}

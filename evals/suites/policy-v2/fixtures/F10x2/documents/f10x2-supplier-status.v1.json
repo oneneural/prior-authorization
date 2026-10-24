@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supplier-status.v1",
+  "documentKind": "supplier_status",
+  "synthetic": true,
+  "supplierId": "SYN-SUP-0001",
+  "status": "non_exempt",
+  "established": true,
+  "newEnrollment": false,
+  "ownershipChange": false,
+  "effectiveFrom": "2025-07-01",
+  "effectiveTo": "2026-06-30"
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F09b",
+  "specFixtureRow": "F09",
+  "title": "Medicare is not the primary payer",
+  "scenario": "Supported K0823 packet except that the case states payerPrimary false (Medicare FFS as secondary coverage). Encounter, signed order, linked receipt and the named supplier record are supplied and consistent.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F09",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "b22ca788fc04407555a521af25b851aaa21523cb5397d12301dcd3dc219ef149"
+    },
+    {
+      "path": "documents/f09b-encounter.v1.json",
+      "sha256": "95a42e632aace98a156a6373a2ab6d7d4e14d95104cba40bf1e12437a3346bad"
+    },
+    {
+      "path": "documents/f09b-encounter.v1.meta.json",
+      "sha256": "f131d09bdbcba139f3d1cd92ec025622bf9b7a38e033b642e98a148306f5dc69"
+    },
+    {
+      "path": "documents/f09b-order.v1.json",
+      "sha256": "72790f13f2e965d4cb71853834fc7f37677169b36db652001fa7899decf2f63e"
+    },
+    {
+      "path": "documents/f09b-order.v1.meta.json",
+      "sha256": "5825aa47d2b4fb933712cda645405409417c7c8346f622ea9cc9c451e8436aab"
+    },
+    {
+      "path": "documents/f09b-receipt.v1.json",
+      "sha256": "b06d4c2ecc4499648bda6a4b9e37a10980e4b61b18023e746877c4ab1f36e265"
+    },
+    {
+      "path": "documents/f09b-receipt.v1.meta.json",
+      "sha256": "df9e75d74f07d529b7f1fcf145f8a9b215c4fcfee0e9d24d707130715c789db4"
+    },
+    {
+      "path": "documents/f09b-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f09b-supplier-status.v1.meta.json",
+      "sha256": "3ca613725deaa97450ed909f5fd377dfe5f2c1368743537bcb527162b2f5824b"
+    }
+  ]
+}

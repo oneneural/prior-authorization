@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.encounter.v1",
+  "documentKind": "encounter",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Reese Testcase",
+    "identifier": "SYN-BEN-F15A"
+  },
+  "encounterDate": "2026-08-26",
+  "completionTime": null,
+  "practitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "lcmpReport": {
+    "incorporated": false,
+    "evaluationDate": null
+  },
+  "clinical": {
+    "diagnosisStatement": "Synthetic test text: long-standing neuromuscular condition reducing leg strength, as recorded by the practitioner.",
+    "mobilityLimitation": "Synthetic test text: needs to stop and rest when walking between rooms in the home.",
+    "lowerLevelDevices": "Synthetic test text: a cane and a manual wheelchair were reviewed during the visit.",
+    "homeAccessibility": "Synthetic test text: single-level home with a ramped entrance and wide doorways.",
+    "abilityToOperate": "Synthetic test text: reached and worked the joystick controls safely during the visit."
+  },
+  "narrative": "SYNTHETIC TEST DOCUMENT for fixture F15a. Fictional face-to-face encounter summary; not a medical record."
+}

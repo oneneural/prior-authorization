@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Taylor Testcase",
+    "identifier": "SYN-BEN-F16G"
+  },
+  "authoredDate": "2026-08-26",
+  "title": "Synthetic administrative note",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F16g. Administrative correspondence note with no clinical content."
+}

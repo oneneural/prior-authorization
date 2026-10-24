@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "X04",
+  "group": "failure",
+  "specRow": "F01",
+  "fixture": {
+    "suite": "policy-v2",
+    "fixtureId": "F01",
+    "manifestSha256": "867f4ee978aabef801e5f565c9038118b5ebb71602ae8b9ea0cb51093f676879"
+  },
+  "provider": {
+    "kind": "unavailable"
+  },
+  "authoringNote": "The provider cannot be reached: the graph run fails, nothing is proposed and the rules outcome stands.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "provider_unavailable",
+      "proposalCodes": [],
+      "prohibitedAttempts": 0,
+      "toolErrors": 0
+    }
+  }
+}

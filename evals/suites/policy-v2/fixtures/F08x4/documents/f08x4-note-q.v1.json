@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Quinn Othercase",
+    "identifier": "SYN-OTH-F08X4"
+  },
+  "authoredDate": "2026-09-01",
+  "title": "Synthetic scheduling note",
+  "text": "Synthetic test text: fictional note about arranging a home visit for another beneficiary."
+}

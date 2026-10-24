@@ -1,0 +1,48 @@
+{
+  "name": "@pa/agents",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "@pa/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./config": {
+      "@pa/source": "./src/config.ts",
+      "types": "./dist/config.d.ts",
+      "default": "./dist/config.js"
+    },
+    "./admission": {
+      "@pa/source": "./src/admission/index.ts",
+      "types": "./dist/admission/index.d.ts",
+      "default": "./dist/admission/index.js"
+    },
+    "./versions": {
+      "@pa/source": "./src/versions.ts",
+      "types": "./dist/versions.d.ts",
+      "default": "./dist/versions.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "catalog:",
+    "@langchain/core": "catalog:",
+    "@langchain/langgraph": "catalog:",
+    "@langchain/langgraph-checkpoint": "catalog:",
+    "@langchain/langgraph-checkpoint-postgres": "catalog:",
+    "@pa/contracts": "workspace:*",
+    "pg": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/pg": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

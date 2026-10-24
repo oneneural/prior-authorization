@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "pa.agent-recording.v1",
+  "recordingId": "missing-order-investigation",
+  "synthetic": true,
+  "label": "scripted_fixture",
+  "provenance": "Authored synthetic provider turns against fixture F01 with its order and receipt withheld. Proposals only: no live model output, expected outcome or score. One citation names a document version absent from the case and one candidate is deliberately low confidence.",
+  "model": "recorded-synthetic-v1",
+  "turns": [
+    { "output": { "type": "call_tool", "tool": "list_documents", "input": {} } },
+    { "output": { "type": "call_tool", "tool": "read_document", "input": { "documentId": "f01-encounter", "version": 1 } } },
+    { "output": { "type": "call_tool", "tool": "get_policy_pack", "input": {} } },
+    {
+      "output": {
+        "type": "call_tool",
+        "tool": "propose_facts",
+        "input": {
+          "candidates": [
+            {
+              "field": "encounter.date",
+              "documentId": "f01-encounter",
+              "documentVersion": 1,
+              "locator": "/encounterDate",
+              "value": "2026-08-20",
+              "originalText": "2026-08-20",
+              "confidence": 0.94,
+              "sourceContentHash": "8b7d9b98edbb0bad09e100d009ce47fa3ab006582a55b0850814cae92be94e83"
+            },
+            {
+              "field": "order.signature_date",
+              "documentId": "f01-order",
+              "documentVersion": 1,
+              "locator": "/signature/signedDate",
+              "value": "2026-09-02",
+              "originalText": "2026-09-02",
+              "confidence": 0.91,
+              "sourceContentHash": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76"
+            },
+            {
+              "field": "encounter.practitioner_name",
+              "documentId": "f01-encounter",
+              "documentVersion": 1,
+              "locator": "/practitioner/name",
+              "value": "Casey Example, MD (synthetic)",
+              "originalText": "Casey Example, MD (synthetic)",
+              "confidence": 0.4,
+              "sourceContentHash": "8b7d9b98edbb0bad09e100d009ce47fa3ab006582a55b0850814cae92be94e83"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "output": {
+        "type": "call_tool",
+        "tool": "propose_document_request",
+        "input": { "candidate": { "findingId": "finding-R03", "templateId": "existing_order", "recipientRole": "practitioner_records" } }
+      }
+    },
+    { "output": { "type": "finish" } }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F07c",
+  "specFixtureRow": "F07",
+  "title": "Month-end encounter clamps to September 30",
+  "scenario": "Final encounter on 2026-03-31 and final order dated 2026-09-30 by the same practitioner identifier; the C01 bound clamps to 2026-09-30. Receipt recorded on 2026-10-01T17:00:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F07"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "d36b2cf8b3770c24198754b892017b777da437f877eda546113b4ba4146f3701"
+    },
+    {
+      "path": "documents/f07c-encounter.v1.json",
+      "sha256": "53a6ffe7ceed49400837695018f77bad59d14f11422217eced0adad38e9d3d3f"
+    },
+    {
+      "path": "documents/f07c-encounter.v1.meta.json",
+      "sha256": "f6374aaa2491175b10291a1a364d23315515372d5141cfecca7111cc47c4e43e"
+    },
+    {
+      "path": "documents/f07c-order.v1.json",
+      "sha256": "dc8e91e06fe635c20eba6c6fb5adc4cae253302fc123cc55261cfadeabbc0eff"
+    },
+    {
+      "path": "documents/f07c-order.v1.meta.json",
+      "sha256": "6b91246393ff482d6f5ab3f75b9ba84a833c0f1da6f4ec33394e470cab8cde31"
+    },
+    {
+      "path": "documents/f07c-receipt.v1.json",
+      "sha256": "6fa32a44385b869845fa3306cc702f2043c2cd40eefa7c415144485df93310c4"
+    },
+    {
+      "path": "documents/f07c-receipt.v1.meta.json",
+      "sha256": "c8abc2bcad8df176b22e6ca01414d4753ebe5db8e87d25ccb8c027231b613ee4"
+    },
+    {
+      "path": "documents/f07c-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f07c-supplier-status.v1.meta.json",
+      "sha256": "b99debee6860d2580844ab4ddded2a54c5b8e8c0c28f748d9f4d247277f9b49c"
+    }
+  ]
+}

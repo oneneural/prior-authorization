@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "pa.agent-recording.v1",
+  "recordingId": "f18a-citations",
+  "synthetic": true,
+  "label": "scripted_fixture",
+  "provenance": "Evaluator-only scripted provider turns authored against suite policy-v2 fixture F01. Proposals only: an absent document version, a field cited at another field's locator, an invented value, a wrong content hash, a low-confidence candidate, one exact candidate, an invented document and a candidate missing its content hash. No live model output.",
+  "model": "recorded-evaluator-v1",
+  "turns": [
+    { "output": { "type": "call_tool", "tool": "list_documents", "input": {} } },
+    { "output": { "type": "call_tool", "tool": "read_document", "input": { "documentId": "f01-order", "version": 1 } } },
+    {
+      "output": {
+        "type": "call_tool",
+        "tool": "propose_facts",
+        "input": {
+          "candidates": [
+            { "field": "order.date", "documentId": "f01-order", "documentVersion": 2, "locator": "/orderDate", "value": "2026-09-02", "originalText": "2026-09-02", "confidence": 0.95, "sourceContentHash": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76" },
+            { "field": "order.date", "documentId": "f01-order", "documentVersion": 1, "locator": "/signature/signedDate", "value": "2026-09-02", "originalText": "2026-09-02", "confidence": 0.95, "sourceContentHash": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76" },
+            { "field": "order.date", "documentId": "f01-order", "documentVersion": 1, "locator": "/orderDate", "value": "2026-09-01", "originalText": "2026-09-01", "confidence": 0.95, "sourceContentHash": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76" },
+            { "field": "order.date", "documentId": "f01-order", "documentVersion": 1, "locator": "/orderDate", "value": "2026-09-02", "originalText": "2026-09-02", "confidence": 0.95, "sourceContentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+            { "field": "encounter.date", "documentId": "f01-encounter", "documentVersion": 1, "locator": "/encounterDate", "value": "2026-08-20", "originalText": "2026-08-20", "confidence": 0.3, "sourceContentHash": "8b7d9b98edbb0bad09e100d009ce47fa3ab006582a55b0850814cae92be94e83" },
+            { "field": "order.signature_date", "documentId": "f01-order", "documentVersion": 1, "locator": "/signature/signedDate", "value": "2026-09-02", "originalText": "2026-09-02", "confidence": 0.92, "sourceContentHash": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76" },
+            { "field": "order.date", "documentId": "f01-prescription", "documentVersion": 1, "locator": "/orderDate", "value": "2026-09-02", "originalText": "2026-09-02", "confidence": 0.95, "sourceContentHash": "60668dad9d3a1404bc577b652aaeefef03cf608df0ec40c7dba76d577505db76" },
+            { "field": "order.date", "documentId": "f01-order", "documentVersion": 1, "locator": "/orderDate", "value": "2026-09-02", "originalText": "2026-09-02", "confidence": 0.95 }
+          ]
+        }
+      }
+    },
+    { "output": { "type": "finish" } }
+  ]
+}

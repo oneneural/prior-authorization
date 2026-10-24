@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F26j",
+  "specFixtureRow": "F26",
+  "title": "Payload of 1,048,577 bytes",
+  "scenario": "Supported K0823 packet plus one supporting note for the same beneficiary whose generated payload is 1,048,577 bytes, filled with the two-byte character U+00E9.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F26",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "edecfdf301d9072d0ef5f4ef347e5e832d95b954c8771da2130d8e53f8e88585"
+    },
+    {
+      "path": "documents/f26j-encounter.v1.json",
+      "sha256": "62e2580e1539095db2a874a1a785f4d14eb845805318999874c2545c4a3b1f47"
+    },
+    {
+      "path": "documents/f26j-encounter.v1.meta.json",
+      "sha256": "b6c9bc5212775a1304ddbf630d3c0b37d3fd0d85ae240bfd57481c7c249b5d03"
+    },
+    {
+      "path": "documents/f26j-large.template.json",
+      "sha256": "f839703a2a832e0c140b3bf773bc36e1ee7f2e70f3a22e07f99f6aca383a977a"
+    },
+    {
+      "path": "documents/f26j-large.v1.meta.json",
+      "sha256": "be852fc792b2af6d68566d3defbef2706c669d3a338235c130c97d8a04496f77"
+    },
+    {
+      "path": "documents/f26j-order.v1.json",
+      "sha256": "6ce023cae42f56dc51fb4249e35a6902347846ce87ee97b89856273d720bf2f5"
+    },
+    {
+      "path": "documents/f26j-order.v1.meta.json",
+      "sha256": "fdd29beecbfb518386b131f1d7717aa99a6b34a08e3fddf033362aa60c954b6a"
+    },
+    {
+      "path": "documents/f26j-receipt.v1.json",
+      "sha256": "e58fac517bb00d344d5a0ee78e2870ee03afced015f2c35b5354fb1a846293e7"
+    },
+    {
+      "path": "documents/f26j-receipt.v1.meta.json",
+      "sha256": "46be39a83fb25ad8033af79f0e219b9a634103a366815aa74bbc6f3cb4437193"
+    },
+    {
+      "path": "documents/f26j-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f26j-supplier-status.v1.meta.json",
+      "sha256": "86f8301cd962588b04a082c40adf7cbbf096a14b1c2aabfa3d0964e4cdeb1226"
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "pad",
+      "template": "documents/f26j-large.template.json",
+      "placeholder": "@@PAD@@",
+      "fill": "é",
+      "targetBytes": 1048577,
+      "output": "documents/f26j-large.v1.json",
+      "sha256": "d338ec2b69a75892b78e0a15cef41c0b5b956f7553b6a255fbd564f709fc4398"
+    }
+  ]
+}

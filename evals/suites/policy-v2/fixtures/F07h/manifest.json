@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F07h",
+  "specFixtureRow": "F07",
+  "title": "Same-day encounter and order with only the encounter time stated",
+  "scenario": "Final encounter on 2026-09-02 with completion time 2026-09-02T10:30:00-07:00 (America/Los_Angeles) and a final order dated 2026-09-02 with no order time, by the same practitioner identifier. Receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F07",
+    "D2",
+    "R04.same_day_unsequenced"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "1866fc4db134bb5d7d908490c57bc6b77f3d3365cf0f2ce51b5e084db76ae214"
+    },
+    {
+      "path": "documents/f07h-encounter.v1.json",
+      "sha256": "defb81898e7174b8407fc80344632362223b760d129edaa9942731f24407df6e"
+    },
+    {
+      "path": "documents/f07h-encounter.v1.meta.json",
+      "sha256": "92002a9d4a1f355b91297ed47ab0d64ef5edda11036672b4fb7abe2e66670840"
+    },
+    {
+      "path": "documents/f07h-order.v1.json",
+      "sha256": "9271dfc375a37ca7c96ac0ddd666547c97ef8dd0f08ce39bd3f9405cdd998212"
+    },
+    {
+      "path": "documents/f07h-order.v1.meta.json",
+      "sha256": "82069d6f6fa7adc0260a308c6a06be016ec3520b0828f9143f7bfc7c494709c2"
+    },
+    {
+      "path": "documents/f07h-receipt.v1.json",
+      "sha256": "b346f151c3b4701ddd243799861d24ab6375573cca2be855582932986ea635a2"
+    },
+    {
+      "path": "documents/f07h-receipt.v1.meta.json",
+      "sha256": "2be522a95250eaec46057dbfda8388f74198ebc1f0604ccea907d424c2c0f35f"
+    },
+    {
+      "path": "documents/f07h-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f07h-supplier-status.v1.meta.json",
+      "sha256": "beae1349008c54a2919cc0fc6e305550be70e3fd44924089259ca31b543f4fb3"
+    }
+  ]
+}

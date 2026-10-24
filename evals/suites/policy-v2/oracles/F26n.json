@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F26n",
+  "fixtureManifestSha256": "3e7721fec3842bbc6897594b21ed55bcd62f3c56152a858995dba5b4c4417fd9",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F26",
+    "rules": [
+      "R09"
+    ],
+    "sections": [
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D6"
+    ],
+    "conventions": [],
+    "sources": []
+  },
+  "authoringNote": "Nine slots are supplied, within the count bound: the encounter, order, receipt and supplier record (4), f26n-large-a v1 and f26n-large-b v1 (pad payloads of 1,048,577 bytes each from one shared over-limit template), f26n-large-c v1 (a pad payload of exactly 1,048,576 bytes, the at-limit negative control) and the path attempts escape-relative.v1 and escape-absolute.v1. Within the count bound the loader reports every size and path reason together (D6): one document_size_exceeded per oversized payload, with documentRef null and the full logical payload pointer, and one path_outside_root, with null documentRef and path, however many paths escape. The at-limit payload is not oversized and adds no reason. Canonical order is by code, so both size reasons precede the path reason, and /documents/f26n-large-a.v1/payload precedes /documents/f26n-large-b.v1/payload by UTF-16 code units. The complete reason list is therefore those two size reasons followed by one path reason. No outside target is opened to measure or hash it. The loader alone owns this input_boundary rejection, before any metadata, case or body is parsed and before any R09 finding exists; rules lists R09 only as the required provenance reference (matrix decision, answer 3), which transfers no input-boundary authority to R09. A rejected expectation holds no state, findings, citations, quarantine, superseded list or deferred expectation, and documentRef is null because the stage precedes metadata parsing. Production ingestion enforcement of the limits stays S4, and real-filesystem symbolic link proof stays with the structural temporary-tree tests, with assessment integration in the version 2 assessment evaluation.",
+  "expectation": {
+    "outcome": "rejected",
+    "stage": "input_boundary",
+    "reasons": [
+      {
+        "code": "document_size_exceeded",
+        "documentRef": null,
+        "path": "/documents/f26n-large-a.v1/payload"
+      },
+      {
+        "code": "document_size_exceeded",
+        "documentRef": null,
+        "path": "/documents/f26n-large-b.v1/payload"
+      },
+      {
+        "code": "path_outside_root",
+        "documentRef": null,
+        "path": null
+      }
+    ]
+  }
+}

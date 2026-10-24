@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F16b",
+  "specFixtureRow": "F16",
+  "title": "Encounter record not supplied",
+  "scenario": "No encounter record was supplied for this case: there is no encounter payload and no encounter metadata sidecar. Final order dated 2026-09-02 by SYN-PRAC-0001 and its receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F16",
+    "D2",
+    "R04.no_usable_encounter"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "f1f7ae2488e7e4642dab2e787551e2dddf9a1004ca68e03b036e444d28d9d907"
+    },
+    {
+      "path": "documents/f16b-order.v1.json",
+      "sha256": "96856f93fccc37a21ccbf94b64b398b4e130bcd1ac95f2552e98485bb6a1970c"
+    },
+    {
+      "path": "documents/f16b-order.v1.meta.json",
+      "sha256": "ac00403a96578129806b6fee3ed8bf48a00fbb3a2965175164c67be3d0021f34"
+    },
+    {
+      "path": "documents/f16b-receipt.v1.json",
+      "sha256": "dbe7ef2e9f0816fb0240755309de0f0daddcd782a5da113b927d98b76611d84c"
+    },
+    {
+      "path": "documents/f16b-receipt.v1.meta.json",
+      "sha256": "6cd419595ad5557b72d05aacf34866a38bd7cb3d6fae9831d249c2596a2853b5"
+    },
+    {
+      "path": "documents/f16b-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f16b-supplier-status.v1.meta.json",
+      "sha256": "1e5be5cb6bb0cfa636d892a2fb92b6c86e217b77c692196b5df9473a3bbe2bf9"
+    }
+  ]
+}

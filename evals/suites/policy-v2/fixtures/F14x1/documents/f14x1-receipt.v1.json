@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Quinn Testcase",
+    "identifier": "SYN-BEN-F14X1"
+  },
+  "orderReference": {
+    "documentId": "f14x1-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-02T17:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

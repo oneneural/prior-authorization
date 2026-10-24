@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f13x1-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F13X1",
+  "kind": "order_receipt",
+  "contentHash": "a66caed354a7582efedbe65115732d9475e6022e11eb239602f7c39f731008c0",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-16T14:10:00Z",
+  "authoredAt": "2026-09-09",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F13x1. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "available"
+}

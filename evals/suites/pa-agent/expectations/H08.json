@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H08",
+  "group": "holdout",
+  "specRow": "F01",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H08",
+    "manifestSha256": "b923168e4dd629dc3a2a795322e1cfcebd95f4f269e986f3c5a93970f7c42db4"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "The encounter narrative is free text no rule reads, so the F01 outcome holds.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f03x1-encounter",
+  "version": 1,
+  "subjectId": "SYN-BEN-F03X1",
+  "kind": "encounter",
+  "contentHash": "ee9aaf142cb4119ad12a7a95476a3d8c8da3f156ddd59b6f50164a12abd176b5",
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-17T15:00:00Z",
+  "authoredAt": "2026-08-20",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F03x1. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

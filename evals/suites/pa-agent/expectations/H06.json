@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H06",
+  "group": "holdout",
+  "specRow": "F01",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H06",
+    "manifestSha256": "612eb33f0248876ef44a1f5d427cc9a93e3986e710363a061c78cd0a98ac4829"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "All dates move together by 30 days: the order stays 13 days after the encounter, inside the six-month bound, the receipt follows the order and the supplier status remains effective.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

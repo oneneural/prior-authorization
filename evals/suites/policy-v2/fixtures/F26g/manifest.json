@@ -1,0 +1,271 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F26g",
+  "specFixtureRow": "F26",
+  "title": "Fifty counted document slots",
+  "scenario": "Supported K0823 packet plus 46 supporting notes for the same beneficiary, for exactly 50 counted slots: a two-version intake cover note whose version 2 supersedes version 1, an access-restricted note supplied as metadata only, a note the source system reports as unreadable and 42 replicated filler notes.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F26",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "3ca2b46fb475d94531aa554d70deb6c99c2e52082ec8966bf8c5e956d0f1aec2"
+    },
+    {
+      "path": "documents/f26g-encounter.v1.json",
+      "sha256": "2f73035127b2a43bbb3a03b4fa020030552815f6ed7c2946a74ce6b4e63e7cdc"
+    },
+    {
+      "path": "documents/f26g-encounter.v1.meta.json",
+      "sha256": "3e1001b149aaf5684ffb1905a5c3b32572d431e7a43f71d0870ee513502a667d"
+    },
+    {
+      "path": "documents/f26g-filler.meta.template.json",
+      "sha256": "890c83636517fe5891861f2b8241dabd6c9b87c22dbf2db842b0331bf59f9d16"
+    },
+    {
+      "path": "documents/f26g-filler.template.json",
+      "sha256": "084e310c2acae53823b6dbb03170dafcdd6d668481bfd0803d2421b37dd719bb"
+    },
+    {
+      "path": "documents/f26g-lineage.v1.json",
+      "sha256": "a75fe5ca6592713fa06e403ebb469db072b38a8caba9308ec6dff1f6302f2667"
+    },
+    {
+      "path": "documents/f26g-lineage.v1.meta.json",
+      "sha256": "8b8fd9e0cb8c8308bad735d0d161bddfe31ed9653453dee2bc1e07814e5c8ebc"
+    },
+    {
+      "path": "documents/f26g-lineage.v2.json",
+      "sha256": "bc3f20a339c30e248151c6caff03ab50c0a8b2a688f1142082c82bd22f537439"
+    },
+    {
+      "path": "documents/f26g-lineage.v2.meta.json",
+      "sha256": "50b6169581f855cbdf9daa50082d6e9fd165df1b035c2bc31706398e3efe4dce"
+    },
+    {
+      "path": "documents/f26g-order.v1.json",
+      "sha256": "9c676b27fc6b8ae258f3e78a5d8b1097f671584486dc387e534b0b4d5c1d8235"
+    },
+    {
+      "path": "documents/f26g-order.v1.meta.json",
+      "sha256": "e20fd498892592fa3702adb4fcf308b08cafebef2d4c679385ecb671dcc35829"
+    },
+    {
+      "path": "documents/f26g-receipt.v1.json",
+      "sha256": "1e256df31ce87e5d6d69fb5af149c854c73d99121a29732c95987536a3b4ec17"
+    },
+    {
+      "path": "documents/f26g-receipt.v1.meta.json",
+      "sha256": "75a4054a189996180fb7d64d0ca5b54121d3715422ff336889563c2c832feea0"
+    },
+    {
+      "path": "documents/f26g-restricted.v1.meta.json",
+      "sha256": "36155d1f4350a7160b9fe51a0dea3a98464069efa4181567382340bd5e06b7d1"
+    },
+    {
+      "path": "documents/f26g-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f26g-supplier-status.v1.meta.json",
+      "sha256": "3c9e5cb582ea6adc214109820491d6d4c6d557e18fe2a17070538dadba885604"
+    },
+    {
+      "path": "documents/f26g-unreadable.v1.json",
+      "sha256": "3172c183f3721848fc1b0265d1664b7dea351d0da639c8e688a13ed9bd85ab9a"
+    },
+    {
+      "path": "documents/f26g-unreadable.v1.meta.json",
+      "sha256": "71f031350cdd3c4de91b02f9364e01e5d0967f30189b7acbc0f81892a190098d"
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": "replicate",
+      "payload": "documents/f26g-filler.template.json",
+      "metadataTemplate": "documents/f26g-filler.meta.template.json",
+      "placeholder": "@@N@@",
+      "count": 42,
+      "width": 2,
+      "outputs": [
+        {
+          "slot": "f26g-filler-01.v1",
+          "metadataSha256": "492236db36e3902d9eb71bfc5fb299601648846c9a854daec922b91f428dc99b"
+        },
+        {
+          "slot": "f26g-filler-02.v1",
+          "metadataSha256": "3b03f297601d33445ba2fef63aa2d37202320873a549e1620117e35cf9153fc2"
+        },
+        {
+          "slot": "f26g-filler-03.v1",
+          "metadataSha256": "1f4a436b436d78f594982cd344541c9b33f0a6621fc074af21dce343d9e6b8e0"
+        },
+        {
+          "slot": "f26g-filler-04.v1",
+          "metadataSha256": "9c824ff43beccc46f113f7e2f3ef1557404189bd65fb07608b2a3998abd11c77"
+        },
+        {
+          "slot": "f26g-filler-05.v1",
+          "metadataSha256": "5e07c49231e670dc747b710aa9af9a0e89c9c5d42a1cc29a10f3719f85d4fe73"
+        },
+        {
+          "slot": "f26g-filler-06.v1",
+          "metadataSha256": "818c8117c9df4bdb50f5188b29ec3dae41f5027abd9241785ccf68e3689025fc"
+        },
+        {
+          "slot": "f26g-filler-07.v1",
+          "metadataSha256": "738677f9103820e0030df0ac55ebca0941104dd1bd0e0d37ed2e80332dde01b2"
+        },
+        {
+          "slot": "f26g-filler-08.v1",
+          "metadataSha256": "e736082f2ea0307c2999c42bb3bc4d5bb236885f138c5b89b4518edb04d69d1c"
+        },
+        {
+          "slot": "f26g-filler-09.v1",
+          "metadataSha256": "83d1f6676445569a9dc57509ce6dadfd502ae2ed3375f573f5a5fe609f7e03a1"
+        },
+        {
+          "slot": "f26g-filler-10.v1",
+          "metadataSha256": "60a37fd2ca04ff5466dc01a5385d3a9e8bcf4cf4cff5fc3d4a5d0de0cbd20ec5"
+        },
+        {
+          "slot": "f26g-filler-11.v1",
+          "metadataSha256": "69539cafd9864ea80e2d10fa8227ba1631c0ace235c98a78afe56a0aff5ca54b"
+        },
+        {
+          "slot": "f26g-filler-12.v1",
+          "metadataSha256": "d23c78992c9c80fc1c4d43cf9b0b11ff0e7de5c2067dedf50eb061f81d380cbc"
+        },
+        {
+          "slot": "f26g-filler-13.v1",
+          "metadataSha256": "b30ccda30f6fc49280dfa85125ba5bce51617ed5b59227cef881aed8019d9095"
+        },
+        {
+          "slot": "f26g-filler-14.v1",
+          "metadataSha256": "a279ffa8614d95ae6e42ebffbad09623b88fc78c1fb4c7cf20c7b66eb028d792"
+        },
+        {
+          "slot": "f26g-filler-15.v1",
+          "metadataSha256": "0b1fbc222a11a4145343e3ffc411743c4a80d67a24f1d1f64f123c7ff3f083ef"
+        },
+        {
+          "slot": "f26g-filler-16.v1",
+          "metadataSha256": "9b81aaadbcc3de4109510b82ce5f22c0188acde7c99df44e7f0edb18a44e0432"
+        },
+        {
+          "slot": "f26g-filler-17.v1",
+          "metadataSha256": "b329c09536aaeb03d9eacb928e452159aeb3214cfdff0b6cc0842917dfe61b7a"
+        },
+        {
+          "slot": "f26g-filler-18.v1",
+          "metadataSha256": "35e7f243ca0c6c7ea6cd765ee6ab27bf5f882616c9dd4f7cb64232007070bff9"
+        },
+        {
+          "slot": "f26g-filler-19.v1",
+          "metadataSha256": "cc8b4ea65d796df645d59ab942f3d9fb197bbf9ac82cb7dab5712009d0bd999e"
+        },
+        {
+          "slot": "f26g-filler-20.v1",
+          "metadataSha256": "d899a4c642030f2cf8afd1541b9bf690944c1ebfe7eda7a872639c18075586f4"
+        },
+        {
+          "slot": "f26g-filler-21.v1",
+          "metadataSha256": "c6f8dbdbaa35e37c4d55d9491c4287460da029d0c9fcdbe0f65782a9d15b95ce"
+        },
+        {
+          "slot": "f26g-filler-22.v1",
+          "metadataSha256": "fa67578bb7debf51efeeba83476a3bfcbaf2a95b56400e30aec30de0c63ac6d0"
+        },
+        {
+          "slot": "f26g-filler-23.v1",
+          "metadataSha256": "0175303a1670ff672fa5353a8d43fdf02710c3cbbdd76eb08d06a59c6a29fc10"
+        },
+        {
+          "slot": "f26g-filler-24.v1",
+          "metadataSha256": "7f3f0f837ade3442f829e03dde4ce40e2ed2464924e46ac1058b089dff68d57a"
+        },
+        {
+          "slot": "f26g-filler-25.v1",
+          "metadataSha256": "0b245767221d5bb50281863a15988bbcf759c4995f7ddadac9ffd5ab081c822a"
+        },
+        {
+          "slot": "f26g-filler-26.v1",
+          "metadataSha256": "d21911a3371c1547363e078f90d5b0068071a271ff70bfe5b1f94c9a35d1514f"
+        },
+        {
+          "slot": "f26g-filler-27.v1",
+          "metadataSha256": "e6ec99fc2f531edd6fb69dd96fbdd271aa467a136d80f4bbc42380d7fcb03d1c"
+        },
+        {
+          "slot": "f26g-filler-28.v1",
+          "metadataSha256": "22b59ddf0e0f1a5ce591bd2ccaedb0a3de86b5bb8c7f16d34de16347806a9639"
+        },
+        {
+          "slot": "f26g-filler-29.v1",
+          "metadataSha256": "90ed2cd328cf45b429a3e10443e3424ec26c51596aab4c8d6600905da11772cc"
+        },
+        {
+          "slot": "f26g-filler-30.v1",
+          "metadataSha256": "72623b457ef67652fe8a9f84899f0f90a3c35ec0f3ceabf168ee04a67f3e0b23"
+        },
+        {
+          "slot": "f26g-filler-31.v1",
+          "metadataSha256": "6ea5001c5b6e464b714e1790410b0f3c315d78d06d407e5d7baf802060aa9040"
+        },
+        {
+          "slot": "f26g-filler-32.v1",
+          "metadataSha256": "6404c1b21bb76ba818b272a223401c2556c2f0e950c58f6fe8770ac2503f8a7f"
+        },
+        {
+          "slot": "f26g-filler-33.v1",
+          "metadataSha256": "204c3330352a4b5264222bd1ccac5e822b566781f583a90d7c0d0534f6a033f7"
+        },
+        {
+          "slot": "f26g-filler-34.v1",
+          "metadataSha256": "a185e1f91ac123d7a18b4a98266e536848e8843f58324d3acf86ef9b53de9a40"
+        },
+        {
+          "slot": "f26g-filler-35.v1",
+          "metadataSha256": "1b8f452796c8c6d3be80386d780143ec86259d96135c12da563177f222af1ebd"
+        },
+        {
+          "slot": "f26g-filler-36.v1",
+          "metadataSha256": "7fd5830153b8a919f480d121e94efd4aa5330dfa3345736e68937864b45f4445"
+        },
+        {
+          "slot": "f26g-filler-37.v1",
+          "metadataSha256": "314c45c4580e9c2d1bd4233efa4dd4542ef66624330c90b1647132209180cafc"
+        },
+        {
+          "slot": "f26g-filler-38.v1",
+          "metadataSha256": "8cbd1e41b548f4ebc04cf1d36092dc2d82e49c24322197693bcc218a1d7e8cd7"
+        },
+        {
+          "slot": "f26g-filler-39.v1",
+          "metadataSha256": "325b5f3b0104d6d51c47d79d72f029c5058bb93d7e93a3151c9a3e800b24ef11"
+        },
+        {
+          "slot": "f26g-filler-40.v1",
+          "metadataSha256": "960cb031413d3e02ba9102de7ee3c73b4f8fe7f454ffede96cd57d0473f57e82"
+        },
+        {
+          "slot": "f26g-filler-41.v1",
+          "metadataSha256": "fcd1972608c372781cf3061a8fbf21387761ff775683cc374f56a4b6e9b9ea2d"
+        },
+        {
+          "slot": "f26g-filler-42.v1",
+          "metadataSha256": "db520e66811aed634a6a3280715105e802b0455a9fb1393149dd1dfc7ec82e74"
+        }
+      ]
+    }
+  ]
+}

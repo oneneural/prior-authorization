@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f26d-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F26D",
+  "kind": "order_receipt",
+  "contentHash": "8beeabe0b53386a0d1cd5c0f1f4968b8c60409819e2a30c5e67a885ff77d20cb",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-04",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F26d. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

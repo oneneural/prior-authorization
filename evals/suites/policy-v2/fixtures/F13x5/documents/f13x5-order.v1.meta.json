@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f13x5-order",
+  "version": 1,
+  "subjectId": "SYN-BEN-F13X5",
+  "kind": "order",
+  "contentHash": null,
+  "mimeType": "application/json",
+  "sourceSystem": "practitioner_record",
+  "receivedAt": "2026-10-16T14:05:00Z",
+  "authoredAt": "2026-09-08",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document written for fixture F13x5. All people, identifiers and organizations are fictional; no real record or copied policy text is included."
+  },
+  "accessStatus": "restricted"
+}

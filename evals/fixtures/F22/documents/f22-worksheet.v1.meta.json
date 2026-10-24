@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f22-worksheet",
+  "version": 1,
+  "subjectId": "SYN-BEN-F22",
+  "kind": "supporting_note",
+  "contentHash": "9cb535b82ac8b1ff9b691a14818dcbffe7f84146624faf34bc2edf81b9457bbd",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:20:00Z",
+  "authoredAt": "2026-10-16",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F22. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

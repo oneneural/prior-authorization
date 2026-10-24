@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F01x3",
+  "specFixtureRow": "F01",
+  "title": "Empty and blank titles make note bodies invalid",
+  "scenario": "The supported packet (encounter 2026-08-20, order 2026-09-02, receipt 2026-09-03T17:00:00Z) plus two supporting notes with ordinary text whose titles are the empty string and three spaces. Hashes match and metadata is valid.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (independent evaluator fixture-author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F01",
+    "D1",
+    "D1.required_text_rejected",
+    "R09.body_invalid"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "a68d9bd2ff0cd1b9b8f753ae5de416173c8b5349a6f51dc5e7aefcc98350a6c6"
+    },
+    {
+      "path": "documents/f01x3-encounter.v1.json",
+      "sha256": "e4d0056c7c2c556f54527254c6b0f2e65dbd998f18915bcaef80fbfdb368fbbd"
+    },
+    {
+      "path": "documents/f01x3-encounter.v1.meta.json",
+      "sha256": "a05f13b2c61818a84a582d0c468cf2a2ac028189da5ccdbb60b45363f3d90b06"
+    },
+    {
+      "path": "documents/f01x3-note-1.v1.json",
+      "sha256": "81b0da036838b1d51cb8f7410002d17dbea440045daa915211f9a666c4242b92"
+    },
+    {
+      "path": "documents/f01x3-note-1.v1.meta.json",
+      "sha256": "5805eacf93980baf9db844025e04414c9ab8f63a6e5fbf5c91de311321d5b147"
+    },
+    {
+      "path": "documents/f01x3-note-2.v1.json",
+      "sha256": "99357fe09a8e27c12edbb50b49030203b7b194d6af88c3f1597dcbf20ee05ef1"
+    },
+    {
+      "path": "documents/f01x3-note-2.v1.meta.json",
+      "sha256": "cd5d96669f610629e0a1fed73bd9810930c2b816b3bbd1c45efdd52006cd9604"
+    },
+    {
+      "path": "documents/f01x3-order.v1.json",
+      "sha256": "11d67dabcc7db4b6271506bf0aa129a55b393784d7ed32fd0b29d77f4d7bdc33"
+    },
+    {
+      "path": "documents/f01x3-order.v1.meta.json",
+      "sha256": "3e46d077b501c88a9a0c56f069e11e9391686cea2c03bc29c7f3599ab87fe458"
+    },
+    {
+      "path": "documents/f01x3-receipt.v1.json",
+      "sha256": "9fd3456bbc4130949cbd2d2be961940087072ecd3fa40def26449c1fa8bb2b48"
+    },
+    {
+      "path": "documents/f01x3-receipt.v1.meta.json",
+      "sha256": "7cf73e54842463e6a47e2f6df8c07b76d43cacc656817d200c3222760027b5a3"
+    },
+    {
+      "path": "documents/f01x3-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f01x3-supplier-status.v1.meta.json",
+      "sha256": "960bf81fb508d3456e41d3b37633907e6092f2f38bbba683a2b38d5ac9b3fb6d"
+    }
+  ]
+}

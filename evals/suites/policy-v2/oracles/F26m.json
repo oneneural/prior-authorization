@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F26m",
+  "fixtureManifestSha256": "1b03163e5993ccc3811e99db3ea576104acfdc1f42f8bb99fe8ebf931d20bb50",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F26",
+    "rules": [
+      "R09"
+    ],
+    "sections": [
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D6"
+    ],
+    "conventions": [],
+    "sources": []
+  },
+  "authoringNote": "51 slots are supplied, counted by hand: the encounter, order, receipt and supplier record (4), f26m-large v1 (1, committed sidecar and a pad payload of 1,048,577 bytes), 45 replicated filler notes (45) and the path attempt escape-relative.v1 (1). The 50 non-attempt slots reach 51 only with the attempt, so the attempt slot must be counted. Count precedence (D6) gives exactly one reason: document_count_exceeded, documentRef null, path /documents. Neither the oversized payload nor the escaping path is reported, because the loader counts first, before resolving any path, measuring any size or expanding any recipe. The loader alone owns this input_boundary rejection, before any metadata, case or body is parsed and before any R09 finding exists; rules lists R09 only as the required provenance reference (matrix decision, answer 3), which transfers no input-boundary authority to R09. A rejected expectation holds no state, findings, citations, quarantine, superseded list or deferred expectation, and documentRef is null because the stage precedes metadata parsing. Production ingestion enforcement of the limits stays S4, and real-filesystem symbolic link proof stays with the structural temporary-tree tests, with assessment integration in the version 2 assessment evaluation.",
+  "expectation": {
+    "outcome": "rejected",
+    "stage": "input_boundary",
+    "reasons": [
+      {
+        "code": "document_count_exceeded",
+        "documentRef": null,
+        "path": "/documents"
+      }
+    ]
+  }
+}

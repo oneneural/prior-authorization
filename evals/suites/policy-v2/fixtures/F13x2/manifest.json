@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F13x2",
+  "specFixtureRow": "F13",
+  "title": "Restricted superseding order",
+  "scenario": "Order f13x2-order version 1 is a valid final order dated 2026-09-08. Version 2 has case-scoped metadata, supersedes version 1 through trusted metadata and is access restricted, with a null contentHash and no payload. The usable receipt links version 1. Final encounter 2026-08-24 and the named supplier record are usable. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F13",
+    "D5",
+    "R03.order_restricted",
+    "R04.order_restricted",
+    "R05.no_usable_order",
+    "R09.access_restricted"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "e2ced2f57016dc778a5e0c894d8852d5612a0f78006081bceffeb4d425727d3f"
+    },
+    {
+      "path": "documents/f13x2-encounter.v1.json",
+      "sha256": "344b1fecfa3e66715a633e4db341780d84051b0498624490d66d02d4d0e34515"
+    },
+    {
+      "path": "documents/f13x2-encounter.v1.meta.json",
+      "sha256": "e9730d49d6f97dd647225938395a02560e088f09ce6de98541ae490e554457cf"
+    },
+    {
+      "path": "documents/f13x2-order.v1.json",
+      "sha256": "babc7f2b062b1c3a8bf06bf58e0d041d9f97eff31703ecbddee7a2f3315c0d95"
+    },
+    {
+      "path": "documents/f13x2-order.v1.meta.json",
+      "sha256": "5195013969b578d2b1107eed08da2bc2245aacecd05bb5bd673a1774edf4fb1c"
+    },
+    {
+      "path": "documents/f13x2-order.v2.meta.json",
+      "sha256": "c471e3ab8dbe7f7d1390614afdeea4d19cbbb26c56359384b406572694740511"
+    },
+    {
+      "path": "documents/f13x2-receipt.v1.json",
+      "sha256": "7a4800e8d9b5e973247ab670c7b559f2fe2ff2cd17a0dc780ee5d791e46cf427"
+    },
+    {
+      "path": "documents/f13x2-receipt.v1.meta.json",
+      "sha256": "5905642a963078d4c195c64b06489bc786746536e2a6db5efb5049600e96ae9d"
+    },
+    {
+      "path": "documents/f13x2-supplier-status.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f13x2-supplier-status.v1.meta.json",
+      "sha256": "ad258bf366101cbd5dd03bedfb90d34c221d81ec9632d163a17081f1db36a17b"
+    }
+  ]
+}

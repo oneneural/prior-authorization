@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Rowan Testcase",
+    "identifier": "SYN-BEN-F28A"
+  },
+  "authoredDate": "2026-09-20",
+  "title": "Library card renewal reminder (synthetic)",
+  "text": "SYNTHETIC TEST DOCUMENT. Fictional reminder that library card SYN-LIB-0099 expires next month and can be renewed at any branch desk. It concerns no mobility equipment, medical event or coverage question."
+}

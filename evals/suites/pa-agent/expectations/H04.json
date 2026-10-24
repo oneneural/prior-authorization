@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H04",
+  "group": "holdout",
+  "specRow": "F01",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H04",
+    "manifestSha256": "b1da23b3dbcc08ccc4ebb0cc7948056bdfd3d6bfe3164181080bfec8db1f74f8"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "A consistent identity substitution keeps every binding and practitioner match, so the F01 outcome holds.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

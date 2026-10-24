@@ -1,0 +1,26 @@
+# Allowlist: the image build sees only workspace manifests, sources and the
+# container runtime files. Everything else, including Git metadata, local secrets and
+# environment files, stays out of the build context.
+*
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!tsconfig.base.json
+!apps/
+!packages/
+!docker/
+
+# Never send generated output, dependencies, tests or local configuration, even
+# inside allowed directories.
+**/node_modules
+**/dist
+**/.next
+**/coverage
+**/*.tsbuildinfo
+**/next-env.d.ts
+**/test
+**/*.test.ts
+**/.env
+**/.env.*
+**/.secrets
+**/.DS_Store

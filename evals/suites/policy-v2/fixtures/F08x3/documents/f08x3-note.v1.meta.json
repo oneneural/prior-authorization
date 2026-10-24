@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f08x3-note",
+  "version": 1,
+  "subjectId": "SYN-BEN-F08X3",
+  "kind": "supporting_note",
+  "contentHash": "e9a79e4c5b07e4ed185c0a3dacf4397aa2a8a118a9cd00681dc4893d2d390af7",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:20:00Z",
+  "authoredAt": "2026-10-16",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F08x3. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

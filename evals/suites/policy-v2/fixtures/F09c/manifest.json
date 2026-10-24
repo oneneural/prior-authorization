@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F09c",
+  "specFixtureRow": "F09",
+  "title": "Beneficiary state outside California",
+  "scenario": "Supported K0823 packet except that the case states beneficiaryState NV. The stated jurisdiction stays noridian_jd; no routing is inferred from the state. Encounter, signed order, linked receipt and the named supplier record are supplied and consistent.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F09",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "f6cd8e1cd74f73dce39bd84b1c749b7b9250e44a5797f2231f111053be40ae60"
+    },
+    {
+      "path": "documents/f09c-encounter.v1.json",
+      "sha256": "7da00ce09abfe335d6f792522695f279179c5d961e689c69805a8ed5800e5a47"
+    },
+    {
+      "path": "documents/f09c-encounter.v1.meta.json",
+      "sha256": "be1d2ab52cf67938ff0b556e2243c27545ce23b0bdb9cacf168a8b959b51d892"
+    },
+    {
+      "path": "documents/f09c-order.v1.json",
+      "sha256": "ff7ee1fcd7994e264ac0581801f2b1b64863e73df1a268367deece3e1fda1a9e"
+    },
+    {
+      "path": "documents/f09c-order.v1.meta.json",
+      "sha256": "9841d928ad96483c5849ea614bae04b1a576c04deebf8b0a59793ed91bae2038"
+    },
+    {
+      "path": "documents/f09c-receipt.v1.json",
+      "sha256": "f36d0809bc2dbd98c0607e7885c9116594769486cb2a7244028514dff80d1c4c"
+    },
+    {
+      "path": "documents/f09c-receipt.v1.meta.json",
+      "sha256": "52b6fd731322cc4ce21949f0785ed23dbcb3dcbb90495724118a609d3619012e"
+    },
+    {
+      "path": "documents/f09c-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f09c-supplier-status.v1.meta.json",
+      "sha256": "d3da7345d99c7296a79b0a42f359e96ebab9318ba9164f568cb9247536e9ed9d"
+    }
+  ]
+}

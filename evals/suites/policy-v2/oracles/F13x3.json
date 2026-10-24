@@ -1,0 +1,342 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F13x3",
+  "fixtureManifestSha256": "d6430d2671bb79d194289565654c75a944ae0dd946dc8cf8b079f381ab2f0530",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F13",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Workflow and state",
+      "Administrative requirements",
+      "Data contracts",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2",
+      "D5"
+    ],
+    "conventions": [
+      "C05",
+      "C07",
+      "C08",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "Partial S3 snapshot (D5 unusable correction). f13x3-order v1 is a valid final order. v2 has case-scoped metadata and trusted supersedes {f13x3-order, 1}; its declared access status is unreadable, while its held bytes are a well-formed order body (corrected description) whose SHA-256 equals its contentHash. The declared status wins: no parsed-body rescue, and none of the held body values becomes a fact, condition or citation. Under C08 an unreadable superseder does not revoke the edge, so v1 is superseded and not current. R03 is unreadable with R03.order_unreadable naming f13x3-order v2 and R04 is unreadable with R04.order_unreadable naming f13x3-order v2, each for the authorization_coordinator; each C07 parent is [f13x3-order v2] because the held candidate condition has the finding status. There is no R03 or R04 no_usable_order: the current unavailable candidate explains the gap (C09). R05 is missing for the authorization_coordinator (needs_information) with R05.no_usable_order and no refs; its parent is empty. The receipt is usable, so there is no no_usable_receipt. R09 is unreadable with R09.access_unreadable naming f13x3-order v2, parent [f13x3-order v2]. R09 first applicable condition for v2 is access_unreadable: it is not restricted and its hash matches. Each unreadable condition routes to the authorization_coordinator with effect needs_information. R02 passes: v2 binds by metadata and its unread body is not compared. R01 passes citing only the seven supplier fields (no current usable order code exists to compare). R02 cites the encounter and receipt beneficiary name and identifier (4). R03 cites nothing. R04 cites only the final encounter status, date and practitioner identifier (3). R05 cites the receipt reference and receivedAt (3) although the version it references is superseded; this is the receipt value, not an order fact. R06 five, R07 one. Vector 7,4,0,3,3,5,1. v1 is never reactivated and contributes no fact or citation. R06 is manual_review for the qualified_clinical_reviewer with R06.clinical_review (no refs, effect none) and cites the five /clinical/ statements of the usable encounter; R07 passes citing /lcmpReport/incorporated (false; the null evaluationDate is not cited); R08 passes; R10 is not_applicable with R10.pure_assessment. clinicalReviewRequired is true. Every other parent is empty. Superseded [f13x3-order v1]; quarantine empty. State needs_information. Recorded reading: a rule cites evidence-field facts only from the documents it reads, and R04 reads only final current usable records; every usable encounter and order here is final, so no draft is excluded. Deferred to S4: arrival-order recovery, history display, replay and rollback prevention are not exercised, and a neutral request for the existing order is a later workflow action.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_information",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x3-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f13x3-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f13x3-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f13x3-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f13x3-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f13x3-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f13x3-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f13x3-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f13x3-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R03",
+        "status": "unreadable",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [
+          {
+            "documentId": "f13x3-order",
+            "version": 2
+          }
+        ],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R03.order_unreadable",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f13x3-order",
+                "version": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R04",
+        "status": "unreadable",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [
+          {
+            "documentId": "f13x3-order",
+            "version": 2
+          }
+        ],
+        "citations": [
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R04.order_unreadable",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f13x3-order",
+                "version": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R05",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x3-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f13x3-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f13x3-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R05.no_usable_order",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x3-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "unreadable",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [
+          {
+            "documentId": "f13x3-order",
+            "version": 2
+          }
+        ],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R09.access_unreadable",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f13x3-order",
+                "version": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [],
+    "supersededDocuments": [
+      {
+        "documentId": "f13x3-order",
+        "version": 1
+      }
+    ],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "Partial S3 snapshot: version selection in one snapshot does not prove arrival-order recovery, history display, replay or rollback prevention; those remain S4."
+      },
+      {
+        "stage": "S4",
+        "statement": "A neutral local request for the existing finalized order is a later workflow action; no order is generated and this snapshot proves only the findings."
+      }
+    ]
+  }
+}

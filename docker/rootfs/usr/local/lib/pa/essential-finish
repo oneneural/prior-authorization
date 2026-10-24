@@ -1,0 +1,31 @@
+#!/bin/sh
+# Usage: essential-finish SERVICE EXIT_CODE SIGNAL (from an s6 finish script,
+# run in the service directory). Every application service is essential: an
+# unexpected exit stops the container instead of letting s6 restart one process
+# inside a partly working unit.
+service="$1"
+code="$2"
+signal="$3"
+
+# s6-rc marks a service wanted down before stopping it on purpose (container
+# shutdown); that exit is expected and is not a failure.
+if [ "$(/command/s6-svstat -o wantedup .)" = false ]; then
+  exit 0
+fi
+
+if [ "$code" -eq 256 ]; then
+  status=$((128 + signal))
+  detail="killed by signal $signal"
+else
+  status="$code"
+  detail="exit code $code"
+fi
+# A clean exit of a long-running service is still unexpected.
+if [ "$status" -eq 0 ]; then
+  status=1
+fi
+/usr/local/lib/pa/pa-halt "$status" "essential service $service stopped unexpectedly ($detail)"
+# 125 tells s6-supervise not to restart the service. During startup it also makes
+# the pending s6-rc transition fail at once, so the shutdown can proceed instead
+# of waiting for a readiness notification that will never come.
+exit 125

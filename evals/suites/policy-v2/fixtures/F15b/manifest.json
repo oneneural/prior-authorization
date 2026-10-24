@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F15b",
+  "specFixtureRow": "F15",
+  "title": "Unsupported assessment date",
+  "scenario": "Supported K0823 packet assessed with the reviewed v2 pack; the case assessment date and the explicit assessment date argument are both 2026-10-19, which the pack does not list. The supplier interval contains that date.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-19",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F15",
+    "R08.assessment_date_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "1054aa8a862102e79379ab9f0042d455352264bb2937976ce88330fb52002c76"
+    },
+    {
+      "path": "documents/f15b-encounter.v1.json",
+      "sha256": "e1576ed4172f36fbb91d581438c6d5f8faba41ec18b9ef4245f066e666bae051"
+    },
+    {
+      "path": "documents/f15b-encounter.v1.meta.json",
+      "sha256": "f7094df48a33ec54a8fcef3c23392abbc2a030fa12db0a972d080ae285f31eb5"
+    },
+    {
+      "path": "documents/f15b-order.v1.json",
+      "sha256": "77f6d9adcfdf296067eea2107386bfcb5f2549495e42ffc8af11d745bcc9cabe"
+    },
+    {
+      "path": "documents/f15b-order.v1.meta.json",
+      "sha256": "dd6705cf71e0c6443a1c5aa6fa06494b719233c439dcb3bf59f6dad5bd1f593d"
+    },
+    {
+      "path": "documents/f15b-receipt.v1.json",
+      "sha256": "156572f8774f54b4dc44a72e6290b44a48146eaa6ce41d47be8772a86067284b"
+    },
+    {
+      "path": "documents/f15b-receipt.v1.meta.json",
+      "sha256": "0de3ad7029c9c58b86d41d7171f0635869fe014bb10a92dbd7987fa00a037629"
+    },
+    {
+      "path": "documents/f15b-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f15b-supplier-status.v1.meta.json",
+      "sha256": "b10ccee4bf31d4e31c64c2700c3c355f5858fd4fbb4e42fdbf96b6ee1dd678d1"
+    }
+  ]
+}

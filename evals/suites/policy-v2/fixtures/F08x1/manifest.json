@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F08x1",
+  "specFixtureRow": "F08",
+  "title": "Quarantined older order version superseded by a usable correction",
+  "scenario": "Order f08x1-order has two versions with case-scoped metadata. Version 1 is available and hash-matching, but its verified body states beneficiary name Rowan Othercase and identifier SYN-OTH-F08X1, neither of which is the case subject. Version 2 supersedes version 1 through trusted metadata, names the case subject and is the order the receipt links. Final encounter 2026-08-24, orders dated 2026-09-08 by SYN-PRAC-0001, receipt 2026-09-09T16:30:00Z and the named supplier record are usable. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F08",
+    "D3",
+    "D5",
+    "R02.document_quarantined"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "34fc7ffd6bcffe72342ce27517c08cc397411a4225811911730095073785297d"
+    },
+    {
+      "path": "documents/f08x1-encounter.v1.json",
+      "sha256": "4b3d4846e98f4685ddd5be8729067176c0723f5f05431bd810931b72e62091b3"
+    },
+    {
+      "path": "documents/f08x1-encounter.v1.meta.json",
+      "sha256": "1bcc641dbdccbb02743d21bd48c4a908ab42108c59ac1242053e15e092fc88a3"
+    },
+    {
+      "path": "documents/f08x1-order.v1.json",
+      "sha256": "9af0112ec58f7622b5825324698f723121d3266030af9c68f16e12430825e550"
+    },
+    {
+      "path": "documents/f08x1-order.v1.meta.json",
+      "sha256": "743b0afd1bad767a645aa287cb3b7be710076afacca14e90af0ce104fefa3e1d"
+    },
+    {
+      "path": "documents/f08x1-order.v2.json",
+      "sha256": "be7c7b956a8d17c0aa3864a684375db7166450bf7be45e047d755f5a513d38e5"
+    },
+    {
+      "path": "documents/f08x1-order.v2.meta.json",
+      "sha256": "0f4fc5bbf01dcaa226090c9e93e3a6990e238ebc4836208cce4c54553250d0ea"
+    },
+    {
+      "path": "documents/f08x1-receipt.v1.json",
+      "sha256": "2959828dc2df7bbe66248384ed2d765f044e1bc9c67a99edd2bdf86ddaf481db"
+    },
+    {
+      "path": "documents/f08x1-receipt.v1.meta.json",
+      "sha256": "712d95f5c33e2a5f3e15ac248d634ae61b3b4d59be90567755539a11448ad1ad"
+    },
+    {
+      "path": "documents/f08x1-supplier-status.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f08x1-supplier-status.v1.meta.json",
+      "sha256": "aad24e312fa1afeac114727fdb2b5d2d0149e88cf7e19ca0fca70385bdc10371"
+    }
+  ]
+}

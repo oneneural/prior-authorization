@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f22-receipt",
+  "version": 1,
+  "subjectId": "SYN-BEN-F22",
+  "kind": "order_receipt",
+  "contentHash": "fe1d4a1bc1b0acd80856303c533e420f7e4917ea6d6efb51ecdb84e1f33c3d98",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:10:00Z",
+  "authoredAt": "2026-09-01",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F22. Fictional beneficiary, practitioner and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

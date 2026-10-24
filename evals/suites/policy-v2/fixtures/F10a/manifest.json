@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F10a",
+  "specFixtureRow": "F10",
+  "title": "Supplier exemption status unknown",
+  "scenario": "Supported K0823 packet except that the case supplier status and the named supplier record both state status unknown; every other supplier value is the supported value and the interval contains the assessment date.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F10",
+    "R01.scope_fact_unknown",
+    "R01.supplier_record_value_unknown"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "1462d3a2cec7112e11d5bfe6e54ab57e7153e275b30e2932ee21083821757708"
+    },
+    {
+      "path": "documents/f10a-encounter.v1.json",
+      "sha256": "b77b559923d01a80608f58d792418e51c97dff53bad658de33178f1f45ea4ac7"
+    },
+    {
+      "path": "documents/f10a-encounter.v1.meta.json",
+      "sha256": "6db1146bf55003486c9bf6e3a9a35e57cab107137df296dfa999e9003a902fcd"
+    },
+    {
+      "path": "documents/f10a-order.v1.json",
+      "sha256": "067817926203759231914ef01467be0fb4ab60f7820b9e4aa0194c9457d60378"
+    },
+    {
+      "path": "documents/f10a-order.v1.meta.json",
+      "sha256": "88eefb46401236d21025dd25323a2377ceb930e44beeabd0aa4614ce3bf97379"
+    },
+    {
+      "path": "documents/f10a-receipt.v1.json",
+      "sha256": "051b88e4a32af43ac5513be1c5260c295ed0c1af07bf6b80f7f15bbced45231d"
+    },
+    {
+      "path": "documents/f10a-receipt.v1.meta.json",
+      "sha256": "833e1ef745028500cd95a92d38c70b89242937befe6a2d19341e0fee13a13011"
+    },
+    {
+      "path": "documents/f10a-supplier-status.v1.json",
+      "sha256": "4a77aa0c9687c4610cf6692d8134473ca7a205c452dac9f68d62cf6e49bec97a"
+    },
+    {
+      "path": "documents/f10a-supplier-status.v1.meta.json",
+      "sha256": "97ab1910d9aa9197f670c7d81b8f407ad72ecd70b72fbd3e491ecce938b8c9d8"
+    }
+  ]
+}

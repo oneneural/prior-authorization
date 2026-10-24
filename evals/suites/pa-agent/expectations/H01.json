@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H01",
+  "group": "holdout",
+  "specRow": "F01",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H01",
+    "manifestSha256": "ff318b21ebad13501b646e469fc517457a288061b22783b2a2887ce901723784"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "Layout only: serialization and key order do not change any value the rules read, so the F01 oracle outcome holds.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

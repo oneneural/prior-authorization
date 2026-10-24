@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F08x2",
+  "fixtureManifestSha256": "5ef49b45cb1f471c6d0e5aaf90a7eddf78b2e6747bd51b6119f7f911c4e90b78",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F08",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Administrative requirements",
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2",
+      "D3",
+      "D5"
+    ],
+    "conventions": [
+      "C05",
+      "C07",
+      "C08",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "Snapshot only. Approved reuse for D3 in the reverse direction and for a D5 superseder that is unusable because its verified body is quarantined. f08x2-order v1 is a valid final order naming the case subject. v2 has case-scoped metadata and trusted supersedes {f08x2-order, 1}; it is available and hash-matching, but its verified body states both beneficiary name Sage Othercase and identifier SYN-OTH-F08X2, so D3 quarantines v2 on two stated bases. C08 keeps the edge: a superseder quarantined on its verified body does not revoke it. v1 is superseded and not current, so the superseded list is [f08x2-order v1] and the quarantine list is [f08x2-order v2]. v1 is never reactivated. R02 is conflict for the administrative_reviewer (needs_human_review) with R02.document_quarantined for binding.stated_identifier and binding.stated_name, each naming f08x2-order v2, parent [f08x2-order v2]. It cites only the encounter and receipt beneficiary name and identifier (4). No current usable order exists, and a quarantined version is never a C09 candidate. R03, R04 and R05 are each missing for the authorization_coordinator (needs_information) with their own no_usable_order condition and no refs; their parents are empty. The receipt is usable, so there is no R05.no_usable_receipt; without an order there is no order_receipt_missing; there is no candidate condition. Citations: R01 cites the supplier record seven fields only, since no current usable order code exists to compare, and passes. R03 cites nothing. R04 cites only the final encounter status, date and practitioner identifier (3). R05 still cites the receipt reference and receivedAt (3) although the version it references is not current; this cites the receipt value, not the superseded order. R06 five, R07 one. Vector 7,4,0,3,3,5,1. R09 passes: every version is available, application/json, hash-matching and parseable. R06 is manual_review for the qualified_clinical_reviewer with R06.clinical_review (no refs, effect none) and cites the five /clinical/ statements of the usable encounter; R07 passes citing /lcmpReport/incorporated (false; the null evaluationDate is not cited); R08 passes; R10 is not_applicable with R10.pure_assessment. clinicalReviewRequired is true. Every other parent is empty. State needs_human_review: the R02 conflict outranks the coordinator effects. Recorded reading: a rule cites evidence-field facts only from the documents it reads, and R04 reads only final current usable records; every usable encounter and order here is final, so no draft is excluded. Neither version contributes order facts, and no stated identity text from v2 appears in any expectation. Deferred to S4: arrival-order recovery, history display, replay and rollback prevention are not exercised by this snapshot.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f08x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f08x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f08x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f08x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f08x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f08x2-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "conflict",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [
+          {
+            "documentId": "f08x2-order",
+            "version": 2
+          }
+        ],
+        "citations": [
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f08x2-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f08x2-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R02.document_quarantined",
+            "field": "binding.stated_identifier",
+            "documents": [
+              {
+                "documentId": "f08x2-order",
+                "version": 2
+              }
+            ]
+          },
+          {
+            "conditionKey": "R02.document_quarantined",
+            "field": "binding.stated_name",
+            "documents": [
+              {
+                "documentId": "f08x2-order",
+                "version": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R03",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R03.no_usable_order",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R04",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R04.no_usable_order",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R05",
+        "status": "missing",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x2-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f08x2-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f08x2-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R05.no_usable_order",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x2-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [
+      {
+        "documentId": "f08x2-order",
+        "version": 2
+      }
+    ],
+    "supersededDocuments": [
+      {
+        "documentId": "f08x2-order",
+        "version": 1
+      }
+    ],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "Snapshot only: arrival-order recovery, history display, replay and rollback prevention for the two order versions are not exercised."
+      },
+      {
+        "stage": "S4",
+        "statement": "A neutral local request for the existing finalized order is a later workflow action; no order is generated and this snapshot proves only the findings."
+      }
+    ]
+  }
+}

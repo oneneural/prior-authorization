@@ -1,0 +1,33 @@
+{
+  "name": "@pa/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "@pa/source": "./src/worker.ts",
+      "types": "./dist/worker.d.ts",
+      "default": "./dist/worker.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@pa/agents": "workspace:*",
+    "@pa/config": "workspace:*",
+    "@pa/contracts": "workspace:*",
+    "@pa/db": "workspace:*",
+    "@pa/domain": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@pa/api": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "@pa/connectors": "workspace:*"
+  }
+}

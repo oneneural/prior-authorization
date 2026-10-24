@@ -1,0 +1,5 @@
+# Fixture inputs, manifests, oracles and suites are hashed as exact bytes on
+# disk, so Git must never convert their line endings.
+fixtures/** -text
+oracles/** -text
+suites/** -text

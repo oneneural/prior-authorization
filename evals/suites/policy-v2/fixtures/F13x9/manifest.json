@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F13x9",
+  "specFixtureRow": "F13",
+  "title": "Supersession across document IDs",
+  "scenario": "The case names supplier record f13x9-supplier-status version 1. A second supplier record f13x9-supplier-alt version 1, also kind supplier_status, has metadata that supersedes f13x9-supplier-status version 1. A final encounter, final order and its receipt are supplied.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F13",
+    "D5",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "f117809e5d074a2541e6e4b98875ca9b50cf2b3e933c7e8bd18149308a48549a"
+    },
+    {
+      "path": "documents/f13x9-encounter.v1.json",
+      "sha256": "f62bfbbafe68c96497ff626e2307d8a4d7e3e235e0ed526a4cbd160237b6b8b1"
+    },
+    {
+      "path": "documents/f13x9-encounter.v1.meta.json",
+      "sha256": "35b74b7a3a342cdde5b9af509599ecbc8719960dff7cffb8a10ce5f4d574e39b"
+    },
+    {
+      "path": "documents/f13x9-order.v1.json",
+      "sha256": "aa2ccbff2d4dd239691c98b64f572242dbdab4ebe5be8b4d1a3f37f29850b7a1"
+    },
+    {
+      "path": "documents/f13x9-order.v1.meta.json",
+      "sha256": "737fdf497d5a298528c5280a55a966aee5decb3f9d5f34e657af8c0014753e3d"
+    },
+    {
+      "path": "documents/f13x9-receipt.v1.json",
+      "sha256": "538571eb6ff22567734c2da8ac706d2361cffa399b8ffda28ff2c1958c6e2847"
+    },
+    {
+      "path": "documents/f13x9-receipt.v1.meta.json",
+      "sha256": "192a46b69191eb4cd41528514d9cf8d4d5ba5fa9c63bf47abb472c29ca480c2d"
+    },
+    {
+      "path": "documents/f13x9-supplier-alt.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f13x9-supplier-alt.v1.meta.json",
+      "sha256": "6c70700745b91256f87155b83660326e8d48561582a056c1ddb5238d0f363916"
+    },
+    {
+      "path": "documents/f13x9-supplier-status.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f13x9-supplier-status.v1.meta.json",
+      "sha256": "7262443ad53d9f17a3b0d88092963c51913b6eefe2c40375c0929af40f4e2143"
+    }
+  ]
+}

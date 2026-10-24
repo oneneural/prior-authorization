@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F11e",
+  "specFixtureRow": "F11",
+  "title": "Item already delivered",
+  "scenario": "Supported K0823 packet except that the case states alreadyDelivered true. No delivery document is supplied; the receipt of the order still follows the order. Encounter, signed order and the named supplier record are supplied and consistent.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F11",
+    "R01.scope_fact_unsupported"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "db9e02d6664641cb5e899b770bfb47bec41178f7b796cf9abd2760fc596b1398"
+    },
+    {
+      "path": "documents/f11e-encounter.v1.json",
+      "sha256": "71d5a5833335cf982b892e7365d515ecc725fc40ed2a6dfc975de70e795081bc"
+    },
+    {
+      "path": "documents/f11e-encounter.v1.meta.json",
+      "sha256": "fc226472ace75232a4e9498fa6bd18fb09cd13ec2ec735c61aaaf529c3edd595"
+    },
+    {
+      "path": "documents/f11e-order.v1.json",
+      "sha256": "912b7ff45ff3af046ac2ca58ece10923675443386b582122e19800d163107e24"
+    },
+    {
+      "path": "documents/f11e-order.v1.meta.json",
+      "sha256": "676a5cf073475cfb780c9536419b5117a2238a6fea115bfe7ddc7a16bcf3327e"
+    },
+    {
+      "path": "documents/f11e-receipt.v1.json",
+      "sha256": "d455a64d1119f09e7c195a1755acf8449bc21e109801faea54d7a18198629058"
+    },
+    {
+      "path": "documents/f11e-receipt.v1.meta.json",
+      "sha256": "65d3cc89f510b13c9463506d4ef968612e9ee135aa22210b97194d39522d896c"
+    },
+    {
+      "path": "documents/f11e-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f11e-supplier-status.v1.meta.json",
+      "sha256": "d1155f4ad69cc4528640174b648b606b59fbdccd9c8b7f968eece1b0c3f2b2c4"
+    }
+  ]
+}

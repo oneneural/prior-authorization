@@ -1,0 +1,9 @@
+# Container-test override, used only by `pnpm test:container` with the
+# prior-authorization-ctest project. It enables the bounded test-only job delay
+# (accepted only in fixture mode) so a drain test can prove a job is active, and
+# lets the drain test pin worker concurrency.
+services:
+  app:
+    environment:
+      PILOT_TEST_JOB_DELAY_MS: ${PA_CTEST_JOB_DELAY_MS:-0}
+      WORKER_CONCURRENCY: ${PA_CTEST_WORKER_CONCURRENCY:-2}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F05c",
+  "specFixtureRow": "F05",
+  "title": "Final encounter states no date",
+  "scenario": "Final encounter by SYN-PRAC-0001 whose encounter date and completion time are null; its metadata authoredAt is 2026-08-20. Final order dated 2026-09-02 by the same practitioner identifier. Receipt recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F05",
+    "D2",
+    "R04.date_not_stated"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "345c3d2d578ddccec7d7ea72705d053792286173934586c59dfa42ce47c0bc15"
+    },
+    {
+      "path": "documents/f05c-encounter.v1.json",
+      "sha256": "ed1db979ab4d3e095d9b1cddf59bcf66bc77f88513a8729d21815f62ceaf7d2b"
+    },
+    {
+      "path": "documents/f05c-encounter.v1.meta.json",
+      "sha256": "2a6a2c8c473f3f7417997fa4ad66bc36aa9520caf21a4f341083c55621b35c35"
+    },
+    {
+      "path": "documents/f05c-order.v1.json",
+      "sha256": "a47657a3b8bb734e1e22e601999fec86ec0907bd39d66130af1ae86cfd959a6a"
+    },
+    {
+      "path": "documents/f05c-order.v1.meta.json",
+      "sha256": "c608f1394f0f29221ff9d718533fefc2601d07e70a3899d1b7ac9f39bdaf0ba6"
+    },
+    {
+      "path": "documents/f05c-receipt.v1.json",
+      "sha256": "3a888c64e68cc5b53ce562fb2501c038f630e2f188a775bb1d1fa5981e404229"
+    },
+    {
+      "path": "documents/f05c-receipt.v1.meta.json",
+      "sha256": "76ee7b31b4ffb5b140d68a1de68921aa460451a5d85d87f266dbe51e3ecf70bb"
+    },
+    {
+      "path": "documents/f05c-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f05c-supplier-status.v1.meta.json",
+      "sha256": "5fd79f43365c88aa5f479ca2f43af2b42fb438eaa9f145b42a75a620b2d39038"
+    }
+  ]
+}

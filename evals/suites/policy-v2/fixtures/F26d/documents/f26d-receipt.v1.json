@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Dell Testcase",
+    "identifier": "SYN-BEN-F26D"
+  },
+  "orderReference": {
+    "documentId": "f26d-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-04T20:15:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

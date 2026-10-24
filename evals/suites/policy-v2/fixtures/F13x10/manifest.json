@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F13x10",
+  "specFixtureRow": "F13",
+  "title": "Order version supersedes itself",
+  "scenario": "Order f13x10-order version 1 has metadata that supersedes f13x10-order version 1, itself. A final encounter, its receipt and the named supplier record are supplied.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F13",
+    "D5",
+    "D6"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "df27ecdeb73de1a3920533501a08f6b68f0cad81673f79e43fa12daf0e322ab9"
+    },
+    {
+      "path": "documents/f13x10-encounter.v1.json",
+      "sha256": "fcc4d91bdcfffe3891d20d895e6115068b433b60c4b01a3930f827c5b0e963d8"
+    },
+    {
+      "path": "documents/f13x10-encounter.v1.meta.json",
+      "sha256": "40507af73c24cda61c21629b0501557b9db9ec423219bea0821d8e91d715c8fc"
+    },
+    {
+      "path": "documents/f13x10-order.v1.json",
+      "sha256": "7995935ed93897c344aaca743e20c2bc327791dabe152e69db9003a888cc1eda"
+    },
+    {
+      "path": "documents/f13x10-order.v1.meta.json",
+      "sha256": "1f5266f8a1524a17779bd1604e7df8dba19e345624e28ef400acba60db64bdff"
+    },
+    {
+      "path": "documents/f13x10-receipt.v1.json",
+      "sha256": "0793cbfdc6515fa25dd39f8b4bad032eb937f604f80e6c1d6afe06537b995b9b"
+    },
+    {
+      "path": "documents/f13x10-receipt.v1.meta.json",
+      "sha256": "b27eb0504011b3d4df01b4eb43a1e7a41a9388dd3374b21d9d632159d411b8e0"
+    },
+    {
+      "path": "documents/f13x10-supplier-status.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f13x10-supplier-status.v1.meta.json",
+      "sha256": "3291f8beb756d63ef45cdefd49f0f4d27ae270a583a25d0ea7a82613374a5910"
+    }
+  ]
+}

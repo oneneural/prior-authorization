@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F08x1",
+  "fixtureManifestSha256": "7f212038844bd0a0f9975c28b1773d400f93d6809bf4791bed9d7b589acd8eb1",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F08",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Administrative requirements",
+      "Data contracts",
+      "Failure, privacy, and recovery",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2",
+      "D3",
+      "D5"
+    ],
+    "conventions": [
+      "C01",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "Snapshot only (D3 and D5, not F13 recovery). f08x1-order v1 has case-scoped metadata (subject SYN-BEN-F08X1, kind order), is available and its bytes match its contentHash, but its verified body states beneficiary name Rowan Othercase and identifier SYN-OTH-F08X1, so D3 quarantines exactly that version on two stated bases (pack /rules/1/outcomes/0/conditions/0). f08x1-order v2 validly supersedes v1 under C08: same document ID and kind, both metadata subjects equal the case, earlier target version. v1 is therefore in both the superseded and the quarantined lists. Quarantine is per version, not per document ID: v2 names the case subject, supplies every current order fact and is the order the receipt links. R02 is conflict for the administrative_reviewer (effect needs_human_review) with R02.document_quarantined for field binding.stated_identifier and for binding.stated_name, each naming f08x1-order v1 (fields in UTF-16 order). Its C07 parent is its quarantine list [f08x1-order v1]. It cites the beneficiary name and identifier of v2, the encounter and the receipt (6). R01, R03, R04 and R05 pass on v2 with the standard citation sets: supplier seven fields plus v2 /item/code (8); nine v2 order elements (9); encounter and v2 status, date and practitioner identifier (6); the receipt reference and time plus v2 /orderDate (4). v1 is neither current (C09) nor usable, so it contributes no fact, citation, candidate or condition, and none of its stated identity text appears in any expectation. R09 passes: every version is available, application/json, hash-matching and parseable; R09 does not report body quarantine. R06 is manual_review for the qualified_clinical_reviewer with R06.clinical_review (no refs, effect none) and cites the five /clinical/ statements of the usable encounter; R07 passes citing /lcmpReport/incorporated (false; the null evaluationDate is not cited); R08 passes; R10 is not_applicable with R10.pure_assessment. clinicalReviewRequired is true. Every other parent is empty. State needs_human_review follows from the R02 conflict. Recorded reading: a rule cites evidence-field facts only from the documents it reads, and R04 reads only final current usable records; every usable encounter and order here is final, so no draft is excluded. The standard chronology holds: the order date 2026-09-08 is after the 2026-08-24 encounter (not the same day, so C02 does not apply) and inside the C01 bound 2027-02-24, and the receipt at 2026-09-09T16:30:00Z is after the C06 span of the order date, which ends 2026-09-09T12:00Z. Deferred to S4: arrival-order recovery, history display, replay and rollback prevention are not exercised by this snapshot.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_human_review",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x1-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f08x1-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f08x1-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f08x1-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f08x1-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f08x1-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f08x1-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/item/code"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "conflict",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [
+          {
+            "documentId": "f08x1-order",
+            "version": 1
+          }
+        ],
+        "citations": [
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f08x1-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f08x1-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R02.document_quarantined",
+            "field": "binding.stated_identifier",
+            "documents": [
+              {
+                "documentId": "f08x1-order",
+                "version": 1
+              }
+            ]
+          },
+          {
+            "conditionKey": "R02.document_quarantined",
+            "field": "binding.stated_name",
+            "documents": [
+              {
+                "documentId": "f08x1-order",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R03",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/signature/signerName"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/signature/signedDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R04",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/treatingPractitioner/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R05",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x1-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f08x1-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f08x1-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f08x1-order",
+            "documentVersion": 2,
+            "locator": "/orderDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f08x1-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [
+      {
+        "documentId": "f08x1-order",
+        "version": 1
+      }
+    ],
+    "supersededDocuments": [
+      {
+        "documentId": "f08x1-order",
+        "version": 1
+      }
+    ],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "Snapshot only: arrival-order recovery, history display, replay and rollback prevention for the two order versions are not exercised."
+      }
+    ]
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "pa.oracle.v3",
+  "fixtureId": "F13x5",
+  "fixtureManifestSha256": "8a66ed67b764e6cf0ed024e0fd8b3f7296880e84bad0dba13555d13a8021e54c",
+  "policyInput": {
+    "packId": "lab-k0823-jd-20261018-v2",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "specReferences": {
+    "fixtureRow": "F13",
+    "rules": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09",
+      "R10"
+    ],
+    "sections": [
+      "Workflow and state",
+      "Administrative requirements",
+      "Data contracts",
+      "Critical fixture suite"
+    ],
+    "decisions": [
+      "D2",
+      "D5"
+    ],
+    "conventions": [
+      "C01",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09"
+    ],
+    "sources": [
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S14"
+    ]
+  },
+  "authoringNote": "Partial S3 snapshot (D5 reverse access) with the recorded conservative limitation; this is not completed F13 recovery. f13x5-order v1 has case-scoped metadata and is restricted (null contentHash, no payload). v2 is a valid final order with trusted supersedes {f13x5-order, 1}; the receipt links v2. v1 is superseded, not current and not a C09 candidate, so R03 and R04 have no restricted condition and pass on v2. R09 still classifies every supplied version that metadata quarantine does not exclude: R09 is restricted for the authorization_coordinator with R09.access_restricted naming f13x5-order v1 (needs_information), parent [f13x5-order v1]. State needs_information. R01 to R05 pass on v2 with the standard citation sets (8, 6, 9, 6, 4). R06 is manual_review for the qualified_clinical_reviewer with R06.clinical_review (no refs, effect none) and cites the five /clinical/ statements of the usable encounter; R07 passes citing /lcmpReport/incorporated (false; the null evaluationDate is not cited); R08 passes; R10 is not_applicable with R10.pure_assessment. clinicalReviewRequired is true. Every other parent is empty. Superseded [f13x5-order v1]; quarantine empty. Recorded reading: a rule cites evidence-field facts only from the documents it reads, and R04 reads only final current usable records; every usable encounter and order here is final, so no draft is excluded. The standard chronology holds: the order date 2026-09-08 is after the 2026-08-24 encounter (not the same day, so C02 does not apply) and inside the C01 bound 2027-02-24, and the receipt at 2026-09-09T16:30:00Z is after the C06 span of the order date, which ends 2026-09-09T12:00Z. Deferred to S4: the disposition of superseded unusable versions, arrival-order recovery, history display, replay and rollback prevention.",
+  "expectation": {
+    "outcome": "assessed",
+    "state": "needs_information",
+    "findings": [
+      {
+        "ruleId": "R01",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x5-supplier-status",
+            "documentVersion": 1,
+            "locator": "/supplierId"
+          },
+          {
+            "documentId": "f13x5-supplier-status",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f13x5-supplier-status",
+            "documentVersion": 1,
+            "locator": "/established"
+          },
+          {
+            "documentId": "f13x5-supplier-status",
+            "documentVersion": 1,
+            "locator": "/newEnrollment"
+          },
+          {
+            "documentId": "f13x5-supplier-status",
+            "documentVersion": 1,
+            "locator": "/ownershipChange"
+          },
+          {
+            "documentId": "f13x5-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveFrom"
+          },
+          {
+            "documentId": "f13x5-supplier-status",
+            "documentVersion": 1,
+            "locator": "/effectiveTo"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/item/code"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R02",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f13x5-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f13x5-receipt",
+            "documentVersion": 1,
+            "locator": "/beneficiary/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R03",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/name"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/beneficiary/identifier"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/item/description"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/item/quantity"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/treatingPractitioner/name"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/treatingPractitioner/identifier"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/signature/signerName"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/signature/signedDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R04",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/encounterDate"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/practitioner/identifier"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/status"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/orderDate"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/treatingPractitioner/identifier"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R05",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x5-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/documentId"
+          },
+          {
+            "documentId": "f13x5-receipt",
+            "documentVersion": 1,
+            "locator": "/orderReference/version"
+          },
+          {
+            "documentId": "f13x5-receipt",
+            "documentVersion": 1,
+            "locator": "/receivedAt"
+          },
+          {
+            "documentId": "f13x5-order",
+            "documentVersion": 2,
+            "locator": "/orderDate"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R06",
+        "status": "manual_review",
+        "responsibleRole": "qualified_clinical_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/diagnosisStatement"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/mobilityLimitation"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/lowerLevelDevices"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/homeAccessibility"
+          },
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/clinical/abilityToOperate"
+          }
+        ],
+        "conditions": [
+          {
+            "conditionKey": "R06.clinical_review",
+            "field": null,
+            "documents": []
+          }
+        ]
+      },
+      {
+        "ruleId": "R07",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [
+          {
+            "documentId": "f13x5-encounter",
+            "documentVersion": 1,
+            "locator": "/lcmpReport/incorporated"
+          }
+        ],
+        "conditions": []
+      },
+      {
+        "ruleId": "R08",
+        "status": "pass",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": []
+      },
+      {
+        "ruleId": "R09",
+        "status": "restricted",
+        "responsibleRole": "authorization_coordinator",
+        "affectedDocuments": [
+          {
+            "documentId": "f13x5-order",
+            "version": 1
+          }
+        ],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R09.access_restricted",
+            "field": null,
+            "documents": [
+              {
+                "documentId": "f13x5-order",
+                "version": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ruleId": "R10",
+        "status": "not_applicable",
+        "responsibleRole": "administrative_reviewer",
+        "affectedDocuments": [],
+        "citations": [],
+        "conditions": [
+          {
+            "conditionKey": "R10.pure_assessment",
+            "field": null,
+            "documents": []
+          }
+        ]
+      }
+    ],
+    "quarantinedDocuments": [],
+    "supersededDocuments": [
+      {
+        "documentId": "f13x5-order",
+        "version": 1
+      }
+    ],
+    "clinicalReviewRequired": true,
+    "deferredExpectations": [
+      {
+        "stage": "S4",
+        "statement": "Partial S3 snapshot: version selection in one snapshot does not prove arrival-order recovery, history display, replay or rollback prevention; those remain S4."
+      },
+      {
+        "stage": "S4",
+        "statement": "The restricted superseded version still blocks through R09; this conservative limitation is recorded, and the disposition of superseded unusable versions is later work."
+      }
+    ]
+  }
+}

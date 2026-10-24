@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "pa.document.v1",
+  "documentId": "f17b-note",
+  "version": 1,
+  "subjectId": "SYN-BEN-F02",
+  "kind": "supporting_note",
+  "contentHash": "7d465ab4ad6625ce52d3387d44ccd7e43d8d4b8ecbb183de93412b5acd928496",
+  "mimeType": "application/json",
+  "sourceSystem": "supplier_intake",
+  "receivedAt": "2026-10-17T15:20:00Z",
+  "authoredAt": "2026-09-10",
+  "supersedes": null,
+  "syntheticProvenance": {
+    "origin": "authored_synthetic",
+    "statement": "Original synthetic test document authored for fixture F17b. Fictional beneficiary and supplier; no real record or copied policy text was used."
+  },
+  "accessStatus": "available"
+}

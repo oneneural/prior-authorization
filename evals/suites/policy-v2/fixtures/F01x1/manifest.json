@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F01x1",
+  "specFixtureRow": "F01",
+  "title": "Padded source text and a raw numeric token",
+  "scenario": "The supported packet of F01 except that the order item description has two leading and two trailing spaces, the order quantity is written as the JSON number token 1.0, the encounter diagnosis statement has a leading space and a trailing tab, and the encounter narrative is padded. Encounter 2026-08-20, order 2026-09-02, receipt 2026-09-03T17:00:00Z.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (independent evaluator fixture-author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F01",
+    "D1",
+    "exactText"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "31786e400917011321c296d9e8f006d2d780dfbe65f2c570f7a2ee4bdf3b2764"
+    },
+    {
+      "path": "documents/f01x1-encounter.v1.json",
+      "sha256": "daf1edc34d0e532d4fa284e954755a0a011e1f697c14b05baf0fbd4ec12ebe70"
+    },
+    {
+      "path": "documents/f01x1-encounter.v1.meta.json",
+      "sha256": "565db4e1b03a8f908388f57b17ec8b938854cc57c973e4232b99ce2bb022cc6c"
+    },
+    {
+      "path": "documents/f01x1-order.v1.json",
+      "sha256": "271cb88b97c93eca3b4d4cb2a78df8532a1d4e1ef1a41893c1e3fb117266c16d"
+    },
+    {
+      "path": "documents/f01x1-order.v1.meta.json",
+      "sha256": "817a870ed63e7d85992daa4439cdba7d18fdc6de564911424692ddd49e4934f6"
+    },
+    {
+      "path": "documents/f01x1-receipt.v1.json",
+      "sha256": "958013e10b96086ebcd66eb503ca6bb1bf745b5e97c2c12fe972a4fb1a29c879"
+    },
+    {
+      "path": "documents/f01x1-receipt.v1.meta.json",
+      "sha256": "afbb1ecc142b37e9089167d6ad509b87231fcee4b35b452f799c39bdbfa89c7c"
+    },
+    {
+      "path": "documents/f01x1-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f01x1-supplier-status.v1.meta.json",
+      "sha256": "5b1530ae59ac9007f61262d6818bf4f15ca65b2ccd6258469b4a6c67eda73162"
+    }
+  ]
+}

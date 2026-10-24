@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.encounter.v1",
+  "documentKind": "encounter",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Morgan Othercase",
+    "identifier": "SYN-BEN-X801"
+  },
+  "encounterDate": "2026-07-30",
+  "completionTime": null,
+  "practitioner": {
+    "name": "Jordan Sample, DO (synthetic)",
+    "identifier": "SYN-PRAC-0002"
+  },
+  "lcmpReport": {
+    "incorporated": false,
+    "evaluationDate": null
+  },
+  "clinical": {
+    "diagnosisStatement": "Synthetic test text: condition stated for the other fictional beneficiary only.",
+    "mobilityLimitation": "Synthetic test text: other beneficiary reports difficulty on stairs.",
+    "lowerLevelDevices": "Synthetic test text: other beneficiary uses a walker.",
+    "homeAccessibility": "Synthetic test text: other beneficiary lives in a second-floor apartment.",
+    "abilityToOperate": "Synthetic test text: not discussed for the other beneficiary."
+  },
+  "narrative": "SYNTHETIC TEST DOCUMENT for fixture F08a. Encounter summary of a different fictional beneficiary, attached to this case in error; not a medical record."
+}

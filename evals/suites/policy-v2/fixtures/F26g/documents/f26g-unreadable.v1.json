@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "pa.source.supporting-note.v1",
+  "documentKind": "supporting_note",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Grove Testcase",
+    "identifier": "SYN-BEN-F26G"
+  },
+  "authoredDate": "2026-09-16",
+  "title": "Synthetic scanned intake note",
+  "text": "SYNTHETIC TEST DOCUMENT for fixture F26g. Fictional note that the source system reports as unreadable; no rule reads this text."
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v1",
+  "fixtureId": "F02",
+  "specFixtureRow": "F02",
+  "title": "Finalized order absent",
+  "scenario": "Final encounter on 2026-08-12 and current supplier status are supplied. No order of any kind is supplied. No supplier receipt record is supplied either: receipt evidence is absent by construction of this fixture, stated here rather than inferred from the missing order.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "c5ca67ef97025b8b3b763e4284ff1af5f0ba3ae2b8635329ba369d1e879fcf23"
+    },
+    {
+      "path": "documents/f02-encounter.v1.json",
+      "sha256": "dcff0a7b8be7cf5e8147625d8413db010cc568dd6131c9f36d6e8713d1dad0ab"
+    },
+    {
+      "path": "documents/f02-encounter.v1.meta.json",
+      "sha256": "1757e4f45758de99b88f70b726e2be21a28d77c1235618f40e44b17a1d2a865d"
+    },
+    {
+      "path": "documents/f02-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f02-supplier-status.v1.meta.json",
+      "sha256": "5b2d0c0c089209e1f5a852311fb0235e3232a98794e19124d0bec2568e0eabe7"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F25x1",
+  "specFixtureRow": "F25",
+  "title": "Case subject name with surrounding spaces",
+  "scenario": "An otherwise valid supported packet whose case subjectName is the beneficiary name with one leading and one trailing space. Every document states the name without padding.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (independent evaluator fixture-author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F25",
+    "D1",
+    "D6.schema.case_invalid"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "61027115fe86cb3cdfe322c25beb3f6c0da4d0985d073fd1954e1fc6e878f890"
+    },
+    {
+      "path": "documents/f25x1-encounter.v1.json",
+      "sha256": "5cd41e450271ca2e29412c93fc43ed37967253b37581b89803de1ee9dc92a00e"
+    },
+    {
+      "path": "documents/f25x1-encounter.v1.meta.json",
+      "sha256": "d96b4f3602ceed33dd6825eb615b7716b94f2792459a75b1a23777a2c2d068e7"
+    },
+    {
+      "path": "documents/f25x1-order.v1.json",
+      "sha256": "40582582a8817a3785185dd952494f6fe858c1639de00e06f84551896a200c43"
+    },
+    {
+      "path": "documents/f25x1-order.v1.meta.json",
+      "sha256": "16fbe42d9be2919a3fcbef4edd43b64d17e3dccd60a7602c919cb5cf4087623b"
+    },
+    {
+      "path": "documents/f25x1-receipt.v1.json",
+      "sha256": "ab5365d235586919a822f795764be7d6664e245ab346171904688aab448dcb1c"
+    },
+    {
+      "path": "documents/f25x1-receipt.v1.meta.json",
+      "sha256": "ed916c9831ef92096cc8f725edffba3f9a030aa6e38cb40eb85e10cc3cb66814"
+    },
+    {
+      "path": "documents/f25x1-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f25x1-supplier-status.v1.meta.json",
+      "sha256": "12930fb65298c9d57655d6ed11a6194e1e5e41b392c831dfa0b40d5b24ef9c9e"
+    }
+  ]
+}

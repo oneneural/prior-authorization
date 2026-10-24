@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "H02",
+  "specFixtureRow": "F02",
+  "title": "Held-out layout change of the missing order case",
+  "scenario": "F02 inputs with every source body indented by four spaces and its object keys sorted. No order or receipt is supplied, as in F02.",
+  "syntheticProvenance": "Original synthetic evaluator input authored by mutating suite policy-v2 fixture F02. Every person, practitioner, supplier and identifier is fictional. No real record or copied policy text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "holdout.layout"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "f5215cb8db7879394f723955a55970da97c348ffec71bf83f849acd4be02b399"
+    },
+    {
+      "path": "documents/f02-encounter.v1.json",
+      "sha256": "498ad6fab50e05c1f268cb8d9429d5909d18f349602a9ba600de7ba7e0a2211b"
+    },
+    {
+      "path": "documents/f02-encounter.v1.meta.json",
+      "sha256": "ac5299b6d06c52d9757be26fec3378a0b324943f4cec1c21988bede0508a7f6f"
+    },
+    {
+      "path": "documents/f02-supplier-status.v1.json",
+      "sha256": "d06cc8c1699b58bbedce5f6166b08aa8961777004ad9b1085e25c3b9d78a3773"
+    },
+    {
+      "path": "documents/f02-supplier-status.v1.meta.json",
+      "sha256": "5b136afe077d9e56693bc437987f31b982a2460174a4300f800af69f3c0feab8"
+    }
+  ]
+}

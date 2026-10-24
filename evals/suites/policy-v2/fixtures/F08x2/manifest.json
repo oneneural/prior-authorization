@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F08x2",
+  "specFixtureRow": "F08",
+  "title": "Usable order superseded by a body-quarantined newer version",
+  "scenario": "Order f08x2-order version 1 is a valid final order naming the case subject. Version 2 has case-scoped metadata and supersedes version 1 through trusted metadata; its bytes match, but its verified body states both beneficiary name Sage Othercase and identifier SYN-OTH-F08X2. The usable receipt links version 1. Final encounter 2026-08-24 and the named supplier record are usable. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (version decision oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F08",
+    "D3",
+    "D5",
+    "R02.document_quarantined",
+    "R03.no_usable_order",
+    "R04.no_usable_order",
+    "R05.no_usable_order"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "d4f855d3d3997753aedf38d6dc5fb4ca41e6194ceb0e2bfefabe32a4b1c4d038"
+    },
+    {
+      "path": "documents/f08x2-encounter.v1.json",
+      "sha256": "0a66bef9b6aece2bbd132e34a3e8251ee0b3b22124205058c36a34f2622be8fd"
+    },
+    {
+      "path": "documents/f08x2-encounter.v1.meta.json",
+      "sha256": "f3e83db0f0963a84f464f1f65ed2131fa3f9247b8dd45fcf265f0ce088c0dc61"
+    },
+    {
+      "path": "documents/f08x2-order.v1.json",
+      "sha256": "3a0254b1195aa61c4b5a0844c0fcfa3550fa8bf24dad734796f7bbae1bc39d5d"
+    },
+    {
+      "path": "documents/f08x2-order.v1.meta.json",
+      "sha256": "599d60a6a19512bb4317265e4f154e7569e1a62c8bcdcb8885dfa79b8ccbc2ed"
+    },
+    {
+      "path": "documents/f08x2-order.v2.json",
+      "sha256": "0420f2e86460bbc3cdc5ebc2f19d396774b396978c1a2347afbae0ee7fbb1cfc"
+    },
+    {
+      "path": "documents/f08x2-order.v2.meta.json",
+      "sha256": "060c65777d3eaaed9323e1595730cb5ef620fc0538fb7c4c53ce50e7a0b9e24c"
+    },
+    {
+      "path": "documents/f08x2-receipt.v1.json",
+      "sha256": "0a76d5b6cd8af608b0a677a1099033ee4320fe6ca27ab0f6c17b1e6685c256c9"
+    },
+    {
+      "path": "documents/f08x2-receipt.v1.meta.json",
+      "sha256": "5adf952301c1f2b1a8867cb06cee03d09c0efbb1237a392c6ac349e30607281b"
+    },
+    {
+      "path": "documents/f08x2-supplier-status.v1.json",
+      "sha256": "52c4bef6f14d64c3b693baf6b4f369b11db3fbc505a9d8349a2dea54af0ed220"
+    },
+    {
+      "path": "documents/f08x2-supplier-status.v1.meta.json",
+      "sha256": "c890adebc7c2dff7e3cddd6e909fa35ceac7ea3d0e11312fb5c31fddcfa1bf80"
+    }
+  ]
+}

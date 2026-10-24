@@ -1,0 +1,32 @@
+{
+  "name": "@pa/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3105",
+    "typecheck": "next typegen && tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@pa/config": "workspace:*",
+    "@pa/contracts": "workspace:*",
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@pa/agents": "workspace:*",
+    "@pa/api": "workspace:*",
+    "@pa/connectors": "workspace:*",
+    "@pa/db": "workspace:*",
+    "@pa/worker": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

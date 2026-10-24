@@ -1,0 +1,1 @@
+{"recordedByRole":"supplier intake coordinator (fictional)","receivedAt":"2026-09-03T17:05:00Z","orderReference":{"version":1,"documentId":"f01-order"},"beneficiary":{"identifier":"SYN-BEN-F01","name":"Avery Testcase"},"synthetic":true,"documentKind":"order_receipt","schemaVersion":"pa.source.order-receipt.v1"}

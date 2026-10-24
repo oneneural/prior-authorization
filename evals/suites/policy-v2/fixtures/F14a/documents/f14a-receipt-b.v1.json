@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Greer Testcase",
+    "identifier": "SYN-BEN-F14A"
+  },
+  "orderReference": {
+    "documentId": "f14a-order-b",
+    "version": 1
+  },
+  "receivedAt": "2026-09-06T18:00:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

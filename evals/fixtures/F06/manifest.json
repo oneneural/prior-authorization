@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v1",
+  "fixtureId": "F06",
+  "specFixtureRow": "F06",
+  "title": "Same-day encounter and order without a completion sequence",
+  "scenario": "Final encounter and final signed order are both dated 2026-09-10 and neither states a time. Supplier receipt recorded on 2026-09-11. Everything else matches the supported case.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (oracle author A, 2026-10-19). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "d9235895ad6d1c1215996e749c4f30d65626bb5b9f4f79fae7bac255aa2fa212"
+    },
+    {
+      "path": "documents/f06-encounter.v1.json",
+      "sha256": "05f79ef756bf86dc5f72f02f5c06730fc630b52551101671f60301d177048c5a"
+    },
+    {
+      "path": "documents/f06-encounter.v1.meta.json",
+      "sha256": "417df28f996fa90d3c47ee98980e37cc260520f14a2a329321ad8c4949df8df1"
+    },
+    {
+      "path": "documents/f06-order.v1.json",
+      "sha256": "71448d0d0f1ac1d41203107e75555956fc645406e665702d4a9a47295edf5535"
+    },
+    {
+      "path": "documents/f06-order.v1.meta.json",
+      "sha256": "f089a3294b404cb7e9f79f6cced8957e4a3cb49e0ea6781aa92a9158f5fd0de8"
+    },
+    {
+      "path": "documents/f06-receipt.v1.json",
+      "sha256": "ffad7e28bf61a48e655c18b4de71c0fcdc7e1d7eec5af913f517640d5d8352b1"
+    },
+    {
+      "path": "documents/f06-receipt.v1.meta.json",
+      "sha256": "d874a108701a694cbdd4bd9b2e8cdfcb6ee1e5e7a33b9f6b4f9dc550bc416a22"
+    },
+    {
+      "path": "documents/f06-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f06-supplier-status.v1.meta.json",
+      "sha256": "ff52ae9b86abaee463005387171b1038068310e6cbb4e042e0f57607d79c36c3"
+    }
+  ]
+}

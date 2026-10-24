@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "X02",
+  "group": "failure",
+  "specRow": "F01",
+  "fixture": {
+    "suite": "policy-v2",
+    "fixtureId": "F01",
+    "manifestSha256": "867f4ee978aabef801e5f565c9038118b5ebb71602ae8b9ea0cb51093f676879"
+  },
+  "provider": {
+    "kind": "recorded",
+    "responseId": "fail-truncated"
+  },
+  "authoringNote": "Truncated text is not a valid provider turn: the run stops after one read with no proposal.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "invalid_model_output",
+      "proposalCodes": [],
+      "prohibitedAttempts": 0,
+      "toolErrors": 0
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Rowan Testcase",
+    "identifier": "SYN-BEN-F03A"
+  },
+  "orderReference": {
+    "documentId": "f03a-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-03T17:05:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

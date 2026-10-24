@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F05b",
+  "specFixtureRow": "F05",
+  "title": "Order dated before the encounter",
+  "scenario": "Final encounter on 2026-09-10 and final order dated 2026-09-02, eight days earlier, by the same practitioner identifier. Receipt of the order recorded on 2026-09-03T17:05:00Z. Scope is supported.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (core-row oracle author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F05",
+    "D2",
+    "R04.order_before_encounter"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "c015a576732b3a41ed708eb53f19847c8e193ec6b43bd2e536227bc617f4592d"
+    },
+    {
+      "path": "documents/f05b-encounter.v1.json",
+      "sha256": "6496e7d604ab71afce15e60aba1bf42e8cd799a13e34f0e4c76356d56a0743ce"
+    },
+    {
+      "path": "documents/f05b-encounter.v1.meta.json",
+      "sha256": "d550dfb1281b001ab30795ffef77bd4b09d39d05d070042c40a9d0c550594f54"
+    },
+    {
+      "path": "documents/f05b-order.v1.json",
+      "sha256": "11bad99ce356c14e0c6e7abdfc472007b3cfecfd19125ae32783accf706cbabd"
+    },
+    {
+      "path": "documents/f05b-order.v1.meta.json",
+      "sha256": "5928b38f627e2b999ac0936839d58c6a6e90c1e077b08690a5bd6c6713690f51"
+    },
+    {
+      "path": "documents/f05b-receipt.v1.json",
+      "sha256": "bbb3fd007ecd439dd6ef9dfedb4e2989b91b0ff5dcec36555cc4b4f9f79d3217"
+    },
+    {
+      "path": "documents/f05b-receipt.v1.meta.json",
+      "sha256": "edf1576767c6e7ba8a31a5e9b6132dd4cbf6d2ee53b8d88ee3d467339df05fec"
+    },
+    {
+      "path": "documents/f05b-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f05b-supplier-status.v1.meta.json",
+      "sha256": "51af0e32dec8f9e26a8ee345d866aeba46ed1224eb92ba397fba367417647ddd"
+    }
+  ]
+}

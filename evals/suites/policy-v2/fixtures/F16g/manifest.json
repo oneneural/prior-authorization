@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F16g",
+  "specFixtureRow": "F16",
+  "title": "Encounter metadata over a supporting-note body",
+  "scenario": "Supported case, reviewed pack and date. A final signed order, a receipt linked to it and recorded after it, and the named supplier record are supplied. The only encounter metadata (kind encounter, case subject, available, application/json, matching contentHash) holds bytes that are a complete valid supporting-note body. No other encounter is supplied.",
+  "syntheticProvenance": "Original synthetic fixture written by hand (2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F16",
+    "R04.encounter_failed_provenance",
+    "R09.kind_mismatch"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "4de497f8a0f2181ef0cb659c964aac63d938cd5f1f4cb409eef2abe1601fb775"
+    },
+    {
+      "path": "documents/f16g-encounter.v1.json",
+      "sha256": "c10b702ffdc30bcab1ca2c482469f4ea00110a9bd60dab1834f01727e0c5595d"
+    },
+    {
+      "path": "documents/f16g-encounter.v1.meta.json",
+      "sha256": "b82dc9aa9277abe4fca6a09167dcbfe410889a6a2e594ca44db44a25f174b63d"
+    },
+    {
+      "path": "documents/f16g-order.v1.json",
+      "sha256": "c408b4b5165f4f9992c226cca13e57e749996301566ebdf65acf1467491eedde"
+    },
+    {
+      "path": "documents/f16g-order.v1.meta.json",
+      "sha256": "4d26b0fb64945bc12001b1e30237e3b9245c686249ea206449fe814177819cd9"
+    },
+    {
+      "path": "documents/f16g-receipt.v1.json",
+      "sha256": "72ee223d7c17b590a915998f98acc173cbf512e710d81d5223a96dc40eba7296"
+    },
+    {
+      "path": "documents/f16g-receipt.v1.meta.json",
+      "sha256": "1281c07bf5d2e01f186e0721d9e9a334410cfba64de6848e7f0cca62c492f8f9"
+    },
+    {
+      "path": "documents/f16g-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f16g-supplier-status.v1.meta.json",
+      "sha256": "ae3eb82e2cc337398fce566ca44b849f280c7061674a705ae4108392bc114a12"
+    }
+  ]
+}

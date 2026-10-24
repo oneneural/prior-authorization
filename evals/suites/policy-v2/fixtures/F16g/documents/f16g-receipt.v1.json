@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "pa.source.order-receipt.v1",
+  "documentKind": "order_receipt",
+  "synthetic": true,
+  "beneficiary": {
+    "name": "Taylor Testcase",
+    "identifier": "SYN-BEN-F16G"
+  },
+  "orderReference": {
+    "documentId": "f16g-order",
+    "version": 1
+  },
+  "receivedAt": "2026-09-05T18:40:00Z",
+  "recordedByRole": "supplier intake coordinator (fictional)"
+}

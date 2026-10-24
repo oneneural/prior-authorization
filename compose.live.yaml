@@ -1,0 +1,28 @@
+# Optional live Claude overlay, never used by default. It enables packaged live
+# mode for the app container only when added explicitly:
+#   docker compose -f compose.yaml -f compose.live.yaml up -d
+# Every value below is required and has no default. The accounting directory is
+# a host directory outside the checkout, the database volume and every backup,
+# restore and reset path; it must already hold a ledger migrated with the
+# maintenance command (docs/operations.md#live-accounting). Live startup never
+# creates an account. The key file is mounted read-only and only the worker
+# receives its path; the API, worker and web still share one container, so this
+# is path separation, not process isolation.
+services:
+  app:
+    environment:
+      AGENT_GRAPH_PROVIDER: live
+      AGENT_RUN_BUDGET_USD: ${AGENT_RUN_BUDGET_USD:?set a positive run cap of at most 10}
+      AGENT_DAILY_BUDGET_USD: ${AGENT_DAILY_BUDGET_USD:?set a positive UTC-day cap of at most 20}
+      AGENT_TOTAL_BUDGET_USD: ${AGENT_TOTAL_BUDGET_USD:?set a positive lifetime cap of at most 20}
+      # API only: the canonical accounting ledger, at the path it was migrated for.
+      PA_ACCOUNTING_LEDGER_FILE: /var/lib/pa-accounting/ledger.json
+      # Worker only: opened when a live investigation starts, never at startup.
+      PA_ANTHROPIC_API_KEY_FILE: /run/secrets/anthropic_api_key
+    secrets: [anthropic_api_key]
+    volumes:
+      - ${PA_ACCOUNTING_DIR:?set the host accounting directory}:/var/lib/pa-accounting
+
+secrets:
+  anthropic_api_key:
+    file: ${PA_ANTHROPIC_API_KEY_HOST_FILE:?set the host path of the Anthropic key file}

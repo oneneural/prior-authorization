@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "pa.fixture-manifest.v2",
+  "fixtureId": "F25x2",
+  "specFixtureRow": "F25",
+  "title": "Blank case name and blank provenance statements",
+  "scenario": "A supported packet whose case subjectName is three spaces, whose encounter metadata provenance statement is a space, a tab and a space, and whose order metadata provenance statement is empty. The receipt and supplier metadata are valid.",
+  "syntheticProvenance": "Original synthetic fixture authored by hand (independent evaluator fixture-author, 2026-10-20). Every person, practitioner, supplier, identifier and clinical statement is fictional. No real patient record, Synthea output or copied policy, checklist or questionnaire text is included.",
+  "assessmentDate": "2026-10-18",
+  "policyInput": {
+    "path": "policy-packs/lab-k0823-jd-20261018-v2.json",
+    "sha256": "0792ccad775e5b65e9f1e84d5a76321c8ab7a39f6b08c2f0c443bb34ea2a385c"
+  },
+  "coverage": [
+    "F25",
+    "D1",
+    "D6.schema.case_invalid",
+    "D6.schema.document_metadata_invalid"
+  ],
+  "files": [
+    {
+      "path": "case.json",
+      "sha256": "1c4ca6455adf41f3f6f6ed514680d586d011e36c0770026403aae780724e0846"
+    },
+    {
+      "path": "documents/f25x2-encounter.v1.json",
+      "sha256": "c67bc9890c37ed9d7217e3656ef1e10d6a023e27bc59740d387c2b8a65b48fe0"
+    },
+    {
+      "path": "documents/f25x2-encounter.v1.meta.json",
+      "sha256": "f09624ad8e0a1315d71e54c2b2941fa263b67be845bae2d9e46c5a8d820e80b6"
+    },
+    {
+      "path": "documents/f25x2-order.v1.json",
+      "sha256": "f14ffc8adf1252b3844341955eadc4c1394e9f518ad00febfe8338de49c0d52c"
+    },
+    {
+      "path": "documents/f25x2-order.v1.meta.json",
+      "sha256": "ba4705ec5bcbd367439b3cef8dcd85211587023bf3a465b1662c6d26d735d404"
+    },
+    {
+      "path": "documents/f25x2-receipt.v1.json",
+      "sha256": "c352f893687dd433baa24d3d5d34bde8c5091d09037ab633d8b99eb0c31b1636"
+    },
+    {
+      "path": "documents/f25x2-receipt.v1.meta.json",
+      "sha256": "b6db510e07647dee0c153a040825f52e251a00ba43fd7b98bac64f5b25eec1ca"
+    },
+    {
+      "path": "documents/f25x2-supplier-status.v1.json",
+      "sha256": "668b681689c4a168d32744864569355dfdec7cf618cdaf93619237c0322c3323"
+    },
+    {
+      "path": "documents/f25x2-supplier-status.v1.meta.json",
+      "sha256": "683a0b15d1e3361a149a0861ee91b75f54c7caadb2e53b4bab3cd957d36c8d9a"
+    }
+  ]
+}

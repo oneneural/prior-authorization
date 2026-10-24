@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "pa.agent-expectation.v1",
+  "caseId": "H09",
+  "group": "holdout",
+  "specRow": "F28",
+  "fixture": {
+    "suite": "pa-agent",
+    "fixtureId": "H09",
+    "manifestSha256": "a9116c023dc2b2bd651148411d4438305696ddee0aa1ef2e879eeafd75bef4a8"
+  },
+  "provider": {
+    "kind": "scripted_reader"
+  },
+  "authoringNote": "The note stays unrelated to any requirement (F28), so the F28a outcome holds.",
+  "expected": {
+    "outcome": "assessed",
+    "state": "ready_for_review",
+    "issues": [
+      "R06:manual_review"
+    ],
+    "agent": {
+      "stopReason": "finished"
+    }
+  }
+}

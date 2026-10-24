@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "pa.source.encounter.v1",
+  "documentKind": "encounter",
+  "synthetic": true,
+  "status": "final",
+  "beneficiary": {
+    "name": "Bay Testcase",
+    "identifier": "SYN-BEN-F26B"
+  },
+  "encounterDate": "2026-08-26",
+  "completionTime": null,
+  "practitioner": {
+    "name": "Casey Example, MD (synthetic)",
+    "identifier": "SYN-PRAC-0001"
+  },
+  "lcmpReport": {
+    "incorporated": false,
+    "evaluationDate": null
+  },
+  "clinical": {
+    "diagnosisStatement": "Synthetic test text: progressive neuromuscular weakness affecting both legs, as stated by the practitioner.",
+    "mobilityLimitation": "Synthetic test text: cannot walk from the bedroom to the kitchen without stopping to rest.",
+    "lowerLevelDevices": "Synthetic test text: a walker and a manual wheelchair were discussed during the visit.",
+    "homeAccessibility": "Synthetic test text: ground-floor apartment with level entry and clear hallways.",
+    "abilityToOperate": "Synthetic test text: steered a power base safely with joystick control during the visit."
+  },
+  "narrative": "SYNTHETIC TEST DOCUMENT for fixture F26b. Fictional face-to-face encounter record written for a test; not a medical record."
+}
